@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yichao Jin | Ph.D. Candidate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            background-color: #f9fafb;
+        }
+        h1, h2, h3 {
+            font-family: 'Inter', sans-serif; /* Academic sites often use Sans for headers, Serif for body, or vice versa. sticking to clean Sans for modern academic look */
+        }
+        .serif-text {
+            font-family: 'Merriweather', serif;
+        }
+        .nav-link {
+            @apply text-gray-600 hover:text-blue-800 transition-colors duration-200;
+        }
+        .section-title {
+            @apply text-2xl font-bold text-gray-800 mb-6 border-b pb-2 border-gray-200;
+        }
+        .paper-item {
+            @apply mb-6;
+        }
+        .paper-title {
+            @apply font-semibold text-lg text-gray-900;
+        }
+        .paper-meta {
+            @apply text-gray-600 italic;
+        }
+        .paper-desc {
+            @apply text-gray-600 mt-1 text-sm;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col md:flex-row">
+
+    <!-- Sidebar / Header -->
+    <aside class="w-full md:w-1/4 bg-white border-r border-gray-200 p-8 flex flex-col items-center md:items-start md:fixed md:h-full overflow-y-auto">
+        <!-- Photo Placeholder -->
+        <div class="w-40 h-40 rounded-full mb-6 overflow-hidden flex items-center justify-center border-4 border-gray-50 shadow-md">
+            <img src="profile.jpg" alt="Yichao Jin" class="w-full h-full object-cover">
+        </div>
+
+        <h1 class="text-3xl font-bold text-gray-900 mb-2">Yichao Jin</h1>
+        <p class="text-blue-800 font-medium mb-1">Ph.D. Candidate</p>
+        <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+            School of Economic, Political and Policy Sciences<br>
+            University of Texas at Dallas
+        </p>
+
+        <div class="flex flex-col gap-2 text-sm text-gray-600 mb-8 w-full">
+            <a href="mailto:yichao.jin@utdallas.edu" class="flex items-center gap-2 hover:text-blue-800">
+                <i class="fas fa-envelope w-4"></i> yichao.jin@utdallas.edu
+            </a>
+            <div class="flex items-center gap-2">
+                <i class="fas fa-map-marker-alt w-4"></i> Texas, USA
+            </div>
+            <!-- Add Phone if needed, usually omitted on public web -->
+        </div>
+
+        <nav class="flex flex-col gap-3 text-sm font-medium w-full hidden md:flex">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#research" class="nav-link">Research</a>
+            <a href="#education" class="nav-link">Education</a>
+            <a href="#teaching" class="nav-link">Teaching</a>
+            <a href="cv.pdf" class="mt-4 px-4 py-2 bg-blue-800 text-white text-center rounded hover:bg-blue-900 transition shadow-sm">
+                Download CV
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="w-full md:w-3/4 md:ml-[25%] p-8 md:p-12 max-w-4xl">
+        
+        <!-- Mobile Nav (Visible only on small screens) -->
+        <div class="md:hidden flex flex-wrap gap-4 mb-8 text-sm border-b pb-4">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#research" class="nav-link">Research</a>
+            <a href="#education" class="nav-link">Education</a>
+            <a href="cv.pdf" class="font-bold text-blue-800">Download CV</a>
+        </div>
+
+        <!-- About Section -->
+        <section id="about" class="mb-16">
+            <h2 class="section-title">About Me</h2>
+            <div class="serif-text text-gray-700 leading-relaxed text-lg space-y-4">
+                <p>
+                    I am a Ph.D. Candidate in Public Policy and Political Economy (Health Economics) at the 
+                    <a href="https://www.utdallas.edu/" class="text-blue-800 hover:underline">University of Texas at Dallas</a>, 
+                    expected to graduate in Spring 2026.
+                </p>
+                <p>
+                    My research lies at the intersection of <strong>Behavioral Economics</strong> and <strong>Public Health</strong>. 
+                    I specialize in using <strong>Discrete Choice Experiments (DCEs)</strong> and structural modeling to understand 
+                    intertemporal decision-making, particularly how individuals value delayed health protection such as vaccination.
+                </p>
+                <p>
+                    Currently, I am working on estimating behavioral discount rates for vaccination decisions and exploring 
+                    how these insights can inform equity-sensitive health policies. My work has been supported by the 
+                    <em>UTD Dean of Graduate Education Dissertation Research Award</em>.
+                </p>
+            </div>
+        </section>
+
+        <!-- Research Section -->
+        <section id="research" class="mb-16">
+            <h2 class="section-title">Research</h2>
+            
+            <h3 class="text-xl font-bold text-gray-800 mb-4 mt-8 uppercase tracking-wide text-sm border-l-4 border-blue-800 pl-3">Under Review</h3>
+            
+            <div class="paper-item">
+                <div class="paper-title">How Humans Value Delayed Protection: Biological Vulnerability and Intertemporal Health Decisions</div>
+                <div class="paper-meta">with Dohyeong Kim. Under review at <strong>Economic Analysis and Policy</strong>.</div>
+                <div class="paper-desc">
+                    Utilizes a DCE with 1000+ respondents in Wuhan to estimate hyperbolic and exponential discount rates, 
+                    highlighting the role of biological vulnerability in shaping time preferences.
+                </div>
+            </div>
+
+            <div class="paper-item">
+                <div class="paper-title">How CEO Succession Influences Firm AI Innovation: The Role of Academic Experience Changes</div>
+                <div class="paper-meta">Tian, Z., Xiang, Y., & <strong>Jin, Y.</strong> Under review at <strong>Journal of Business Research</strong>.</div>
+                <div class="paper-desc">
+                    Analyzes 1,776 CEO succession events in Chinese high-tech firms to examine how shifts in CEOs' academic experience impact AI innovation.
+                </div>
+            </div>
+
+            <h3 class="text-xl font-bold text-gray-800 mb-4 mt-8 uppercase tracking-wide text-sm border-l-4 border-gray-400 pl-3">Working Papers</h3>
+            
+            <div class="paper-item">
+                <div class="paper-title">The Price of Waiting: Evidence on Cash–Time Trade-Offs in Vaccination Time Discount</div>
+                <div class="paper-meta">In preparation. Target: Social Science & Medicine.</div>
+            </div>
+            
+            <div class="paper-item">
+                <div class="paper-title">Behavioral Elasticities of Early Vaccination Incentives</div>
+                <div class="paper-meta">Research Pipeline.</div>
+                <div class="paper-desc">Integrates MWTA/WTW and iso-uptake surfaces to estimate incentive elasticity.</div>
+            </div>
+
+             <div class="paper-item">
+                <div class="paper-title">Time Preferences in Preventive Health: A Multi-Domain Behavioral Study</div>
+                <div class="paper-meta">Research Pipeline.</div>
+            </div>
+
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="mb-16">
+            <h2 class="section-title">Education</h2>
+            
+            <div class="mb-6">
+                <div class="flex justify-between items-baseline">
+                    <h3 class="font-bold text-lg text-gray-900">University of Texas at Dallas</h3>
+                    <span class="text-gray-500 text-sm">Expected Spring 2026</span>
+                </div>
+                <div class="text-gray-700">Ph.D. in Public Policy and Political Economy (Health Economics)</div>
+                <div class="text-gray-600 text-sm mt-1">Dissertation Chair: Dohyeong Kim</div>
+            </div>
+
+            <div class="mb-6">
+                <div class="flex justify-between items-baseline">
+                    <h3 class="font-bold text-lg text-gray-900">University of Queensland</h3>
+                    <span class="text-gray-500 text-sm">2019</span>
+                </div>
+                <div class="text-gray-700">Master of Development Economics</div>
+            </div>
+
+            <div class="mb-6">
+                <div class="flex justify-between items-baseline">
+                    <h3 class="font-bold text-lg text-gray-900">University of California, Riverside</h3>
+                    <span class="text-gray-500 text-sm">2017</span>
+                </div>
+                <div class="text-gray-700">Bachelor of Arts in Economics</div>
+            </div>
+        </section>
+
+        <!-- Teaching Section -->
+        <section id="teaching" class="mb-16">
+            <h2 class="section-title">Teaching</h2>
+            <p class="mb-4 text-gray-700">Teaching Assistant at UT Dallas:</p>
+            <ul class="list-disc list-inside space-y-2 text-gray-700 ml-2">
+                <li><span class="font-semibold">Quantitative Methods for Policy Analysis (Graduate)</span>: Econometrics labs, R programming.</li>
+                <li><span class="font-semibold">Public Policy Analysis</span>: Policy memo coaching.</li>
+                <li><span class="font-semibold">Health Economics & Public Policy</span>: Lecture support, case studies.</li>
+            </ul>
+        </section>
+
+        <!-- Awards Section -->
+        <section id="awards" class="mb-16">
+            <h2 class="section-title">Honors & Awards</h2>
+            <ul class="list-none space-y-3 text-gray-700">
+                <li class="flex items-start gap-3">
+                    <i class="fas fa-trophy text-yellow-600 mt-1"></i>
+                    <div>
+                        <span class="font-semibold">Dean of Graduate Education Dissertation Research Award</span>, UT Dallas (2025)
+                    </div>
+                </li>
+                <li class="flex items-start gap-3">
+                    <i class="fas fa-award text-gray-400 mt-1"></i>
+                    <div>
+                        <span class="font-semibold">Betty & Gifford Johnson Graduate Travel Award</span>, UT Dallas (2025)
+                    </div>
+                </li>
+                <li class="flex items-start gap-3">
+                    <i class="fas fa-star text-blue-800 mt-1"></i>
+                    <div>
+                        <span class="font-semibold">Omicron Delta Epsilon</span>, International Honor Society for Economics
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <footer class="text-center text-gray-400 text-sm mt-20 pt-10 border-t">
+            <p>&copy; 2026 Yichao Jin. All rights reserved.</p>
+        </footer>
+
+    </main>
+</body>
+</html>
