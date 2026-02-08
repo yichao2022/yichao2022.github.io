@@ -7,96 +7,119 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
         
         body {
-            font-family: 'Inter', sans-serif;
-            color: #333;
-            background-color: #f9fafb;
+            font-family: 'Merriweather', serif; /* Use Serif for body text (readability) */
+            color: #334155; /* Slate-700 for better readability than pure black */
+            background-color: #f8fafc; /* Slate-50 background */
+            line-height: 1.7;
         }
-        h1, h2, h3 {
-            font-family: 'Inter', sans-serif; /* Academic sites often use Sans for headers, Serif for body, or vice versa. sticking to clean Sans for modern academic look */
-        }
-        .serif-text {
-            font-family: 'Merriweather', serif;
+        h1, h2, h3, h4, h5, h6, .sans-font {
+            font-family: 'Inter', sans-serif; /* Use Sans for headers/UI */
         }
         .nav-link {
-            @apply text-gray-600 hover:text-blue-800 transition-colors duration-200;
+            @apply block py-2 px-4 text-slate-600 hover:text-teal-700 hover:bg-slate-50 hover:border-l-4 hover:border-teal-600 transition-all duration-200;
+            border-left: 4px solid transparent; /* Reserve space for border */
         }
         .section-title {
-            @apply text-2xl font-bold text-gray-800 mb-6 border-b pb-2 border-gray-200;
+            @apply text-3xl font-bold text-slate-800 mb-8 pb-4 border-b border-slate-200 relative font-sans;
         }
-        .paper-item {
-            @apply mb-6;
+        .section-title::after {
+            content: '';
+            @apply absolute bottom-0 left-0 w-24 h-1 bg-teal-600 rounded;
+            transform: translateY(2px); /* Slightly offset */
+        }
+        .paper-card {
+            @apply bg-white p-6 rounded-lg shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 mb-6;
         }
         .paper-title {
-            @apply font-semibold text-lg text-gray-900;
+            @apply font-bold text-lg text-slate-900 leading-tight mb-1 font-sans;
         }
         .paper-meta {
-            @apply text-gray-600 italic;
+            @apply text-slate-500 text-sm italic mb-3 font-serif;
         }
         .paper-desc {
-            @apply text-gray-600 mt-1 text-sm;
+            @apply text-slate-600 text-sm mt-3 border-t border-slate-50 pt-3 leading-relaxed;
+        }
+        .badge {
+            @apply inline-block px-2 py-0.5 rounded text-xs font-bold uppercase tracking-wider align-middle ml-2 font-sans;
+        }
+        .badge-jmp {
+            @apply bg-amber-100 text-amber-800 border border-amber-200;
+        }
+        .badge-ur {
+            @apply bg-blue-100 text-blue-800 border border-blue-200;
+        }
+        .btn-download {
+            @apply inline-flex items-center gap-2 px-3 py-1.5 bg-slate-100 hover:bg-teal-50 text-slate-700 hover:text-teal-800 rounded text-xs font-semibold transition border border-slate-200 hover:border-teal-200 font-sans;
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col md:flex-row">
+<body class="min-h-screen flex flex-col md:flex-row text-slate-700">
 
     <!-- Sidebar / Header -->
-    <aside class="w-full md:w-1/4 bg-white border-r border-gray-200 p-8 flex flex-col items-center md:items-start md:fixed md:h-full overflow-y-auto">
+    <aside class="w-full md:w-1/4 bg-white border-r border-slate-200 p-8 flex flex-col items-center md:items-start md:fixed md:h-full overflow-y-auto z-10">
         <!-- Photo Placeholder -->
-        <div class="w-40 h-40 rounded-full mb-6 overflow-hidden flex items-center justify-center border-4 border-gray-50 shadow-md">
+        <div class="w-48 h-48 rounded-lg mb-6 overflow-hidden shadow-lg border-4 border-white ring-1 ring-slate-100 transition-transform hover:scale-105 duration-500">
             <img src="profile.jpg" alt="Yichao Jin" class="w-full h-full object-cover">
         </div>
 
-        <h1 class="text-3xl font-bold text-gray-900 mb-2">Yichao Jin</h1>
-        <p class="text-red-700 bg-red-100 text-xs px-2 py-1 rounded inline-block font-bold mb-2">On the 2026–27 Job Market</p>
-        <p class="text-blue-800 font-medium mb-1">Ph.D. Candidate</p>
-        <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+        <h1 class="text-3xl font-bold text-slate-900 mb-1 tracking-tight font-sans">Yichao Jin</h1>
+        
+        <div class="mb-4 font-sans">
+             <span class="badge bg-red-50 text-red-700 border-red-100 ml-0 px-2 py-1 border">On the 2026–27 Job Market</span>
+        </div>
+
+        <p class="text-teal-700 font-semibold mb-1 font-sans">Ph.D. Candidate</p>
+        <p class="text-slate-500 text-sm mb-6 leading-relaxed font-sans">
             School of Economic, Political and Policy Sciences<br>
             University of Texas at Dallas
         </p>
 
-        <div class="flex flex-col gap-2 text-sm text-gray-600 mb-8 w-full">
-            <a href="mailto:yichao.jin@utdallas.edu" class="flex items-center gap-2 hover:text-blue-800">
-                <i class="fas fa-envelope w-4"></i> yichao.jin@utdallas.edu
+        <div class="flex flex-col gap-2 text-sm text-slate-500 mb-8 w-full font-sans">
+            <a href="mailto:yichao.jin@utdallas.edu" class="flex items-center gap-3 hover:text-teal-700 transition">
+                <i class="fas fa-envelope w-4 text-center"></i> yichao.jin@utdallas.edu
             </a>
-            <div class="flex items-center gap-2">
-                <i class="fas fa-map-marker-alt w-4"></i> Texas, USA
+            <div class="flex items-center gap-3">
+                <i class="fas fa-map-marker-alt w-4 text-center"></i> Texas, USA
             </div>
-            <!-- Add Phone if needed, usually omitted on public web -->
         </div>
 
-        <nav class="flex flex-col gap-3 text-sm font-medium w-full hidden md:flex">
+        <nav class="flex flex-col gap-1 text-sm font-medium w-full hidden md:flex font-sans -ml-4">
             <a href="#about" class="nav-link">About</a>
             <a href="#research" class="nav-link">Research</a>
             <a href="#education" class="nav-link">Education</a>
             <a href="#certifications" class="nav-link">Certifications</a>
             <a href="#teaching" class="nav-link">Teaching</a>
-            <a href="cv.pdf" class="mt-4 px-4 py-2 bg-blue-800 text-white text-center rounded hover:bg-blue-900 transition shadow-sm">
-                Download CV
-            </a>
+            <a href="#awards" class="nav-link">Awards</a>
         </nav>
+        
+        <div class="mt-8 w-full font-sans">
+            <a href="cv.pdf" class="block w-full px-6 py-3 bg-slate-800 text-white text-center rounded hover:bg-teal-700 transition shadow-lg hover:shadow-xl font-semibold tracking-wide transform hover:-translate-y-0.5 duration-200">
+                <i class="fas fa-download mr-2"></i> Download CV
+            </a>
+        </div>
     </aside>
 
     <!-- Main Content -->
-    <main class="w-full md:w-3/4 md:ml-[25%] p-8 md:p-12 max-w-4xl">
+    <main class="w-full md:w-3/4 md:ml-[25%] p-8 md:p-16 max-w-5xl bg-slate-50/50">
         
         <!-- Mobile Nav (Visible only on small screens) -->
-        <div class="md:hidden flex flex-wrap gap-4 mb-8 text-sm border-b pb-4">
-            <a href="#about" class="nav-link">About</a>
-            <a href="#research" class="nav-link">Research</a>
-            <a href="#education" class="nav-link">Education</a>
-            <a href="cv.pdf" class="font-bold text-blue-800">Download CV</a>
+        <div class="md:hidden flex flex-wrap gap-4 mb-10 text-sm border-b border-slate-200 pb-4 font-sans font-medium text-slate-600">
+            <a href="#about" class="hover:text-teal-700">About</a>
+            <a href="#research" class="hover:text-teal-700">Research</a>
+            <a href="#education" class="hover:text-teal-700">Education</a>
+            <a href="cv.pdf" class="font-bold text-teal-700">CV</a>
         </div>
 
         <!-- About Section -->
-        <section id="about" class="mb-16">
+        <section id="about" class="mb-20">
             <h2 class="section-title">About Me</h2>
-            <div class="serif-text text-gray-700 leading-relaxed text-lg space-y-4">
+            <div class="text-slate-700 leading-loose text-lg space-y-6 max-w-3xl">
                 <p>
-                    I am a Ph.D. Candidate in Public Policy and Political Economy (Health Economics) at the 
-                    <a href="https://www.utdallas.edu/" class="text-blue-800 hover:underline">University of Texas at Dallas</a>, 
+                    I am a Ph.D. Candidate in <strong>Public Policy and Political Economy (Health Economics)</strong> at the 
+                    <a href="https://www.utdallas.edu/" class="text-teal-700 hover:underline decoration-2 underline-offset-2 font-medium decoration-teal-200 hover:decoration-teal-600 transition-all">University of Texas at Dallas</a>, 
                     expected to graduate in Spring 2026.
                 </p>
                 <p>
@@ -113,45 +136,54 @@
         </section>
 
         <!-- Research Section -->
-        <section id="research" class="mb-16">
+        <section id="research" class="mb-20">
             <h2 class="section-title">Research</h2>
             
-            <h3 class="text-xl font-bold text-gray-800 mb-4 mt-8 uppercase tracking-wide text-sm border-l-4 border-blue-800 pl-3">Under Review</h3>
+            <h3 class="text-sm font-bold text-slate-400 mb-6 uppercase tracking-widest font-sans border-b border-slate-100 pb-2">Under Review</h3>
             
-            <div class="paper-item">
-                <div class="paper-title">How Humans Value Delayed Protection: Biological Vulnerability and Intertemporal Health Decisions <span class="text-red-700 bg-red-100 text-xs px-2 py-1 rounded ml-2 align-middle">JOB MARKET PAPER</span></div>
-                <div class="paper-meta">with Dohyeong Kim. Under review at <strong>Economic Analysis and Policy</strong>.</div>
-                <div class="mt-2 text-sm">
-                    <a href="jmp.pdf" class="inline-block px-3 py-1 bg-gray-200 hover:bg-gray-300 rounded text-gray-800 font-medium transition mr-2"><i class="fas fa-file-pdf mr-1"></i> Download PDF</a>
+            <div class="paper-card border-l-4 border-l-amber-400 relative overflow-hidden">
+                <div class="paper-title">
+                    How Humans Value Delayed Protection: Biological Vulnerability and Intertemporal Health Decisions
+                    <span class="badge badge-jmp shadow-sm">Job Market Paper</span>
                 </div>
+                <div class="paper-meta">with Dohyeong Kim. Under review at <strong>Economic Analysis and Policy</strong>.</div>
+                
+                <div class="flex gap-2 mt-3 mb-2">
+                    <a href="jmp.pdf" class="btn-download"><i class="fas fa-file-pdf"></i> Draft PDF</a>
+                    <!-- <a href="#" class="btn-download"><i class="fas fa-chart-bar"></i> Slides</a> -->
+                </div>
+
                 <div class="paper-desc">
                     Utilizes a DCE with 1000+ respondents in Wuhan to estimate hyperbolic and exponential discount rates, 
-                    highlighting the role of biological vulnerability in shaping time preferences.
+                    highlighting the role of biological vulnerability in shaping time preferences. Key finding: Vulnerability significantly alters discount rates, suggesting targeted communication strategies.
                 </div>
             </div>
 
-            <div class="paper-item">
-                <div class="paper-title">How CEO Succession Influences Firm AI Innovation: The Role of Academic Experience Changes</div>
+            <div class="paper-card border-l-4 border-l-blue-400">
+                <div class="paper-title">
+                    How CEO Succession Influences Firm AI Innovation: The Role of Academic Experience Changes
+                    <span class="badge badge-ur">Under Review</span>
+                </div>
                 <div class="paper-meta">Tian, Z., Xiang, Y., & <strong>Jin, Y.</strong> Under review at <strong>Journal of Business Research</strong>.</div>
-                <div class="paper-desc">
-                    Analyzes 1,776 CEO succession events in Chinese high-tech firms to examine how shifts in CEOs' academic experience impact AI innovation.
+                 <div class="paper-desc">
+                    Analyzes 1,776 CEO succession events in Chinese high-tech firms to examine how shifts in CEOs' academic experience impact AI innovation trajectories.
                 </div>
             </div>
 
-            <h3 class="text-xl font-bold text-gray-800 mb-4 mt-8 uppercase tracking-wide text-sm border-l-4 border-gray-400 pl-3">Working Papers</h3>
+            <h3 class="text-sm font-bold text-slate-400 mb-6 mt-12 uppercase tracking-widest font-sans border-b border-slate-100 pb-2">Working Papers</h3>
             
-            <div class="paper-item">
+            <div class="paper-card opacity-90 hover:opacity-100 transition-opacity">
                 <div class="paper-title">The Price of Waiting: Evidence on Cash–Time Trade-Offs in Vaccination Time Discount</div>
                 <div class="paper-meta">In preparation. Target: Social Science & Medicine.</div>
             </div>
             
-            <div class="paper-item">
+            <div class="paper-card opacity-90 hover:opacity-100 transition-opacity">
                 <div class="paper-title">Behavioral Elasticities of Early Vaccination Incentives</div>
                 <div class="paper-meta">Research Pipeline.</div>
                 <div class="paper-desc">Integrates MWTA/WTW and iso-uptake surfaces to estimate incentive elasticity.</div>
             </div>
 
-             <div class="paper-item">
+             <div class="paper-card opacity-90 hover:opacity-100 transition-opacity">
                 <div class="paper-title">Time Preferences in Preventive Health: A Multi-Domain Behavioral Study</div>
                 <div class="paper-meta">Research Pipeline.</div>
             </div>
@@ -159,107 +191,144 @@
         </section>
 
         <!-- Education Section -->
-        <section id="education" class="mb-16">
+        <section id="education" class="mb-20">
             <h2 class="section-title">Education</h2>
             
-            <div class="mb-6">
-                <div class="flex justify-between items-baseline">
-                    <h3 class="font-bold text-lg text-gray-900">University of Texas at Dallas</h3>
-                    <span class="text-gray-500 text-sm">Expected Spring 2026</span>
+            <div class="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-x-8 gap-y-2 mb-4 items-baseline hover:bg-white p-6 rounded-lg transition-all border border-transparent hover:border-slate-100 hover:shadow-sm -mx-6">
+                <div>
+                    <h3 class="font-bold text-lg text-slate-900 font-sans">University of Texas at Dallas</h3>
+                    <div class="text-teal-700 font-serif italic font-medium">Ph.D. in Public Policy and Political Economy (Health Economics)</div>
+                    <div class="text-slate-500 text-sm mt-2">Dissertation: "Essays on Behavioral Health Economics and Intertemporal Choice"</div>
+                    <div class="text-slate-500 text-sm">Chair: Dr. Dohyeong Kim</div>
                 </div>
-                <div class="text-gray-700">Ph.D. in Public Policy and Political Economy (Health Economics)</div>
-                <div class="text-gray-600 text-sm mt-1">Dissertation Chair: Dohyeong Kim</div>
+                <div class="text-slate-400 text-sm font-bold font-sans uppercase tracking-wide bg-slate-50 px-2 py-1 rounded border border-slate-100">Exp. 2026</div>
             </div>
 
-            <div class="mb-6">
-                <div class="flex justify-between items-baseline">
-                    <h3 class="font-bold text-lg text-gray-900">University of Texas at Dallas</h3>
-                    <span class="text-gray-500 text-sm">Expected Spring 2026</span>
+            <div class="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-x-8 gap-y-2 mb-4 items-baseline hover:bg-white p-6 rounded-lg transition-all border border-transparent hover:border-slate-100 hover:shadow-sm -mx-6">
+                <div>
+                    <h3 class="font-bold text-lg text-slate-900 font-sans">University of Texas at Dallas</h3>
+                    <div class="text-slate-600 font-serif italic">M.S. in Social Data Analytics and Research</div>
                 </div>
-                <div class="text-gray-700">M.S. in Social Data Analytics and Research</div>
-                <div class="text-gray-600 text-sm mt-1"><a href="https://catalog.utdallas.edu/2025/graduate/programs/epps/social-data-analytics-and-research" class="text-blue-800 hover:underline" target="_blank">Program Details</a></div>
+                <div class="text-slate-400 text-sm font-bold font-sans uppercase tracking-wide bg-slate-50 px-2 py-1 rounded border border-slate-100">Exp. 2026</div>
             </div>
 
-            <div class="mb-6">
-                <div class="flex justify-between items-baseline">
-                    <h3 class="font-bold text-lg text-gray-900">University of Queensland</h3>
-                    <span class="text-gray-500 text-sm">2019</span>
+            <div class="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-x-8 gap-y-2 mb-4 items-baseline hover:bg-white p-6 rounded-lg transition-all border border-transparent hover:border-slate-100 hover:shadow-sm -mx-6">
+                <div>
+                    <h3 class="font-bold text-lg text-slate-900 font-sans">University of Queensland</h3>
+                    <div class="text-slate-600 font-serif italic">Master of Development Economics</div>
                 </div>
-                <div class="text-gray-700">Master of Development Economics</div>
+                <div class="text-slate-400 text-sm font-bold font-sans uppercase tracking-wide bg-slate-50 px-2 py-1 rounded border border-slate-100">2019</div>
             </div>
 
-            <div class="mb-6">
-                <div class="flex justify-between items-baseline">
-                    <h3 class="font-bold text-lg text-gray-900">University of California, Riverside</h3>
-                    <span class="text-gray-500 text-sm">2017</span>
+            <div class="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-x-8 gap-y-2 mb-4 items-baseline hover:bg-white p-6 rounded-lg transition-all border border-transparent hover:border-slate-100 hover:shadow-sm -mx-6">
+                <div>
+                    <h3 class="font-bold text-lg text-slate-900 font-sans">University of California, Riverside</h3>
+                    <div class="text-slate-600 font-serif italic">Bachelor of Arts in Economics</div>
                 </div>
-                <div class="text-gray-700">Bachelor of Arts in Economics</div>
+                <div class="text-slate-400 text-sm font-bold font-sans uppercase tracking-wide bg-slate-50 px-2 py-1 rounded border border-slate-100">2017</div>
             </div>
         </section>
 
         <!-- Certifications Section -->
-        <section id="certifications" class="mb-16">
+        <section id="certifications" class="mb-20">
             <h2 class="section-title">Certifications</h2>
             
-            <div class="mb-6">
-                <div class="flex justify-between items-baseline">
-                    <h3 class="font-bold text-lg text-gray-900">Stanford University</h3>
-                    <span class="text-gray-500 text-sm">Graduate Certificate</span>
+            <div class="bg-white rounded-lg border border-slate-100 p-8 shadow-sm">
+                <div class="mb-8 pb-8 border-b border-slate-50 last:mb-0 last:pb-0 last:border-0">
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <h3 class="font-bold text-slate-900 font-sans text-lg">Stanford University</h3>
+                            <div class="text-teal-700 font-medium font-serif mt-1">Graduate Certificate in Artificial Intelligence</div>
+                            <div class="text-slate-500 text-sm mt-1 font-sans">Focus: AI Foundations, Machine Learning, and Applications</div>
+                        </div>
+                        <span class="text-xs font-bold bg-slate-100 text-slate-600 px-3 py-1 rounded-full font-sans uppercase tracking-wide border border-slate-200">Stanford Online</span>
+                    </div>
                 </div>
-                <div class="text-gray-700 font-semibold">Artificial Intelligence (AI Foundations, ML, and Applications)</div>
-                <div class="text-gray-600 text-sm mt-1">Stanford Online</div>
-            </div>
 
-            <div class="mb-6">
-                <div class="flex justify-between items-baseline">
-                    <h3 class="font-bold text-lg text-gray-900">CITI Program</h3>
-                    <span class="text-gray-500 text-sm">Valid through Oct 2025</span>
+                <div class="mb-0">
+                    <div class="flex justify-between items-start mb-2">
+                         <div>
+                            <h3 class="font-bold text-slate-900 font-sans text-lg">CITI Program</h3>
+                            <div class="text-teal-700 font-medium font-serif mt-1">Human Subjects Protection</div>
+                            <div class="text-slate-500 text-sm mt-1 font-sans">Social & Behavioral Research</div>
+                        </div>
+                        <div class="text-right">
+                             <span class="text-xs font-bold bg-green-50 text-green-700 px-3 py-1 rounded-full font-sans uppercase tracking-wide border border-green-200">Active</span>
+                             <div class="text-slate-400 text-xs mt-1 font-sans">Expires Oct 2025</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="text-gray-700 font-semibold">Human Subjects Protection (Social & Behavioral Research)</div>
-                <div class="text-gray-600 text-sm mt-1">Completed Oct 2022</div>
             </div>
         </section>
 
         <!-- Teaching Section -->
-        <section id="teaching" class="mb-16">
+        <section id="teaching" class="mb-20">
             <h2 class="section-title">Teaching</h2>
-            <p class="mb-4 text-gray-700">Teaching Assistant at UT Dallas:</p>
-            <ul class="list-disc list-inside space-y-2 text-gray-700 ml-2">
-                <li><span class="font-semibold">Quantitative Methods for Policy Analysis (Graduate)</span>: Econometrics labs, R programming.</li>
-                <li><span class="font-semibold">Public Policy Analysis</span>: Policy memo coaching.</li>
-                <li><span class="font-semibold">Health Economics & Public Policy</span>: Lecture support, case studies.</li>
-            </ul>
+            <div class="bg-white p-8 rounded-lg border-l-4 border-slate-300 shadow-sm hover:border-teal-400 transition-colors">
+                <p class="mb-6 text-slate-900 font-bold font-sans border-b border-slate-100 pb-2">Teaching Assistant at UT Dallas</p>
+                <ul class="space-y-4 text-slate-700 font-serif">
+                    <li class="flex items-start gap-4 group">
+                        <div class="w-6 h-6 rounded-full bg-teal-50 text-teal-600 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-teal-100 transition-colors">
+                            <i class="fas fa-check text-xs"></i>
+                        </div>
+                        <span><strong class="text-slate-900 block font-sans">Quantitative Methods for Policy Analysis (Graduate)</strong> Led econometrics labs and R programming tutorials for master's students.</span>
+                    </li>
+                    <li class="flex items-start gap-4 group">
+                        <div class="w-6 h-6 rounded-full bg-teal-50 text-teal-600 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-teal-100 transition-colors">
+                             <i class="fas fa-check text-xs"></i>
+                        </div>
+                        <span><strong class="text-slate-900 block font-sans">Public Policy Analysis</strong> Coached undergraduate students on policy memo writing and analytical frameworks.</span>
+                    </li>
+                    <li class="flex items-start gap-4 group">
+                        <div class="w-6 h-6 rounded-full bg-teal-50 text-teal-600 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-teal-100 transition-colors">
+                             <i class="fas fa-check text-xs"></i>
+                        </div>
+                        <span><strong class="text-slate-900 block font-sans">Health Economics & Public Policy</strong> Provided lecture support, graded assignments, and facilitated case study discussions.</span>
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <!-- Awards Section -->
-        <section id="awards" class="mb-16">
+        <section id="awards" class="mb-20">
             <h2 class="section-title">Honors & Awards</h2>
-            <ul class="list-none space-y-3 text-gray-700">
-                <li class="flex items-start gap-3">
-                    <i class="fas fa-trophy text-yellow-600 mt-1"></i>
-                    <div>
-                        <span class="font-semibold">Dean of Graduate Education Dissertation Research Award</span>, UT Dallas (2025)
+            <div class="grid gap-4">
+                <div class="flex items-center gap-5 p-5 bg-white rounded-lg border border-slate-100 shadow-sm hover:shadow-md transition-all">
+                    <div class="w-12 h-12 rounded-full bg-amber-50 flex items-center justify-center text-amber-600 flex-shrink-0 text-xl border border-amber-100">
+                        <i class="fas fa-trophy"></i>
                     </div>
-                </li>
-                <li class="flex items-start gap-3">
-                    <i class="fas fa-award text-gray-400 mt-1"></i>
                     <div>
-                        <span class="font-semibold">Betty & Gifford Johnson Graduate Travel Award</span>, UT Dallas (2025)
+                        <div class="font-bold text-slate-900 font-sans text-lg">Dean of Graduate Education Dissertation Research Award</div>
+                        <div class="text-slate-500 font-serif">UT Dallas (2025)</div>
                     </div>
-                </li>
-                <li class="flex items-start gap-3">
-                    <i class="fas fa-star text-blue-800 mt-1"></i>
+                </div>
+                
+                <div class="flex items-center gap-5 p-5 bg-white rounded-lg border border-slate-100 shadow-sm hover:shadow-md transition-all">
+                    <div class="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center text-slate-500 flex-shrink-0 text-xl border border-slate-100">
+                        <i class="fas fa-award"></i>
+                    </div>
                     <div>
-                        <span class="font-semibold">Omicron Delta Epsilon</span>, International Honor Society for Economics
+                        <div class="font-bold text-slate-900 font-sans text-lg">Betty & Gifford Johnson Graduate Travel Award</div>
+                        <div class="text-slate-500 font-serif">UT Dallas (2025)</div>
                     </div>
-                </li>
-            </ul>
+                </div>
+
+                <div class="flex items-center gap-5 p-5 bg-white rounded-lg border border-slate-100 shadow-sm hover:shadow-md transition-all">
+                    <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-blue-700 flex-shrink-0 text-xl border border-blue-100">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div>
+                        <div class="font-bold text-slate-900 font-sans text-lg">Omicron Delta Epsilon</div>
+                        <div class="text-slate-500 font-serif">International Honor Society for Economics</div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <footer class="text-center text-gray-400 text-sm mt-20 pt-10 border-t">
-            <p>&copy; 2026 Yichao Jin. All rights reserved.</p>
+        <footer class="text-center text-slate-400 text-sm mt-24 pt-12 border-t border-slate-200 font-sans pb-12">
+            <p>&copy; 2026 Yichao Jin. Designed for impact.</p>
         </footer>
 
     </main>
 </body>
-</html><!-- trigger rebuild -->
+</html>
