@@ -12,7 +12,7 @@ yichao.jin@utdallas.edu
 
 ## Education
 
-**Ph.D., Public Policy and Political Economy (Health Economics)**, University of Texas at Dallas, Expected Spring 2026  
+**Ph.D., Public Policy and Political Economy (Public Health)**, University of Texas at Dallas, Expected Spring 2026  
 - Dissertation: *Explore the Determinants of Time Discount Rate for Covid-like Diseases Vaccination: A Discrete Choice Experiment in Three Districts of Wuhan*
 - Chair: Dohyeong Kim
 - Minor: International Business and Public Policy
@@ -28,7 +28,7 @@ yichao.jin@utdallas.edu
 
 ## Research Fields
 
-**Primary:** Health Economics, Behavioral Economics, Public Health  
+**Primary:** Public Health, Behavioral Economics, Health Economics  
 **Secondary:** Public Policy, Applied Microeconomics
 
 ---
