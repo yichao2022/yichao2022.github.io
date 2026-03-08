@@ -39,7 +39,6 @@ Richardson, TX 75080
    - Developed a novel DCE framework (N=1,000+) to estimate hyperbolic discount rates in vaccination timing.
    - Identified "Biological Vulnerability" as a key driver of time preference, offering a new behavioral lens for pandemic preparedness.
 
-2. **"How CEO Succession Influences Firm AI Innovation: The Role of Academic Experience"** (with Zhimin Tian, Yu Xiang)  
    *Under Review at Journal of Business Research*  
 
 3. **"The Ghost in the Machine: Algorithmic Rationality vs. Social Legitimacy in AI-Driven Public Health Governance"**  

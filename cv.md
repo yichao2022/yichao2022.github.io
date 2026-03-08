@@ -56,7 +56,6 @@ Bachelor of Arts in Economics, 2017
 
 PAPERS UNDER REVIEW & WORKING PAPERS
 
-**Tian, Z.**, Xiang, Y., & **Jin, Y.** (Under review). *How CEO Succession Influences Firm AI Innovation: The Role of Academic Experience Changes.* *Journal of Business Research*.
 
 > Analyzes 1,776 CEO succession events in Chinese high-tech firms to examine how shifts in CEOs' academic experience impact AI innovation.
 
