@@ -52,13 +52,16 @@ Richardson, TX 75080
 
 ## Work in Progress
 
-1. **"Behavioral Elasticities of Early Vaccination Incentives"**  
+1. **"The Ghost in the Machine: Algorithmic Rationality vs. Social Legitimacy in AI-Driven Public Health Governance"**  
+   - Analyzes the theoretical tension between automated efficiency and institutional trust using the AGIL framework and Rational Choice models.
+
+2. **"Behavioral Elasticities of Early Vaccination Incentives"**  
    - Estimates incentive elasticity using structural simulation; integrates MWTA/WTW metrics for policy precision.
 
-2. **"Time Preferences in Preventive Health: A Multi-Domain Behavioral Study"**  
+3. **"Time Preferences in Preventive Health: A Multi-Domain Behavioral Study"**  
    - Explores consistency of impatience across vaccination, PPE acquisition, and pharmaceutical adoption.
 
-3. **"AI-Assisted Behavioral Forecasting"**  
+4. **"AI-Assisted Behavioral Forecasting"**  
    - Integrating Stanford AI Graduate Certificate insights to combine DCE with Machine Learning for high-risk group identification.
 
 ---
