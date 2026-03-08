@@ -61,7 +61,7 @@ PAPERS UNDER REVIEW & WORKING PAPERS
 
 > Findings suggest that transitions to academic CEOs significantly enhance AI innovation, moderated by TMT digital expertise and regional knowledge ecosystems.
 
-**Jin, Y.**, & Kim, D. (Under review). *How Humans Value Delayed Protection: Biological Vulnerability and Intertemporal Health Decisions.* Target Journal: *Economic Analysis and Policy* (Elsevier).
+**Jin, Y.**, & Kim, D. (Under review). *How Humans Value Delayed Protection: Biological Vulnerability and Intertemporal Health Decisions.* *Applied Health Economics and Health Policy*.
 
 > Utilizes a DCE with 1000+ respondents in Wuhan, China, to estimate
 > hyperbolic and exponential discount rates for CLD vaccination

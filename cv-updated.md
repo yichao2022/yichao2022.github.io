@@ -35,7 +35,7 @@ Richardson, TX 75080
 ## Working Papers
 
 1. **"How Humans Value Delayed Protection: Biological Vulnerability and Intertemporal Health Decisions"** (with Dohyeong Kim)  
-   *Under Review at Economic Analysis and Policy* — **Job Market Paper**  
+   *Under Review at Applied Health Economics and Health Policy* — **Job Market Paper**  
    - Developed a novel DCE framework (N=1,000+) to estimate hyperbolic discount rates in vaccination timing.
    - Identified "Biological Vulnerability" as a key driver of time preference, offering a new behavioral lens for pandemic preparedness.
 
