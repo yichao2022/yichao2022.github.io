@@ -72,6 +72,10 @@ PAPERS UNDER REVIEW & WORKING PAPERS
 
 > 
 
+**Jin, Y.** (Working Paper). *The Ghost in the Machine: Algorithmic Rationality vs. Social Legitimacy in AI-Driven Public Health Governance.*
+
+> Analyzes the theoretical tension between automated efficiency and institutional trust using the AGIL framework and Rational Choice models.
+
 **Jin, Y.** (In preparation). *The Price of Waiting: Evidence on
 Cash--Time Trade-Offs in Vaccination Time Discount.* Target Journal: SSM
 (Social Science & Medicine)*.*
