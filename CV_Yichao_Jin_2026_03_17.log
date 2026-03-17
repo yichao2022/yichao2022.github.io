@@ -247,12 +247,7 @@ LaTeX Font Info:    Trying to load font information for TS1+bch on input line 74
 File: ts1bch.fd 2004/10/18 font definitions for TS1/bch.
 ) [1
 
-{/Users/cary/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/Users/cary/Library/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}]
-Overfull \hbox (3.7719pt too wide) in paragraph at lines 113--114
-[]\T1/bch/b/n/10.95 Public Pol-icy Anal-y-sis (Un-der-grad-u-ate)\T1/bch/m/n/10.95 : Men-tored stu-dents in draft-ing evidence-based pol-icy memos
- []
-
-[2] (./CV_Yichao_Jin_2026_03_17.aux)
+{/Users/cary/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/Users/cary/Library/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}] [2] (./CV_Yichao_Jin_2026_03_17.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
