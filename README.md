@@ -19,6 +19,12 @@ We estimate the **Marginal Willingness to Accept (MWTA)** for waiting time. Our 
 - **Urban-Rural Psychology Divide**: Urban residents are significantly more sensitive to wait time ($p=0.029$, coeff=$-0.068$).
 - **Trust as a Buffer**: High institutional trust acts as a psychological buffer, reducing the negative impact of wait time friction ($p=0.035$).
 
+#### Visualizing the Behavioral Friction
+<p align="center">
+  <img src="plots/urban_rural_sensitivity.png" width="45%" />
+  <img src="plots/trust_buffer_effect.png" width="45%" />
+</p>
+
 ---
 
 ## 🛠️ Repository Structure
