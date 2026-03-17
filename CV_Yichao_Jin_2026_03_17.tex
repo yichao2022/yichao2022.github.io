@@ -1,9 +1,12 @@
-\documentclass[11pt]{article}
-\usepackage[margin=0.8in, top=0.5in]{geometry}
+\documentclass[11pt, letterpaper]{article}
+\usepackage[margin=0.8in, top=0.5in, bottom=0.8in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage{hyperref}
 \usepackage{enumitem}
+\usepackage{charter} % Professional font (already confirmed present)
 
-% Colors and Hyperlinks
+% --- Formatting ---
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
@@ -11,109 +14,130 @@
     pdftitle={CV - Yichao Jin},
 }
 
+% Manual section styling for robustness
+\newcommand{\ressection}[1]{
+    \vspace{10pt}
+    \noindent\textbf{\large \textsc{#1}}
+    \vspace{-2pt}
+    \hrule
+    \vspace{5pt}
+}
+
+\setlist[itemize]{leftmargin=1.5em, noitemsep, topsep=2pt, parsep=2pt}
+\setlist[enumerate]{leftmargin=1.5em}
+
 \begin{document}
 
-% HEADER
+% --- HEADER ---
 \begin{center}
     {\huge \textbf{Yichao Jin}} \\
-    \vspace{0.5em}
-    School of Economic, Political and Policy Sciences \\
-    The University of Texas at Dallas, Richardson, TX 75080 \\
-    \vspace{0.5em}
-    \href{https://yichao2022.github.io}{\textbf{https://yichao2022.github.io}} \quad | \quad \href{mailto:Yichao.Jin@UTDallas.edu}{Yichao.Jin@UTDallas.edu} \quad | \quad +1 (682) 266-4185 \\
-    \vspace{0.5em}
-    \textit{Specialization: Health Economics | Applied Econometrics | Behavioral Economics | Policy Simulation}
+    \vspace{0.6em}
+    School of Economic, Political and Policy Sciences $\cdot$ University of Texas at Dallas \\
+    \vspace{0.4em}
+    \href{mailto:Yichao.Jin@UTDallas.edu}{Yichao.Jin@UTDallas.edu} \quad | \quad \href{https://yichao2022.github.io}{yichao2022.github.io} \quad | \quad +1 (682) 266-4185
 \end{center}
 
-\vspace{0.5em}
-\noindent\hrulefill
+\vspace{0.2em}
 
-\section*{Education}
-\textbf{University of Texas at Dallas} \hfill Expected Spring 2026 \\
-\textbf{Ph.D., Public Policy and Political Economy} \\
-- \textit{Distinction}: Recipient of the Dean of Graduate Education Dissertation Research Award (2025). \\
-- \textit{Dissertation}: Dynamics of Intertemporal Choice in Vaccination Timing: A Discrete Choice Experiment Approach \\
-- \textit{Chair}: Dohyeong Kim \quad | \quad \textit{Concentration}: Public Health \quad | \quad \textit{Minor}: International Business
+% --- RESEARCH INTERESTS (Opening) ---
+\ressection{Research Profile}
+\noindent \textbf{Fields:} Health Economics, Behavioral Economics, Public Policy Analysis, Technology Governance. \\
+\textbf{Methods:} Discrete Choice Experiments (DCE), Structural Modeling, Applied Econometrics (Causal Inference), Policy Simulation (SEIR), Machine Learning.
 
-\vspace{0.5em}
-\noindent \textbf{University of Texas at Dallas} \hfill Expected Spring 2026 \\
-\textbf{M.S., Social Data Analytics and Research}
+% --- EDUCATION ---
+\ressection{Education}
+\noindent \textbf{University of Texas at Dallas} \hfill Expected May 2026 \\
+\textbf{Ph.D. in Public Policy and Political Economy} \\
+- \textit{Dissertation:} ``Dynamics of Intertemporal Choice in Vaccination Timing: A DCE Approach'' \\
+- \textit{Committee:} Dohyeong Kim (Chair), Richard Scotch, Soyoung Kwon. \\
+- \textit{Distinction:} Dean of Graduate Education Dissertation Research Award (2025).
 
-\vspace{0.5em}
+\vspace{0.4em}
+\noindent \textbf{University of Texas at Dallas} \hfill Expected May 2026 \\
+\textbf{M.S. in Social Data Analytics and Research}
+
+\vspace{0.4em}
 \noindent \textbf{University of Queensland} \hfill 2019 \\
 \textbf{Master of Development Economics}
 
-\vspace{0.5em}
+\vspace{0.4em}
 \noindent \textbf{University of California, Riverside} \hfill 2017 \\
-\textbf{B.A., Economics}
+\textbf{B.A. in Economics}
 
-\section*{Research Fields}
-\textbf{Primary}: Health Economics, Applied Econometrics, Behavioral Economics \\
-\textbf{Secondary}: Quantitative Methods, Policy Evaluation, Technology Governance (AI in Health)
-
-\section*{Working Papers}
+% --- WORKING PAPERS (Core Research) ---
+\ressection{Working Papers}
 \begin{enumerate}
     \item \textbf{``How Waiting Time Shapes Preventive Health Behavior: Evidence from Vaccination Decisions''} (with Dohyeong Kim) \\
-    \textit{Job Market Paper} --- \href{https://yichao2022.github.io/jmp.pdf}{\textbf{Link to Draft}} \quad | \quad \href{https://github.com/yichao2022/jmp_repo_draft}{\textbf{Research Repo [GitHub]}} \\
-    \textit{Under Review at Journal of Behavioral Medicine}
-    \begin{itemize}[noitemsep, topsep=0pt]
-        \item Developed a structural Discrete Choice Experiment (DCE) framework to recover formal time-preference parameters (hyperbolic $\kappa = 0.225$, exponential $\delta = 0.160$) for delayed biological protection.
-        \item Integrated behaviorally-augmented parameters into dynamic SEIR simulations to evaluate the impact of waiting time on epidemic control.
+    \textit{Job Market Paper} \quad | \quad \textit{Under Review at Journal of Behavioral Medicine} \\
+    \href{https://yichao2022.github.io/jmp.pdf}{\textbf{Link to Draft}} \quad | \quad \href{https://github.com/yichao2022/jmp_repo_draft}{\textbf{Research Repo}}
+    \begin{itemize}
+        \item \textbf{Research Question}: How do administrative delays (waiting time) and institutional trust interact to create behavioral barriers to preventive health decisions?
+        \item \textbf{Approach}: Recovered formal time-preference parameters (hyperbolic and exponential discount rates) for delayed protection using a structural Discrete Choice Experiment (DCE, N=1,027).
+        \item \textbf{Main Findings}: Identified that individuals with lower institutional trust are significantly more sensitive to delay friction. Heterogeneity analysis reveals that wait-time costs are disproportionately borne by rural and less-educated populations.
+        \item \textbf{Policy Relevance}: Demonstrates that reducing administrative delay is as critical for health equity as financial incentives, providing a behavioral roadmap for trust-deficient populations.
     \end{itemize}
 
-    \item \textbf{``How CEO Succession Influences Firm AI Innovation: The Role of Academic Experience''} (with Zhimin Tian, Yu Xiang) \\
+    \item \textbf{``How CEO Succession Influences Firm AI Innovation: The Role of Academic Experience''} (with Zhimin Tian and Yu Xiang) \\
     \textit{Under Review at Journal of Business Research}
-    \begin{itemize}[noitemsep, topsep=0pt]
-        \item Analyzes 1,776 CEO succession events in high-tech firms to evaluate impact of shifts in academic experience on AI innovation output.
+    \begin{itemize}
+        \item \textbf{Research Question}: Does the academic background of incoming CEOs drive AI-related innovation in high-tech firms?
+        \item \textbf{Approach}: Analyzed 1,776 CEO succession events to identify shifts in innovation trajectory linked to academic credentials and experience.
     \end{itemize}
 
     \item \textbf{``The Price of Waiting: Evidence on Cash--Time Trade-Offs in Vaccination Time Discount''} \\
     \textit{In Preparation} --- Targeting \textit{Social Science \& Medicine}.
 \end{enumerate}
 
-\section*{Research Experience \& Affiliations}
-\textbf{Doctoral Researcher, Spatial Health AI Research Partnership (SHARP), UT Dallas} \\
-- Leading interdisciplinary research on the intersection of artificial intelligence, geospatial analytics, and health policy. \\
-- Managing large-scale datasets and developing computational simulations (R, Python) to evaluate pandemic preparedness.
-
-\vspace{0.5em}
-\noindent \textbf{Graduate Researcher, Behavioral Health Economics Laboratory, UT Dallas} \\
-- Conducted high-salience behavioral experiments (N=1,027) analyzing risk-weighted health decisions and institutional trust.
-
-\section*{Teaching Experience}
-\textbf{Teaching Assistant, School of Economic, Political and Policy Sciences, UT Dallas}
-\begin{itemize}[noitemsep, topsep=0pt]
-    \item \textbf{Quantitative Methods for Policy Analysis (Graduate)}: Led Econometrics labs; specialized in R programming, regression analysis, and causal inference.
-    \item \textbf{Health Economics \& Public Policy (Undergraduate)}: Developed case studies on health market failures and administrative challenges.
-    \item \textbf{Public Policy Analysis (Undergraduate)}: Mentored students in drafting evidence-based policy memos.
+% --- RESEARCH EXPERIENCE ---
+\ressection{Professional Experience}
+\noindent \textbf{Doctoral Researcher}, Spatial Health AI Research Partnership (SHARP) \hfill 2022 -- Present \\
+\textit{UT Dallas, School of Economic, Political and Policy Sciences}
+\begin{itemize}
+    \item Lead researcher for interdisciplinary projects at the intersection of AI, geospatial analytics, and health policy.
+    \item Developed large-scale computational simulations (R, Python) to evaluate pandemic preparedness.
 \end{itemize}
 
-\section*{Conference Presentations}
-\begin{itemize}[noitemsep, topsep=0pt]
-    \item \textbf{APPAM Fall Research Conference 2025} (Seattle, WA): Estimating Time Discount Rate for Vaccination.
-    \item \textbf{UT Dallas Graduate Research Symposium 2025}: Modeling Vaccination Decisions with Hyperbolic Discounting.
+\vspace{0.4em}
+\noindent \textbf{Graduate Researcher}, Behavioral Health Economics Laboratory \hfill 2021 -- Present \\
+\textit{UT Dallas}
+\begin{itemize}
+    \item Designed and executed large-scale behavioral experiments (N=1,027) analyzing risk-weighted health decisions and institutional trust.
 \end{itemize}
 
-\section*{Honors \& Awards}
-\begin{itemize}[noitemsep, topsep=0pt]
-    \item \textbf{2025} Dean of Graduate Education Dissertation Research Award, UT Dallas
-    \item \textbf{2025} Betty \& Gifford Johnson Graduate Travel Award, UT Dallas
-    \item \textbf{---} Omicron Delta Epsilon, International Honor Society for Economics
+% --- TEACHING ---
+\ressection{Teaching}
+\noindent \textbf{Teaching Assistant}, University of Texas at Dallas \hfill 2021 -- Present
+\begin{itemize}
+    \item \textbf{Quantitative Methods for Policy Analysis (Graduate)}: Led Econometrics labs; specialized in R programming, regression analysis, and causal inference for policy data.
+    \item \textbf{Health Economics \& Public Policy (Undergraduate)}: Focused on health market failures and the economics of preventive care.
+    \item \textbf{Public Policy Analysis (Undergraduate)}: Mentored students in drafting evidence-based policy memos and program evaluation frameworks.
 \end{itemize}
 
-\section*{Technical Skills \& Certifications}
-\textbf{Econometrics}: Mixed Logit (MXL), Latent Class Models (LCM), SEIR Modeling, Causal Inference. \\
-\textbf{Software}: Stata (Advanced), R, Python, MATLAB, \LaTeX, SQL, GIS. \\
-\textbf{Certifications}: Stanford Artificial Intelligence Graduate Certificate; CITI Human Subjects Protection.
+% --- PRESENTATIONS & AWARDS ---
+\ressection{Conferences \& Honors}
+\begin{itemize}
+    \item \textbf{APPAM Fall Research Conference} (2025): Estimating Time Discount Rate for Vaccination.
+    \item \textbf{UT Dallas Graduate Research Symposium} (2025): Modeling Vaccination Decisions with Hyperbolic Discounting.
+    \item \textbf{Dean of Graduate Education Dissertation Research Award} (2025), UT Dallas.
+    \item \textbf{Betty \& Gifford Johnson Graduate Travel Award} (2025), UT Dallas.
+    \item \textbf{Omicron Delta Epsilon}, International Honor Society for Economics.
+\end{itemize}
 
-\section*{Professional References}
-\textbf{Dohyeong Kim (Chair)} | \textit{dohyeong.kim@utdallas.edu} \\
-\textbf{Richard Scotch} | \textit{richard.scotch@utdallas.edu} \\
-\textbf{Soyoung Kwon} | \textit{soyoung.kwon@utdallas.edu}
+% --- SKILLS ---
+\ressection{Skills \& Certifications}
+\noindent \textbf{Econometrics}: Mixed Logit (MXL), Latent Class Models (LCM), Structural Modeling, Causal Inference. \\
+\textbf{Computing}: R, Stata (Advanced), Python, MATLAB, \LaTeX, SQL, GIS. \\
+\textbf{Certificates}: Stanford Graduate Certificate in AI; CITI Human Subjects Protection.
 
-\vspace{1em}
+% --- REFERENCES ---
+\ressection{References}
+\noindent \textbf{Dohyeong Kim (Chair)} \hfill \textbf{Richard Scotch} \hfill \textbf{Soyoung Kwon} \\
+University of Texas at Dallas \hfill University of Texas at Dallas \hfill University of Texas at Dallas \\
+\href{mailto:dohyeong.kim@utdallas.edu}{dohyeong.kim@utdallas.edu} \hfill \href{mailto:richard.scotch@utdallas.edu}{richard.scotch@utdallas.edu} \hfill \href{mailto:soyoung.kwon@utdallas.edu}{soyoung.kwon@utdallas.edu}
+
+\vfill
 \begin{center}
-    \textit{Last Updated: March 17, 2026}
+    \footnotesize \textit{Last Updated: March 17, 2026}
 \end{center}
 
 \end{document}
