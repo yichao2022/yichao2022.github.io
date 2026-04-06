@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIBE v2 | Neuro-Behavioral Foundation Model</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#0A192F',
+                        gold: '#FACC15',
+                        mint: '#64FFDA',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #0A192F; color: #E2E8F0; }
+        .math { font-family: 'Fira Code', monospace; }
+        .glow-mint { filter: drop-shadow(0 0 8px rgba(100, 255, 218, 0.6)); }
+        .glow-gold { filter: drop-shadow(0 0 8px rgba(250, 204, 21, 0.6)); }
+        .brain-bg { fill: rgba(30, 41, 59, 0.5); stroke: #475569; stroke-width: 1.5; }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Sticky Banner -->
+    <div class="fixed top-0 w-full bg-gold text-navy font-bold py-2 text-center z-50 shadow-lg">
+        Defense: April 14, 2026 @ UT Dallas | PhD Candidate: Yichao Jin (金毅超)
+    </div>
+
+    <!-- Hero Section -->
+    <header class="pt-32 pb-20 px-6 text-center bg-gradient-to-b from-navy to-slate-900">
+        <h1 class="text-6xl md:text-8xl font-bold text-mint mb-4 tracking-tight glow-mint">TRIBE v2</h1>
+        <p class="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto font-light">
+            <span class="text-gold font-semibold">Neuro-Behavioral Foundation Model</span>: 
+            Bridging Structural Econometrics and Multimodal fMRI.
+        </p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-6 space-y-32 pb-32">
+
+        <!-- Interactive Sandbox -->
+        <section id="sandbox" class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-slate-900/50 p-8 rounded-3xl border border-slate-800 shadow-2xl">
+            <div>
+                <h2 class="text-3xl font-semibold text-gold mb-6 italic">Interactive Sandbox</h2>
+                <div class="space-y-8">
+                    <!-- Slider Beta -->
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <label class="text-mint font-medium">Time Preference ($\beta$)</label>
+                            <span id="beta-val" class="text-gold font-mono">0.65</span>
+                        </div>
+                        <input type="range" id="slider-beta" min="0.1" max="1.0" step="0.01" value="0.65" 
+                            class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-mint">
+                        <p class="text-sm text-slate-500 italic">High $\beta$ = Patient; Low $\beta$ = Impulsive Striatal Activation.</p>
+                    </div>
+
+                    <!-- Slider Lambda -->
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <label class="text-mint font-medium">Loss Aversion ($\lambda$)</label>
+                            <span id="lambda-val" class="text-gold font-mono">2.25</span>
+                        </div>
+                        <input type="range" id="slider-lambda" min="1.0" max="5.0" step="0.1" value="2.25" 
+                            class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-gold">
+                        <p class="text-sm text-slate-500 italic">High $\lambda$ = Risk Avoidance; Amygdala hyper-sensitivity.</p>
+                    </div>
+
+                    <div id="status-card" class="mt-8 p-6 bg-navy border-l-4 border-mint rounded-r-xl">
+                        <p class="text-sm uppercase tracking-widest text-slate-500 mb-2">Characterization Log</p>
+                        <p id="dynamic-text" class="text-lg font-medium text-slate-200">
+                            Characterizing "Neutral Trusters" from Wuhan Study...
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- D3 Brain Visualization -->
+            <div class="relative flex justify-center items-center h-[500px]">
+                <svg id="brain-viz" viewBox="0 0 500 400" class="w-full h-full"></svg>
+            </div>
+        </section>
+
+        <!-- TRIBE Section -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div class="space-y-6">
+                <h2 class="text-4xl font-bold text-mint">Theory & Flow</h2>
+                <p class="text-lg text-slate-400 leading-relaxed">
+                    TRIBE v2 (Temporal Reward & Intertemporal Behavioral Engine) integrates 
+                    <span class="text-gold">Discrete Choice Experiments (DCE)</span> parameters into an fMRI-tuned 
+                    latent space. We don't just predict choice; we model the neuro-computational cost of waiting.
+                </p>
+                <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800 math">
+                    <p class="text-mint text-xl" id="math-formula">
+                        \mathcal{P} = \text{Softmax}(\mathbf{W} \cdot \text{TRIBE}(\text{fMRI}, \text{DCE}))
+                    </p>
+                </div>
+            </div>
+            <div class="space-y-8">
+                <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center text-gold shrink-0">1</div>
+                    <p class="text-slate-300"><strong class="text-white">Multimodal Input:</strong> Combines structural coefficients ($\alpha, \beta, \lambda$) with voxel-wise time-series.</p>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-mint/10 rounded-full flex items-center justify-center text-mint shrink-0">2</div>
+                    <p class="text-slate-300"><strong class="text-white">Latent Representation:</strong> TRIBE maps behavioral friction to neuro-energetic signatures.</p>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center text-slate-400 shrink-0">3</div>
+                    <p class="text-slate-300"><strong class="text-white">Policy Simulation:</strong> Real-time estimation of vaccine uptake under varying administrative "nudges".</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Study -->
+        <section class="bg-gradient-to-r from-mint/5 to-gold/5 p-12 rounded-3xl border border-slate-800">
+            <div class="max-w-3xl">
+                <h3 class="text-2xl font-bold text-white mb-4">Case: The "Neutral Trusters"</h3>
+                <p class="text-xl text-slate-400 italic leading-relaxed">
+                    "Our findings in Wuhan reveal a segment with mid-tier trust scores. Unlike high-trust early adopters, 
+                    <span class="text-mint">Neutral Trusters</span> are disproportionately sensitive to administrative friction. 
+                    TRIBE v2 quantifies their 'waiting cost' as a function of intertemporal neuro-signatures."
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="py-12 border-t border-slate-800 text-center text-slate-500">
+        <p>© 2026 Yichao Jin | Built with OpenClaw & D3.js</p>
+    </footer>
+
+    <script>
+        // Initialize KaTeX for Math
+        window.onload = () => {
+            const mathElements = document.getElementsByClassName("math");
+            for (let i = 0; i < mathElements.length; i++) {
+                const el = mathElements[i];
+                if (el.id === 'math-formula') {
+                    katex.render("\\mathcal{P} = \\text{Softmax}(\\mathbf{W} \\cdot \\text{TRIBE}(\\text{fMRI}, \\text{DCE}))", el, { displayMode: true });
+                }
+            }
+        };
+
+        // D3 Brain Logic
+        const svg = d3.select("#brain-viz");
+        
+        // Simple Sagittal Brain Path (Simplified for Demo)
+        const brainPath = "M 100,200 C 100,50 400,50 400,200 C 400,350 100,350 100,200 Z";
+        
+        svg.append("path")
+            .attr("d", brainPath)
+            .attr("class", "brain-bg")
+            .attr("transform", "translate(50, 0)");
+
+        // Brain Regions
+        const regions = [
+            { id: "striatum", name: "Ventral Striatum", cx: 250, cy: 220, r: 25, color: "#64FFDA", label: "Reward" },
+            { id: "amygdala", name: "Amygdala", cx: 230, cy: 260, r: 15, color: "#EF4444", label: "Threat" },
+            { id: "pfc", name: "Prefrontal Cortex", cx: 350, cy: 150, r: 40, color: "#FACC15", label: "Executive" }
+        ];
+
+        const regionNodes = svg.selectAll(".region")
+            .data(regions)
+            .enter()
+            .append("circle")
+            .attr("cx", d => d.cx)
+            .attr("cy", d => d.cy)
+            .attr("r", d => d.r)
+            .attr("fill", d => d.color)
+            .attr("opacity", 0.2);
+
+        // Region Labels
+        svg.selectAll(".label")
+            .data(regions)
+            .enter()
+            .append("text")
+            .attr("x", d => d.cx)
+            .attr("y", d => d.cy + d.r + 20)
+            .attr("text-anchor", "middle")
+            .attr("fill", "#94A3B8")
+            .attr("font-size", "12px")
+            .text(d => d.name);
+
+        // Interaction Update
+        function update(beta, lambda) {
+            d3.select("#beta-val").text(beta.toFixed(2));
+            d3.select("#lambda-val").text(lambda.toFixed(2));
+
+            // Update Striatum based on Beta (Impulsivity)
+            const striatumOpacity = (1 - beta) * 0.8 + 0.1;
+            svg.select("circle[fill='#64FFDA']")
+                .transition().duration(200)
+                .attr("opacity", striatumOpacity)
+                .attr("r", 25 + (1 - beta) * 15);
+
+            // Update Amygdala based on Lambda (Loss Aversion)
+            const amygdalaOpacity = (lambda - 1) / 4 * 0.9 + 0.1;
+            svg.select("circle[fill='#EF4444']")
+                .transition().duration(200)
+                .attr("opacity", amygdalaOpacity)
+                .attr("r", 15 + (lambda - 1) * 5);
+
+            // Dynamic Text Logic
+            let msg = "";
+            if (beta < 0.4) msg = "Impulsive Profile: High 'Waiting Cost' detected.";
+            else if (lambda > 3.5) msg = "Highly Risk-Averse: Fear of side effects dominating decision matrix.";
+            else if (beta > 0.6 && beta < 0.8 && lambda > 2 && lambda < 3) msg = "Neutral Truster Archetype: Highly sensitive to 'Administrative Friction'.";
+            else msg = "Standard Agent: Balanced neuro-behavioral weighting.";
+            
+            d3.select("#dynamic-text").text(msg);
+        }
+
+        d3.select("#slider-beta").on("input", function() { update(+this.value, +d3.select("#slider-lambda").property("value")); });
+        d3.select("#slider-lambda").on("input", function() { update(+d3.select("#slider-beta").property("value"), +this.value); });
+
+        // Initial run
+        update(0.65, 2.25);
+
+    </script>
+</body>
+</html>

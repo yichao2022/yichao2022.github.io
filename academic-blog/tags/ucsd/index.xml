@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>UCSD | Yichao Jin | Academic Blog</title><link>https://yichao2022.github.io/academic-blog/tags/ucsd/</link><atom:link href="https://yichao2022.github.io/academic-blog/tags/ucsd/index.xml" rel="self" type="application/rss+xml"/><description>UCSD</description><generator>HugoBlox Kit (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 24 Mar 2026 00:00:00 +0000</lastBuildDate><image><url>https://yichao2022.github.io/academic-blog/media/icon_hu_da05098ef60dc2e7.png</url><title>UCSD</title><link>https://yichao2022.github.io/academic-blog/tags/ucsd/</link></image><item><title>Embodied AI &amp; Behavioral Modeling: From Unitree G1 to Smart Grid Optimization</title><link>https://yichao2022.github.io/academic-blog/blog/embodied-ai-behavioral-modeling/</link><pubDate>Tue, 24 Mar 2026 00:00:00 +0000</pubDate><guid>https://yichao2022.github.io/academic-blog/blog/embodied-ai-behavioral-modeling/</guid><description>&lt;p&gt;Is it possible to &amp;ldquo;run&amp;rdquo; a behavioral economics model on a robot?&lt;/p&gt;
+&lt;p&gt;As I prepare for my new &lt;strong&gt;Mac Studio M4 Max (128GB)&lt;/strong&gt; to arrive in May, my research is pivoting toward &lt;strong&gt;Embodied AI&lt;/strong&gt;. This isn&amp;rsquo;t just about robotics; it&amp;rsquo;s about the &lt;strong&gt;micro-foundation of decision-making&lt;/strong&gt; in autonomous systems.&lt;/p&gt;
+&lt;h2 id="1-the-idea-behavioral-models-as-firmware"&gt;1. The Idea: Behavioral Models as &amp;ldquo;Firmware&amp;rdquo;&lt;/h2&gt;
+&lt;p&gt;Most robotics today focuses on perception and navigation. But what if we encode &lt;strong&gt;Behavioral Economics models&lt;/strong&gt; (like prospect theory or hyperbolic discounting) directly into the decision logic of a robot?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Unitree G1 / XLeRobot&lt;/strong&gt;: These platforms aren&amp;rsquo;t just toys. They are &amp;ldquo;embodied agents.&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The Experiment&lt;/strong&gt;: If a robot has to choose between an immediate &amp;ldquo;low-energy&amp;rdquo; task and a delayed &amp;ldquo;high-reward&amp;rdquo; task, how does it weigh them? By implementing &lt;strong&gt;Behavioral Modeling&lt;/strong&gt;, we can simulate how human-like biases might affect autonomous agents in complex environments.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="2-the-princeton-pppp-connection-smart-grids"&gt;2. The Princeton PPPP Connection: Smart Grids&lt;/h2&gt;
+&lt;p&gt;This might sound like pure engineering, but it has profound implications for &lt;strong&gt;Energy Policy&lt;/strong&gt; and &lt;strong&gt;Smart Grids&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Autonomous Energy Optimization&lt;/strong&gt;: Future energy systems won&amp;rsquo;t be managed by humans in real-time. They will be managed by a mesh of autonomous agents—from smart thermostats to EV chargers.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Micro-Foundations&lt;/strong&gt;: In energy modeling, we often assume these agents are &amp;ldquo;perfectly rational.&amp;rdquo; But what if they aren&amp;rsquo;t? By studying &lt;strong&gt;Embodied AI Behavioral Decision Logic&lt;/strong&gt;, we can build more resilient energy models that account for &amp;ldquo;irrational&amp;rdquo; or &amp;ldquo;constrained&amp;rdquo; agent behavior in smart grids.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The Goal&lt;/strong&gt;: Integrating these micro-level behavioral insights into the &lt;strong&gt;Peking-Princeton Project (PPPP)&lt;/strong&gt; macro-energy models.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="3-future-academic-calendar-a-new-chapter"&gt;3. Future Academic Calendar: A New Chapter&lt;/h2&gt;
+&lt;p&gt;As of today, &lt;strong&gt;March 24, 2026&lt;/strong&gt;, I am at a crossroads. Tomorrow, &lt;strong&gt;March 25&lt;/strong&gt;, marks the start of the &lt;strong&gt;UCSD Spring Quarter&lt;/strong&gt;. This is the final sprint before my defense on &lt;strong&gt;April 14&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The transition from a &amp;ldquo;pure&amp;rdquo; behavioral economist to an &amp;ldquo;embodied AI&amp;rdquo; researcher mirrors the transition from a PhD student to a postdoc. The next few months will be dedicated to:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;FODP&lt;/strong&gt;: Finalizing my dissertation slides (aiming for 20+ slides by tomorrow).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Hardware Prep&lt;/strong&gt;: Setting up the Mac Studio for local LLM and robotics simulation.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Princeton/Stanford Transition&lt;/strong&gt;: Finalizing applications that bridge these two worlds.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;This is the fourth installment in a series exploring the future of behavioral economics. The journey from Wuhan&amp;rsquo;s vaccination clinics to the autonomous grids of the future continues.&lt;/em&gt;&lt;/p&gt;</description></item></channel></rss>

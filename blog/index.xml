@@ -1,0 +1,19 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Yichao Jin | Academic Blog</title>
+        <link>https://yichao2022.github.io/blog/</link>
+        <description>Ph.D. Candidate in Public Policy and Political Economy</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 24 Mar 2026 10:00:00 -0500</lastBuildDate>
+            <atom:link href="https://yichao2022.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>Welcome to My Academic Blog</title>
+    <link>https://yichao2022.github.io/blog/posts/hello-world/</link>
+    <pubDate>Tue, 24 Mar 2026 10:00:00 -0500</pubDate>
+    <author>xxxx</author>
+    <guid>https://yichao2022.github.io/blog/posts/hello-world/</guid>
+    <description><![CDATA[<h1 id="hello">Hello!</h1>
+<p>Welcome to my academic blog. This space will be used to share my research progress, thoughts on Behavioral Economics and Public Health, and other academic insights.</p>
+<p>Stay tuned for more updates!</p>]]></description>
+</item>
+</channel>
+</rss>
