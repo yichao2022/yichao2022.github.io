@@ -1,0 +1,54 @@
+# OpenClaw Workspace Gitignore
+.DS_Store
+*.log
+*.aux
+*.out
+*.fdb_latexmk
+*.fls
+*.toc
+*.pyc
+__pycache__/
+.ipynb_checkpoints/
+.quarto/
+index.knit.md
+index.utf8.md
+
+# Build artifacts
+*.o
+*.so
+*.dylib
+
+# Specific large files to exclude by default
+# (Adjust as needed)
+# *.pdf
+!jmp.pdf
+!CV_*.pdf
+!Defense_Slides.pdf
+!Writing_Sample_*.pdf
+
+# Environment folders
+node_modules/
+xhs_venv/
+deepcode_env/
+crawl4ai_env/
+mem0_env/
+flash-moe-env/
+omlx_env/
+research_env/
+
+# Backup folders
+backups/
+temp_backup/
+Self_Evolution_Backup/
+Self_Evolution_Backup_*/
+
+# Data and logs
+*.csv
+*.json
+analysis_trust*.log
+deepcode_*.log
+r_error.log
+talk.log
+xhs_clone_*.duration
+xhs_clone_*.wav
+xhs_clone_*.zip
