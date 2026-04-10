@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIBE v2 | Neuro-Behavioral Sandbox</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #0A192F; color: #E2E8F0; }
+        .slider-label { color: #64FFDA; font-weight: 600; }
+        .brain-svg { filter: drop-shadow(0 0 10px rgba(100, 255, 218, 0.2)); }
+    </style>
+</head>
+<body class="min-h-screen p-8 flex flex-col items-center">
+    <div class="max-w-4xl w-full">
+        <!-- Header -->
+        <header class="mb-12 border-b border-slate-700 pb-6">
+            <h1 class="text-4xl font-bold text-yellow-400 mb-2">TRIBE v2: Neuro-Behavioral Sandbox</h1>
+            <p class="text-slate-400">Computational Mapping of Policy Interventions to Neural Signatures</p>
+            <div class="mt-4 inline-block bg-teal-900/50 text-teal-300 px-3 py-1 rounded-full text-xs font-bold border border-teal-500/30">
+                PhD Defense: April 14, 2026 @ UT Dallas
+            </div>
+        </header>
+
+        <!-- Sandbox Container -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-slate-800/50 p-8 rounded-2xl border border-slate-700 shadow-2xl">
+            <!-- Controls -->
+            <div class="space-y-10">
+                <div>
+                    <div class="flex justify-between mb-4">
+                        <label class="slider-label">Time Discounting (β)</label>
+                        <span id="beta-val" class="text-yellow-400 font-mono font-bold">0.85</span>
+                    </div>
+                    <input type="range" id="beta-slider" min="0.1" max="1.0" step="0.05" value="0.85" 
+                           class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-teal-400">
+                    <p class="text-slate-500 text-xs mt-2 italic">Lower β = Higher Impulsivity (Ventral Striatum Active)</p>
+                </div>
+
+                <div>
+                    <div class="flex justify-between mb-4">
+                        <label class="slider-label">Loss Aversion (λ)</label>
+                        <span id="lambda-val" class="text-yellow-400 font-mono font-bold">2.25</span>
+                    </div>
+                    <input type="range" id="lambda-slider" min="1.0" max="5.0" step="0.1" value="2.25" 
+                           class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-teal-400">
+                    <p class="text-slate-500 text-xs mt-2 italic">Higher λ = Higher Risk Sensitivity (Amygdala Active)</p>
+                </div>
+
+                <div id="status-log" class="p-4 bg-black/40 rounded border border-slate-700 font-mono text-xs text-teal-400 h-24 overflow-hidden">
+                    > Initializing TRIBE v2 Brain Matrix...<br>
+                    > Calibrating for 'Neutral Trusters' (Wuhan Cohort)...<br>
+                    > Ready.
+                </div>
+            </div>
+
+            <!-- Visualization Area -->
+            <div class="flex justify-center relative">
+                <svg id="brain-viz" width="300" height="300" viewBox="0 0 300 300" class="brain-svg">
+                    <!-- Placeholder Brain Shape (Simplified Sagittal) -->
+                    <path d="M50,150 C50,50 250,50 250,150 C250,250 50,250 50,150" fill="none" stroke="#64FFDA" stroke-width="2" />
+                    <!-- Ventral Striatum (Reward) -->
+                    <circle id="striatum" cx="130" cy="160" r="15" fill="#64FFDA" fill-opacity="0.2" />
+                    <!-- Amygdala (Fear/Loss) -->
+                    <circle id="amygdala" cx="170" cy="180" r="12" fill="#FACC15" fill-opacity="0.2" />
+                    
+                    <text x="130" y="140" fill="#64FFDA" font-size="10" text-anchor="middle" class="font-bold">Striatum</text>
+                    <text x="170" y="210" fill="#FACC15" font-size="10" text-anchor="middle" class="font-bold">Amygdala</text>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Back to Main Site -->
+        <div class="mt-12 text-center">
+            <a href="../index.html" class="text-slate-400 hover:text-teal-400 transition flex items-center justify-center gap-2">
+                <i class="fas fa-arrow-left"></i> Back to yichao2022.github.io
+            </a>
+        </div>
+    </div>
+
+    <script>
+        const betaSlider = document.getElementById('beta-slider');
+        const lambdaSlider = document.getElementById('lambda-slider');
+        const striatum = document.getElementById('striatum');
+        const amygdala = document.getElementById('amygdala');
+        const statusLog = document.getElementById('status-log');
+
+        function updateViz() {
+            const beta = +betaSlider.value;
+            const lambda = +lambdaSlider.value;
+            
+            document.getElementById('beta-val').textContent = beta.toFixed(2);
+            document.getElementById('lambda-val').textContent = lambda.toFixed(2);
+
+            // Logic: Lower Beta (Impatient) -> Brighter Striatum
+            const striatumOpacity = (1.1 - beta) * 0.8;
+            striatum.setAttribute('fill-opacity', striatumOpacity);
+            striatum.setAttribute('r', 10 + (striatumOpacity * 20));
+
+            // Logic: Higher Lambda (Loss Averse) -> Brighter Amygdala
+            const amygdalaOpacity = (lambda / 5) * 0.8;
+            amygdala.setAttribute('fill-opacity', amygdalaOpacity);
+            amygdala.setAttribute('r', 8 + (amygdalaOpacity * 15));
+
+            // Log update
+            const newLog = document.createElement('div');
+            newLog.textContent = `> Neural signal detected: VS=${striatumOpacity.toFixed(2)} AMY=${amygdalaOpacity.toFixed(2)}`;
+            statusLog.appendChild(newLog);
+            if (statusLog.children.length > 5) statusLog.removeChild(statusLog.firstChild);
+        }
+
+        betaSlider.oninput = updateViz;
+        lambdaSlider.oninput = updateViz;
+        updateViz();
+    </script>
+</body>
+</html>

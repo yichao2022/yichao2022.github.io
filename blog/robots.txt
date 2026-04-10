@@ -1,0 +1,3 @@
+User-agent: *
+
+Sitemap: https://yichao2022.github.io/blog/sitemap.xml
