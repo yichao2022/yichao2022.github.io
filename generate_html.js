@@ -80,7 +80,9 @@ const createHtml = (title, mdFile) => `<!DOCTYPE html>
 
         async function renderContent() {
             try {
-                const response = await fetch('./index.md');
+                // Add cache-busting parameter
+                const cacheBuster = new Date().getTime();
+                const response = await fetch('./${mdFile}?v=' + cacheBuster);
                 if (!response.ok) throw new Error('Markdown file not found');
                 
                 let markdown = await response.text();
@@ -137,4 +139,8 @@ const createHtml = (title, mdFile) => `<!DOCTYPE html>
 
 fs.writeFileSync('/Users/cary/.openclaw/workspace/yichao2022.github.io/clinical/index.html', createHtml('Clinical Simulation', 'index.md'));
 fs.writeFileSync('/Users/cary/.openclaw/workspace/yichao2022.github.io/platforms/index.html', createHtml('Tech Platform Integration', 'index.md'));
-console.log('HTML files generated successfully!');
+fs.writeFileSync('/Users/cary/.openclaw/workspace/yichao2022.github.io/equity/index.html', createHtml('Equity & Policy Impact', 'index.md'));
+if (fs.existsSync('/Users/cary/.openclaw/workspace/yichao2022.github.io/health/index.md')) {
+    fs.writeFileSync('/Users/cary/.openclaw/workspace/yichao2022.github.io/health/index.html', createHtml('Public Health & Behavior', 'index.md'));
+}
+console.log('HTML files generated successfully with cache-busting logic!');

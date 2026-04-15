@@ -78,7 +78,9 @@
 
         async function renderContent() {
             try {
-                const response = await fetch('./index.md');
+                // Add cache-busting parameter
+                const cacheBuster = new Date().getTime();
+                const response = await fetch('./index.md?v=' + cacheBuster);
                 if (!response.ok) throw new Error('Markdown file not found');
                 
                 let markdown = await response.text();
