@@ -5,50 +5,57 @@ title: "Equity & Policy Impact | Yichao Jin, PhD"
 
 # Administrative Burden Diagnostics: Visualizing the Equity Gaps in Public Policy
 
-## The "Administrative Sludge"
+In alignment with community-centered, data-driven public policy, my research examines how seemingly minor logistical hurdles create outsized barriers for marginalized groups. Public policy too often focuses on macro-level goals, but true equity is determined in the micro-frictions of implementation. 
 
-Public policy often focuses on the macro-level goals, but equity is determined in the micro-frictions of implementation. **"Administrative Sludge"** refers to the seemingly minor bureaucratic hurdles, paperwork, and logistical frictions in policy design that, cumulatively, lead to massive disparities in take-up among vulnerable populations. 
+**"Administrative Sludge"** refers to the bureaucratic hurdles and paperwork in policy design that, cumulatively, lead to massive disparities in take-up among vulnerable populations. 
 
-## The "Hidden Majority" (45%)
+## The Anatomy of Inaction: How $\kappa$ Drives Inequality
 
-In my research examining intertemporal choices, a critical insight emerged: roughly **45% of the target population** are not actively opposed to policy goals (e.g., vaccination). Instead, they belong to a **"Neutral Swing Group"**.
-
-These individuals are disproportionately paralyzed by administrative friction ($\kappa$) and generally exhibit lower baseline institutional trust ($\delta$). Because they lack strong proactive motivation, even minor barriers can indefinitely delay their compliance, causing them to fall through the cracks of public health initiatives.
-
-## Structural Insights: The Cost of Friction
+At the core of the equity gap lies **$\kappa$ (Administrative Friction)**. 
 
 To quantify this, we look at the **Friction-Adjusted Utility**:
 
 $$ U_{adj} = U(a) - \kappa_{sludge} $$
 
-Where $U(a)$ represents the baseline utility of taking an action, and $\kappa_{sludge}$ represents the utility drain of navigating administrative hurdles.
+Where $U(a)$ represents the baseline utility of taking a policy action, and $\kappa_{sludge}$ represents the immediate cognitive and temporal drain of navigating administrative hurdles.
 
-By applying **$\beta-\delta$ modeling**, my structural framework reveals that administrative burdens do not affect all groups equally. Instead, they act as a **"tax on the poor and the time-constrained"**. For populations with high present-bias ($\beta$), immediate administrative costs heavily outweigh delayed health or economic benefits.
+By applying **$\beta-\delta$ modeling**, my structural framework reveals that $\kappa$ does not affect all groups equally. Instead, it acts as a regressive "tax on the poor and the time-constrained." For populations with high present-bias ($\beta$) and low baseline institutional trust ($\delta$), the immediate costs of $\kappa$ heavily outweigh delayed benefits. The result is the **Anatomy of Inaction**—not active resistance to policy, but a systemic paralysis induced by friction.
+
+## The "Hidden Majority": Where We Lose 45%
+
+In my research examining intertemporal choices, a critical data point emerged: roughly **45% of the target population** are not actively opposed to public goals (e.g., vaccination). Instead, they belong to a **"Neutral Swing Group"**. 
+
+Because they lack strong proactive motivation, even minor barriers can indefinitely delay their compliance, causing them to fall through the cracks of public initiatives. The Sankey diagram below illustrates exactly where these populations are lost to friction.
+
+```mermaid
+sankey-beta
+    %% Source, Target, Value
+    Target Population, Adopters (Low Friction), 55
+    Target Population, Administrative Friction, 45
+    Administrative Friction, Lost to Complexity, 15
+    Administrative Friction, Lost to Time Scarcity, 20
+    Administrative Friction, Lost to Mistrust, 10
+    
+    Lost to Complexity, Neutral Swing Group, 15
+    Lost to Time Scarcity, Neutral Swing Group, 20
+    Lost to Mistrust, Neutral Swing Group, 10
+```
 
 ## Mapping the Equity Gap
 
-The following flowchart illustrates the profound impact of administrative sludge on the population and how targeted friction-reduction interventions can reclaim the Neutral Swing Group.
+When we compare populations burdened by $\kappa$ versus those unburdened, the disparities in policy engagement become stark. The following heatmap table illustrates how different behavioral constraints interact with administrative sludge to widen the equity gap.
 
-```mermaid
-flowchart TD
-    A[100% Target Population] --> B{Administrative Hurdles<br/>Sludge}
-    
-    B -->|High Friction| C[55% Adopters]
-    B -->|High Friction| D[45% Lost in Friction<br/>Neutral Swing Group]
-    
-    D -.-> E[Intervention:<br/>Reduce Friction kappa]
-    E -.-> F[Recovered Population:<br/>Restoring Equity & Access]
-    
-    style A fill:#f9f9f9,stroke:#333,stroke-width:2px
-    style B fill:#ffcccc,stroke:#cc0000,stroke-width:2px
-    style C fill:#d9ead3,stroke:#38761d,stroke-width:2px
-    style D fill:#fce5cd,stroke:#e69138,stroke-width:2px
-    style E fill:#cfe2f3,stroke:#0b5394,stroke-width:2px,stroke-dasharray: 5 5
-    style F fill:#d9ead3,stroke:#38761d,stroke-width:2px,stroke-dasharray: 5 5
-```
+| Behavioral Persona | Institutional Trust ($\delta$) | Present Bias ($\beta$) | Friction Sensitivity ($\kappa$) | Policy Take-up Rate | Risk of Exclusion |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **High-Resource Advocates** | High | Low | Low | 🟩 **85%** | ⬜ Minimal |
+| **Constrained Compliers** | Medium | Medium | Medium | 🟨 **55%** | 🟨 Moderate |
+| **The Neutral Swing Group** | Low | High | High | 🟧 **15%** | 🟧 High |
+| **Marginalized/Unreached** | Very Low | Very High | Extreme | 🟥 **<5%** | 🟥 Severe |
 
-## Call to Action
+*Note: The structural burden is disproportionately carried by those with the least cognitive bandwidth to spare. Interventions must target the $\kappa$ parameter to convert the orange/red zones into green.*
 
-The evidence is clear: when we design policies without accounting for the true cost of administrative burdens, we fail our most vulnerable constituents. Redesigning policy for equity means aggressively auditing and eliminating sludge.
+## Redesigning for Possibility
+
+The evidence is clear: when we design policies without accounting for the true cost of administrative burdens, we fail our most vulnerable constituents. Redesigning policy for equity means aggressively auditing and eliminating sludge. By centering community realities and deploying data-driven friction-reduction, we can build public programs that truly serve everyone.
 
 👉 **[Download the JMP (Policy & Equity Focus)](/jmp.pdf)**
