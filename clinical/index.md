@@ -3,86 +3,64 @@ title: "Clinical Simulation | Yichao Jin, PhD"
 layout: page
 ---
 
-# Precision Behavioral Interventions in Clinical Settings
+# Clinical Decision Diagnostics & Patient Adherence
 
-# The Clinical Bottleneck: Decoding "Intervention Fatigue"
+In modern medical systems, the most robust predictive models often fail at the last mile: human behavior. Despite optimal clinical pathways, SMS reminders, and well-designed incentives, patients frequently exhibit non-adherence, delayed screenings, or drop out of clinical trials. 
 
-Medical systems possess the world's richest EHR and patient follow-up data. Yet, traditional "nudges"—like SMS reminders or static financial incentives—often fail in real-world clinical settings due to patient non-adherence and trial attrition.
+By applying structural behavioral economics and neuro-computational models, we can decode and predict these adherence failures. The missing link is the structural quantification of **Cognitive Friction ($\kappa$)**, **Present Bias ($\beta$)**, and **Trust Depreciation ($\delta$)**.
 
-The missing link is the structural quantification of **Cognitive Friction ($\kappa$)** and **Trust Depreciation ($\delta$)**. A nudge that works on Day 1 often triggers avoidance by Day 14. 
+## Visualizing Patient Decision Drift
 
-## The Core Mechanism: Present Bias & Patient Heterogeneity
-
-To understand why a patient postpones scheduling a critical screening or delays vaccination despite optimal incentives, we must look at the structural mechanics of their decision-making. 
-
-Our engine models this through an augmented Bellman Equation that embeds specific behavioral biases directly into the patient's value function:
-
-$$V(s_t) = \max_{a_t} \{ U(a_t, \kappa) + \beta \delta E [V(s_{t+1})] \}$$
-
-*   **$\kappa$ (Administrative/Cognitive Friction)**: The mental bandwidth required to navigate the clinical system. 
-*   **$\beta$ (Present Bias)**: The psychological tendency to heavily discount future health benefits in favor of immediate comfort.
-*   **$\delta$ (Trust Capital)**: The evolving trust in the medical provider, which depreciates if interventions are poorly timed or overly aggressive.
-
-### Technical Implementation: Patient-Level Value Iteration
-
-Below is a structural cut of the `02_bellman_engine.R` solver, illustrating how individual patient parameters are evaluated dynamically to predict dropout risks:
-
-```R
-# ---------------------------------------------------------
-# TRIBE-v2: Patient-Level Heterogeneous Bellman Solver
-# ---------------------------------------------------------
-
-solve_patient_value <- function(state, beta, delta, kappa, incentive) {
-  # 1. U(a_t, kappa): Utility adjusted for cognitive/administrative friction
-  utility_adhere <- incentive - kappa
-  utility_delay  <- 0  # The baseline comfort of inaction
-  
-  # 2. Expected Future Value
-  # Incorporating Present Bias (beta) and Trust Capital (delta)
-  expected_future_value <- compute_ev(state + 1)
-  discounted_future <- beta * delta * expected_future_value
-  
-  # 3. Dynamic Bellman Operator
-  # V(s_t) = max { U(a_t, \kappa) + \beta \delta E[V(s_{t+1})] }
-  v_adhere <- utility_adhere + discounted_future
-  v_delay  <- utility_delay + discounted_future
-  
-  # If v_delay > v_adhere, the patient exhibits 'Present Bias' 
-  # and structurally drifts from the clinical path.
-  return(max(v_adhere, v_delay))
-}
-```
-
-This structural approach explains why even perfectly rational economic incentives fail when $\kappa$ (friction) overwhelms the discounted future benefit.
-
-## Visualizing the Clinical Reality
+Why does a patient postpone scheduling a critical screening or delay preventive care despite knowing the benefits? We model this structurally as **Patient Decision Drift**—the transition from optimal medical intent into a state of indefinite delay, governed by specific behavioral parameters.
 
 <div align="center">
   <div class="mermaid">
 stateDiagram-v2
     direction LR
-    %% Agent progressing towards a health goal
-    [*] --> Scheduled_for_Screening : Optimal Pathway Begins
-    Scheduled_for_Screening --> Compliant : High Trust (δ) / Low Friction (κ)
     
-    %% Getting trapped
-    Scheduled_for_Screening --> Delayed : Present Bias (β) triggers Delay
-    Delayed --> Delayed : High Friction (κ) creates "Delay Trap"
+    [*] --> Intent : Medical Recommendation
     
-    %% Phase transitions based on structural parameters
-    Delayed --> Compliant : Nudge + Low Friction override
-    Delayed --> System_Dropout : Trust (δ) decays below threshold
+    Intent --> Adherence : Proactive Action (Low β, Low κ)
+    Intent --> Delay : Friction (κ) > Utility
+    Intent --> Delay : Present Bias (β) Dominates
     
-    Compliant --> [*] : Health Goal Achieved
-    System_Dropout --> [*] : Lost to Follow-up
+    state Delay {
+        direction TB
+        Procrastination --> CognitiveFatigue : Repeated Hurdles
+        CognitiveFatigue --> ChronicNonAdherence : Trust (δ) Decays
+    }
+    
+    Delay --> Adherence : Intervention / Friction Reduction
+    Delay --> [*] : Loss to Follow-up
+    Adherence --> [*] : Health Outcome Realized
   </div>
-  <p><em><strong>Figure 1. Decision Drift:</strong> This visualization maps the empirical divergence between the optimal clinical pathway and actual patient adherence. It highlights how the accumulation of $\kappa$ (cognitive friction) and the decay of $\delta$ (trust capital) structurally push patients into "delay" loops, ultimately leading to clinical trial dropout or non-compliance.</em></p>
+  <p><em><strong>Figure 1. Patient Decision Drift:</strong> This state diagram maps how individuals transition from clinical "Intent" to "Delay" when administrative friction ($\kappa$) outweighs utility, or when present bias ($\beta$) heavily discounts future health outcomes.</em></p>
 </div>
 
+## Tech Spotlight: Local Privacy-Preserving AI
+
+A critical challenge in applying advanced AI to clinical settings—especially in neuro-ethics, behavioral mapping, and decision science—is the privacy of Electronic Health Records (EHR). Relying on cloud-based LLM APIs introduces significant friction regarding HIPAA compliance, data sovereignty, and ethical boundaries.
+
+To solve this, **TRIBE v2 (Trust-Reinforced Intertemporal Behavioral Engine)** is structurally optimized for **Apple Silicon and Metal Performance Shaders (MPS)** via the MLX framework. 
+
+This architectural choice allows us to deploy "Local System 2" reasoning models directly on internal medical workstations. By running deep behavioral digital twin simulations **100% locally and offline**, we achieve high-fidelity predictions of patient adherence while ensuring sensitive patient data never leaves the hospital's secure environment.
+
+## Case Study: Quantifying the Friction of Preventive Healthcare
+
+My Job Market Paper serves as a foundational case study in applying this methodology to real-world clinical behavior.
+
+To understand why individuals delayed preventive healthcare (vaccination timing) despite overwhelming public health urgency, I designed a discrete choice experiment to map the intertemporal decisions of populations facing varying levels of administrative and cognitive friction. 
+
+By integrating these choices into a structural econometric framework, the research successfully **recovered core behavioral parameters** directly from empirical decision data:
+- **Quantifying $\kappa$**: Measuring exactly how much "sludge" (e.g., confusing scheduling platforms, logistical delays, wait times) it takes to deter an otherwise willing patient.
+- **Isolating $\beta$ and $\delta$**: Disentangling procrastination driven by present bias from non-adherence driven by systemic mistrust.
+
+This approach transitions patient adherence from an unpredictable, qualitative frustration into a calculable, actionable metric for clinical trial designers, public health policymakers, and neuro-ethics researchers.
+
 ---
-*Powered by TRIBE-v2 (Trust-Reinforced Intertemporal Behavioral Engine) - Tailored for Precision Health Interventions.*
+*Powered by TRIBE-v2 (Trust-Reinforced Intertemporal Behavioral Engine) - Tailored for Precision Health Interventions and Local Clinical AI.*
+
 <script type="module">
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
   mermaid.initialize({ startOnLoad: true });
 </script>
-
