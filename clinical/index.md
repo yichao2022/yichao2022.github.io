@@ -1,27 +1,7 @@
 ---
-title: "Clinical Simulation | Yichao Jin, PhD"
+title: "Clinical Decision Diagnostics & Patient Adherence | Yichao Jin, PhD"
 layout: page
 ---
-
-<style>
-  .mermaid-container {
-    width: 100%;
-    overflow-x: auto;
-    margin: 2rem 0;
-  }
-  .mermaid {
-    width: 100% !important;
-    max-width: 1000px !important;
-    margin: 0 auto !important;
-    background-color: #f9f9f9;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  }
-  .mermaid svg {
-    max-width: 100% !important;
-  }
-</style>
 
 # Clinical Decision Diagnostics & Patient Adherence
 
@@ -33,16 +13,14 @@ By applying structural behavioral economics and neuro-computational models, we c
 
 Why does a patient postpone scheduling a critical screening or delay preventive care despite knowing the benefits? We model this structurally as **Patient Decision Drift**—the transition from optimal medical intent into a state of indefinite delay, governed by specific behavioral parameters.
 
-<div align="center">
-  <div class="mermaid-container">
-    <div class="mermaid">
+```mermaid
 %%{init: {'theme': 'neutral', 'themeVariables': { 'fontSize': '18px', 'fontFamily': 'system-ui', 'edgeLabelBackground':'#ffffff', 'tertiaryColor': '#f3f3f3', 'lineColor': '#333333'}, 'state': {'edgeLength': 150}}}%%
 stateDiagram-v2
     direction LR
 
-    classDef delayState fill:#fef2f2,stroke:#dc2626,stroke-width:2.5px,color:#991b1b,fontWeight:bold;
-    classDef optimalState fill:#f0f9ff,stroke:#0369a1,stroke-width:2.5px,color:#0c4a6e,fontWeight:bold;
-    classDef defaultState stroke-width:2px;
+    classDef delayState fill:#fef2f2,stroke:#dc2626,stroke-width:2px,color:#991b1b
+    classDef optimalState fill:#f0f9ff,stroke:#0369a1,stroke-width:2px,color:#0c4a6e
+    classDef defaultState stroke-width:2px
 
     [*] --> Intent : Medical Recommendation
     
@@ -63,10 +41,9 @@ stateDiagram-v2
     class Delay delayState
     class Adherence optimalState
     class Intent defaultState
-    </div>
-  </div>
-  <p><em><strong>Figure 1. Patient Decision Drift:</strong> This state diagram maps how individuals transition from clinical "Intent" to "Delay" when administrative friction ($\kappa$) outweighs utility, or when present bias ($\beta$) heavily discounts future health outcomes.</em></p>
-</div>
+```
+
+<p align="center"><em><strong>Figure 1. Patient Decision Drift:</strong> This state diagram maps how individuals transition from clinical "Intent" to "Delay" when administrative friction ($\kappa$) outweighs utility, or when present bias ($\beta$) heavily discounts future health outcomes.</em></p>
 
 ## Tech Spotlight: Local Privacy-Preserving AI
 
@@ -90,8 +67,3 @@ This approach transitions patient adherence from an unpredictable, qualitative f
 
 ---
 *Powered by TRIBE-v2 (Trust-Reinforced Intertemporal Behavioral Engine) - Tailored for Precision Health Interventions and Local Clinical AI.*
-
-<script type="module">
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-  mermaid.initialize({ startOnLoad: true });
-</script>
