@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equity & Policy Impact | Yichao Jin, Ph.D.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Marked.js for Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+    <!-- DOMPurify for security -->
+    <script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
+
+    <!-- Highlight.js for code blocks -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <!-- MathJax for LaTeX -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']],
+          processEscapes: true
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- Tailwind Typography -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+        body { background-color: #f8fafc; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-700 antialiased font-serif">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center font-sans">
+            <a href="/" class="text-xl font-bold text-slate-800 hover:text-teal-700 transition-colors">Yichao Jin, Ph.D.</a>
+            <a href="/" class="text-sm font-medium text-slate-500 hover:text-teal-600 transition-colors"><i class="fas fa-arrow-left mr-2"></i>Back to Home</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 py-12">
+        <div class="bg-white p-8 md:p-12 rounded-xl shadow-sm border border-slate-100">
+            <div id="content" class="prose prose-slate prose-lg max-w-none prose-headings:font-sans prose-a:text-teal-600 hover:prose-a:text-teal-700"></div>
+        </div>
+    </main>
+
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        
+        mermaid.initialize({ 
+            startOnLoad: false,
+            theme: 'default',
+            fontFamily: 'Inter'
+        });
+
+        async function renderContent() {
+            try {
+                const response = await fetch('./index.md');
+                if (!response.ok) throw new Error('Markdown file not found');
+                
+                let markdown = await response.text();
+                
+                // Strip frontmatter if present
+                markdown = markdown.replace(/^---[\s\S]*?---\n/, '');
+
+                // Setup marked to handle code blocks and mermaid
+                marked.setOptions({
+                    highlight: function(code, lang) {
+                        if (lang === 'mermaid') return code; // Let mermaid handle it
+                        if (lang && hljs.getLanguage(lang)) {
+                            return hljs.highlight(code, { language: lang }).value;
+                        }
+                        return hljs.highlightAuto(code).value;
+                    }
+                });
+
+                // Custom renderer for mermaid
+                const renderer = new marked.Renderer();
+                const originalCodeRenderer = renderer.code.bind(renderer);
+                renderer.code = function(code, language, isEscaped) {
+                    if (language === 'mermaid') {
+                        return '<div class="mermaid flex justify-center my-8">' + code + '</div>';
+                    }
+                    return originalCodeRenderer(code, language, isEscaped);
+                };
+                marked.use({ renderer });
+
+                const rawHtml = marked.parse(markdown);
+                
+                document.getElementById('content').innerHTML = rawHtml;
+                
+                // Render Mermaid
+                await mermaid.run({
+                    nodes: document.querySelectorAll('.mermaid')
+                });
+
+                // Render MathJax
+                if (window.MathJax) {
+                    MathJax.typesetPromise();
+                }
+
+            } catch (error) {
+                console.error('Error rendering content:', error);
+                document.getElementById('content').innerHTML = '<p class="text-red-500">Error loading content.</p>';
+            }
+        }
+
+        renderContent();
+    </script>
+</body>
+</html>
