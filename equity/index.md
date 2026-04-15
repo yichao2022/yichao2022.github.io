@@ -3,11 +3,13 @@ layout: default
 title: "Equity & Policy Impact | Yichao Jin, PhD"
 ---
 
-# Administrative Burden Diagnostics: Visualizing the Equity Gaps in Public Policy
+# Administrative Burden & Equity Diagnostics
 
-In alignment with community-centered, data-driven public policy, my research examines how seemingly minor logistical hurdles create outsized barriers for marginalized groups. Public policy too often focuses on macro-level goals, but true equity is determined in the micro-frictions of implementation. 
+My research identifies the Hidden Majority (45%) who are paralyzed by administrative friction ($\kappa$) rather than policy opposition. By quantifying this Equity Tax, I help labs design more inclusive interventions.
 
-**"Administrative Sludge"** refers to the bureaucratic hurdles and paperwork in policy design that, cumulatively, lead to massive disparities in take-up among vulnerable populations. 
+In alignment with community-centered, data-driven public policy, my research examines how seemingly minor logistical hurdles create outsized barriers for marginalized groups. Public policy too often focuses on macro-level goals, but true equity is determined in the micro-frictions of implementation.
+
+**"Administrative Sludge"** refers to the bureaucratic hurdles and paperwork in policy design that, cumulatively, lead to massive disparities in take-up among vulnerable populations.
 
 ## The Anatomy of Inaction: How $\kappa$ Drives Inequality
 
@@ -15,7 +17,7 @@ At the core of the equity gap lies **$\kappa$ (Administrative Friction)**.
 
 To quantify this, we look at the **Friction-Adjusted Utility**:
 
-$$ U_{adj} = U(a) - \kappa_{sludge} $$
+$$Utility = V(Benefit) - \kappa_{Friction}$$
 
 Where $U(a)$ represents the baseline utility of taking a policy action, and $\kappa_{sludge}$ represents the immediate cognitive and temporal drain of navigating administrative hurdles.
 
