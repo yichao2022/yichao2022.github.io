@@ -31,14 +31,14 @@ Because they lack strong proactive motivation, even minor barriers can indefinit
 sankey-beta
     %% Source, Target, Value
     Target Population, Adopters (Low Friction), 55
-    Target Population, Administrative Friction, 45
-    Administrative Friction, Lost to Complexity, 15
-    Administrative Friction, Lost to Time Scarcity, 20
-    Administrative Friction, Lost to Mistrust, 10
+    Target Population, Admin Friction, 45
+    Admin Friction, Complexity, 15
+    Admin Friction, Time Scarcity, 20
+    Admin Friction, Mistrust, 10
     
-    Lost to Complexity, Neutral Swing Group, 15
-    Lost to Time Scarcity, Neutral Swing Group, 20
-    Lost to Mistrust, Neutral Swing Group, 10
+    Complexity, Neutral Swing Group, 15
+    Time Scarcity, Neutral Swing Group, 20
+    Mistrust, Neutral Swing Group, 10
 ```
 
 ## Mapping the Equity Gap
