@@ -73,22 +73,25 @@ The interactive 3D surface plot below demonstrates the power of Edge Simulation 
 
 ## Counterfactual Policy Phase Space: Navigating Regulation
 
+<div class="mermaid-container" style="margin: 2rem 0;">
+
 ```mermaid
 quadrantChart
-    title "Structural Policy Sandbox: Phase Transitions under CCPA/GDPR"
-    x-axis "Centralized Extraction (High Alg Bias)" --> "Edge/Federated Privacy (CCPA/GDPR)"
-    y-axis "Value Destruction (Regulatory Shock)" --> "Sustainable Value Creation (Trust & LTV)"
-    quadrant-1 "Sustainable Equilibrium (TRIBE-v2 Edge)"
-    quadrant-2 "Legacy Ad-Tech Monopoly (Vulnerable)"
-    quadrant-3 "Systemic Churn (Regulatory Backlash)"
-    quadrant-4 "Compliance Drag (Under-monetized)"
+    x-axis "Centralized Extraction" --> "Edge Privacy"
+    y-axis "Value Destruction" --> "Value Creation"
+    quadrant-1 "Sustainable Equilibrium"
+    quadrant-2 "Legacy Monopoly"
+    quadrant-3 "Systemic Churn"
+    quadrant-4 "Compliance Drag"
     "Pre-GDPR Big Tech": [0.20, 0.80]
-    "Aggressive Algorithmic Targeting": [0.15, 0.30]
-    "Raw GDPR/CCPA Shock": [0.75, 0.25]
-    "Current Market Baseline": [0.45, 0.40]
-    "Edge Simulation (TRIBE-v2)": [0.85, 0.85]
-    "Pareto Optimal Frontier": [0.95, 0.90]
+    "Aggressive Targeting": [0.15, 0.30]
+    "GDPR/CCPA Shock": [0.75, 0.25]
+    "Market Baseline": [0.45, 0.40]
+    "TRIBE-v2 Edge": [0.85, 0.85]
+    "Pareto Frontier": [0.95, 0.90]
 ```
+
+</div>
 <p align="center"><em><strong>Figure 2. Structural Policy Sandbox:</strong> This phase map illustrates system-wide equilibrium shifts when platforms face regulatory shocks like GDPR/CCPA. It demonstrates how traditional centralized extraction falls into systemic churn or legacy vulnerability, and how raw privacy mandates induce compliance drag. By integrating <strong>Edge Computing</strong> and mitigating <strong>Algorithmic Bias</strong>, TRIBE-v2 neutralizes privacy friction ($\kappa$) and leverages institutional trust ($\delta$) to guide platforms toward a Sustainable Pareto Equilibrium.</em></p>
 
 ---
