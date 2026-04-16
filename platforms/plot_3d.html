@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+    <style>
+        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+        #plot { width: 100%; height: 100%; }
+    </style>
+</head>
+<body>
+    <div id="plot"></div>
+    <script>
+        const kappa = [];
+        const delta = [];
+        for(let i=0; i<50; i++) {
+            kappa.push(i / 49);
+            delta.push(i / 49);
+        }
+
+        const z_cloud = [];
+        const z_local = [];
+
+        for(let i=0; i<50; i++) { // y is delta
+            let cloud_row = [];
+            let local_row = [];
+            for(let j=0; j<50; j++) { // x is kappa
+                let k = kappa[j];
+                let d = delta[i];
+                
+                // Cloud Compute
+                let u_cloud = 2.5 - (11 * k) / (1 + 2.0 * d);
+                cloud_row.push(1 / (1 + Math.exp(-u_cloud)));
+
+                // Local TRIBE-v2
+                let u_local = 2.5 - (2 * k) / (1 + 4.5 * d);
+                local_row.push(1 / (1 + Math.exp(-u_local)));
+            }
+            z_cloud.push(cloud_row);
+            z_local.push(local_row);
+        }
+
+        const trace_cloud = {
+            z: z_cloud,
+            x: kappa,
+            y: delta,
+            type: 'surface',
+            colorscale: 'Inferno',
+            name: 'Cloud Extraction',
+            showscale: false
+        };
+
+        const trace_local = {
+            z: z_local,
+            x: kappa,
+            y: delta,
+            type: 'surface',
+            colorscale: 'Viridis',
+            name: 'Local Edge-Compute',
+            showscale: false,
+            visible: false
+        };
+
+        const layout = {
+            title: 'Phase 3: Engagement Recovery via Edge Simulation',
+            scene: {
+                xaxis: {title: 'Administrative Sludge (κ)'},
+                yaxis: {title: 'Institutional Trust (δ)'},
+                zaxis: {title: 'Platform Engagement', range: [0, 1]}
+            },
+            updatemenus: [{
+                type: 'buttons',
+                direction: 'right',
+                x: 0.5,
+                y: 1.1,
+                xanchor: 'center',
+                showactive: true,
+                buttons: [
+                    {
+                        label: 'Cloud Model (High Privacy Friction)',
+                        method: 'update',
+                        args: [{'visible': [true, false]},
+                               {'title': 'Cloud Extraction: High Sludge (κ) decimates Engagement'}]
+                    },
+                    {
+                        label: 'Edge Model (TRIBE-v2)',
+                        method: 'update',
+                        args: [{'visible': [false, true]},
+                               {'title': 'Local Edge: Trust (δ) buffers friction, restoring Engagement'}]
+                    }
+                ]
+            }],
+            margin: {l: 0, r: 0, b: 0, t: 50}
+        };
+
+        Plotly.newPlot('plot', [trace_cloud, trace_local], layout);
+    </script>
+</body>
+</html>
