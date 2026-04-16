@@ -137,7 +137,7 @@ const createHtml = (title, mdFile) => `<!DOCTYPE html>
 </body>
 </html>`;
 
-fs.writeFileSync('./clinical/index.html', createHtml('Clinical Simulation', 'index.md'));
+// fs.writeFileSync('./clinical/index.html', createHtml('Clinical Simulation', 'index.md')); // Disabled to protect custom Chart.js injections
 fs.writeFileSync('./platforms/index.html', createHtml('Tech Platform Integration', 'index.md'));
 fs.writeFileSync('./equity/index.html', createHtml('Equity & Policy Impact', 'index.md'));
 if (fs.existsSync('./health/index.md')) {
