@@ -7,130 +7,231 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     
-    <!-- Marked.js for Markdown parsing -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    
-    <!-- DOMPurify for security -->
-    <script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
-
-    <!-- Highlight.js for code blocks -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-    
-    <!-- 1. MathJax Engine (For LaTeX) -->
+    <!-- MathJax Engine (For LaTeX) -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-    <!-- 2. Mermaid Engine (For Diagrams) -->
+    <!-- Mermaid Engine (For Diagrams) -->
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script>
       mermaid.initialize({ 
-        startOnLoad: false, 
+        startOnLoad: true, 
         theme: 'neutral',
         securityLevel: 'loose',
-        fontFamily: 'Inter, sans-serif',
-        quadrantChart: {
-          titleFontSize: 18,
-          labelFontSize: 14,
-          pointFontSize: 12,
-          groupFontSize: 12
-        }
+        fontFamily: 'Inter, sans-serif'
       });
     </script>
 
-    <!-- Tailwind Typography -->
-    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Merriweather', 'serif'],
-                    }
-                }
-            }
-        }
-    </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
-        body { background-color: #f8fafc; }
-        .mermaid { display: flex; justify-content: center; margin: 2rem 0; }
-        .mermaid svg { height: auto !important; width: 100% !important; max-width: 750px !important; }
-        /* Fix for quadrant chart labels */
-        .mermaid .quadrant-label { font-size: 14px !important; font-weight: 600 !important; }
-        .mermaid .point-label { font-size: 12px !important; }
+
+        body {
+            font-family: 'Merriweather', serif;
+            color: #334155;
+            background-color: #f8fafc;
+            line-height: 1.8;
+        }
+        h1, h2, h3, h4, h5, h6, .font-sans {
+            font-family: 'Inter', sans-serif;
+        }
+        .section-title {
+            @apply text-3xl font-bold text-slate-800 mb-8 pb-4 border-b border-slate-200 relative font-sans tracking-tight;
+        }
+        .section-title::after {
+            content: '';
+            @apply absolute bottom-0 left-0 w-24 h-1 bg-teal-600 rounded;
+            transform: translateY(2px);
+        }
+        .prose-text {
+            @apply text-slate-700 leading-relaxed mb-6 text-lg;
+        }
+        .card {
+            @apply bg-white p-8 rounded-xl shadow-sm border border-slate-100 mb-8;
+        }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-700 antialiased font-serif">
+<body class="min-h-screen flex flex-col antialiased selection:bg-teal-100 selection:text-teal-900">
+
     <!-- Navbar -->
     <nav class="bg-white shadow-sm border-b border-slate-200 sticky top-0 z-50">
-        <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center font-sans">
-            <a href="/" class="text-xl font-bold text-slate-800 hover:text-teal-700 transition-colors">Yichao Jin, Ph.D.</a>
-            <a href="/" class="text-sm font-medium text-slate-500 hover:text-teal-600 transition-colors"><i class="fas fa-arrow-left mr-2"></i>Back to Home</a>
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center font-sans">
+            <a href="/" class="text-xl font-bold text-slate-800 hover:text-teal-700 transition-colors tracking-tight">Yichao Jin, Ph.D.</a>
+            <a href="/" class="text-sm font-semibold text-slate-500 hover:text-teal-600 transition-colors flex items-center gap-2 px-3 py-1.5 rounded-md hover:bg-slate-50 border border-transparent hover:border-slate-200"><i class="fas fa-arrow-left"></i> Back to Home</a>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <main class="max-w-4xl mx-auto px-4 py-12">
-        <div class="bg-white p-8 md:p-12 rounded-xl shadow-sm border border-slate-100">
-            <div id="content" class="prose prose-slate prose-lg max-w-none prose-headings:font-sans prose-a:text-teal-600 hover:prose-a:text-teal-700"></div>
+    <main class="flex-grow max-w-4xl mx-auto px-6 py-16 w-full">
+        
+        <header class="mb-14">
+            <div class="inline-block px-3 py-1 bg-teal-50 text-teal-700 text-xs font-bold uppercase tracking-wider rounded border border-teal-100 mb-5 font-sans">Specialized Portfolio</div>
+            <h1 class="text-4xl md:text-5xl font-bold text-slate-900 leading-tight tracking-tight mb-6 font-sans">Clinical Decision Diagnostics & Patient Adherence</h1>
+            <p class="text-xl text-slate-500 font-light leading-relaxed font-sans">Decoding and predicting patient adherence failures using structural behavioral economics and neuro-computational modeling.</p>
+        </header>
+
+        <!-- Intro -->
+        <div class="prose-text text-xl font-light text-slate-600 mb-16">
+            In modern medical systems, the most robust predictive models often fail at the last mile: <strong>human behavior</strong>. Despite optimal clinical pathways, SMS reminders, and well-designed incentives, patients frequently exhibit non-adherence, delayed screenings, or drop out of clinical trials. 
+            <br><br>
+            By applying structural behavioral economics and neuro-computational models, we can decode and predict these adherence failures. The missing link is the structural quantification of <strong>Cognitive Friction (\(\kappa\))</strong>, <strong>Present Bias (\(\beta\))</strong>, and <strong>Trust Depreciation (\(\delta\))</strong>.
         </div>
+
+        <!-- Section 1 -->
+        <section class="mb-16">
+            <h2 class="section-title">Visualizing Patient Decision Drift</h2>
+            <p class="prose-text">
+                Why does a patient postpone scheduling a critical screening or delay preventive care despite knowing the benefits? We model this structurally as <strong>Patient Decision Drift</strong>—the transition from optimal medical intent into a state of indefinite delay, governed by specific behavioral parameters.
+            </p>
+
+            <div class="card overflow-hidden">
+                <div class="mermaid flex justify-center text-sm mb-2">
+%%{init: {'theme': 'neutral', 'themeVariables': { 'fontSize': '16px', 'fontFamily': 'Inter', 'edgeLabelBackground':'#ffffff', 'tertiaryColor': '#f8fafc', 'lineColor': '#475569'}, 'state': {'edgeLength': 150}}}%%
+stateDiagram-v2
+    direction LR
+
+    classDef delayState fill:#fef2f2,stroke:#dc2626,stroke-width:2px,color:#991b1b,font-family:Inter
+    classDef optimalState fill:#f0f9ff,stroke:#0369a1,stroke-width:2px,color:#0c4a6e,font-family:Inter
+    classDef defaultState stroke-width:2px,font-family:Inter,color:#334155
+
+    [*] --> Intent : Medical Recommendation
+    
+    Intent --> Adherence : Proactive Action (Low β, Low κ)
+    Intent --> Delay : Friction (κ) > Utility
+    Intent --> Delay : Present Bias (β) Dominates
+    
+    state Delay {
+        direction TB
+        Procrastination --> CognitiveFatigue : Repeated Hurdles
+        CognitiveFatigue --> ChronicNonAdherence : Trust (δ) Decays
+    }
+    
+    Delay --> Adherence : Intervention / Friction Reduction
+    Delay --> [*] : Loss to Follow-up
+    Adherence --> [*] : Health Outcome Realized
+
+    class Delay delayState
+    class Adherence optimalState
+    class Intent defaultState
+                </div>
+                <div class="mt-6 text-sm text-slate-500 font-sans border-t border-slate-100 pt-5 text-center leading-relaxed">
+                    <strong>Figure 1. Patient Decision Drift:</strong> Maps how individuals transition from clinical "Intent" to "Delay" when administrative friction (\(\kappa\)) outweighs utility, or when present bias (\(\beta\)) heavily discounts future health outcomes.
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Clinical Lab Integration (From Narrative) -->
+        <section class="mb-16">
+            <h2 class="section-title">The Clinical Bottleneck: Intervention Fatigue</h2>
+            <p class="prose-text">
+                Despite the abundance of EHR data and digital health tools, patient non-adherence and clinical trial attrition remain massive challenges. Traditional behavioral economics relies on static "nudges" (e.g., text reminders, generic financial incentives), assuming uniform and stable patient responses. 
+            </p>
+            <p class="prose-text">
+                However, real-world patients experience <strong>Cognitive Fatigue (\(\kappa\))</strong> and <strong>Trust Depreciation (\(\delta\))</strong> over time. A nudge that works on day 1 often triggers avoidance by day 14. 
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-lg flex items-center justify-center mb-4 text-lg">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <h3 class="font-bold font-sans text-slate-800 mb-2">Optimizing Trial Retention</h3>
+                    <p class="text-sm font-sans text-slate-600 leading-relaxed">Predicting which cohorts require structured financial incentives versus purely informational support to remain in long-term studies.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 bg-rose-50 text-rose-600 rounded-lg flex items-center justify-center mb-4 text-lg">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="font-bold font-sans text-slate-800 mb-2">Chronic Disease Management</h3>
+                    <p class="text-sm font-sans text-slate-600 leading-relaxed">Designing adaptive intervention schedules that self-adjust based on predicted fatigue levels, avoiding the "notification blind-spot."</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 bg-teal-50 text-teal-600 rounded-lg flex items-center justify-center mb-4 text-lg">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3 class="font-bold font-sans text-slate-800 mb-2">Health Equity & Trust</h3>
+                    <p class="text-sm font-sans text-slate-600 leading-relaxed">Identifying vulnerable subgroups whose trust can be effectively rebuilt through targeted, low-cognitive-burden interventions.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: TRIBE v2 -->
+        <section class="mb-16">
+            <h2 class="section-title">Tech Spotlight: Local Privacy-Preserving AI</h2>
+            <p class="prose-text">
+                A critical challenge in applying advanced AI to clinical settings—especially in neuro-ethics, behavioral mapping, and decision science—is the privacy of Electronic Health Records (EHR). Relying on cloud-based LLM APIs introduces significant friction regarding HIPAA compliance, data sovereignty, and ethical boundaries.
+            </p>
+            <p class="prose-text">
+                To solve this, <strong class="text-slate-800">TRIBE v2 (Trust-Reinforced Intertemporal Behavioral Engine)</strong> is structurally optimized for <strong>Apple Silicon and Metal Performance Shaders (MPS)</strong> via the MLX framework.
+            </p>
+            
+            <div class="bg-slate-900 text-white p-8 rounded-2xl shadow-lg border border-slate-800 my-8 flex items-start gap-6 relative overflow-hidden group">
+                <div class="absolute -right-6 -bottom-6 text-slate-800 opacity-30 text-9xl transition-transform group-hover:scale-110 duration-700">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                <div class="text-4xl text-teal-400 z-10 pt-1">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div class="z-10 relative">
+                    <h3 class="text-xl font-bold font-sans mb-3 text-white">100% Local & Offline Processing</h3>
+                    <p class="text-slate-300 font-sans text-sm leading-relaxed max-w-2xl">
+                        By deploying "Local System 2" reasoning models directly on internal medical workstations, we run deep behavioral digital twin simulations completely offline. We achieve high-fidelity predictions of patient adherence while ensuring sensitive patient data never leaves the hospital's secure environment.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4 -->
+        <section class="mb-10">
+            <h2 class="section-title">Case Study: Quantifying the Friction of Preventive Healthcare</h2>
+            <p class="prose-text">
+                My Job Market Paper serves as a foundational case study in applying this methodology to real-world clinical behavior. To understand why individuals delayed preventive healthcare (vaccination timing) despite overwhelming public health urgency, I designed a discrete choice experiment to map the intertemporal decisions of populations facing varying levels of administrative and cognitive friction.
+            </p>
+            
+            <div class="card bg-gradient-to-br from-white to-slate-50 border-teal-100/60 shadow-sm relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-teal-50 rounded-full blur-3xl -mr-10 -mt-10"></div>
+                <h3 class="text-xl font-bold text-slate-800 font-sans mb-5 relative z-10"><i class="fas fa-chart-line text-teal-600 mr-2"></i> Behavioral Parameter Recovery</h3>
+                <p class="prose-text text-base relative z-10 mb-6">
+                    By integrating these choices into a structural econometric framework, the research successfully recovered core behavioral parameters directly from empirical decision data:
+                </p>
+                <ul class="space-y-4 font-sans text-slate-700 relative z-10">
+                    <li class="flex items-start gap-3">
+                        <div class="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-teal-100 text-teal-600 flex items-center justify-center text-xs"><i class="fas fa-check"></i></div>
+                        <div>
+                            <strong class="text-slate-800">Quantifying \(\kappa\) (Friction):</strong> Measuring exactly how much "sludge" (e.g., confusing scheduling platforms, logistical delays, wait times) it takes to deter an otherwise willing patient.
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <div class="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-teal-100 text-teal-600 flex items-center justify-center text-xs"><i class="fas fa-check"></i></div>
+                        <div>
+                            <strong class="text-slate-800">Isolating \(\beta\) and \(\delta\):</strong> Disentangling procrastination driven by present bias from non-adherence driven by systemic mistrust.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <p class="prose-text">
+                This approach transitions patient adherence from an unpredictable, qualitative frustration into a calculable, actionable metric for clinical trial designers, public health policymakers, and neuro-ethics researchers.
+            </p>
+        </section>
+
     </main>
 
-    <script>
-        async function renderContent() {
-            try {
-                // Add cache-busting parameter
-                const cacheBuster = new Date().getTime();
-                const response = await fetch('./TRIBE-v2-Clinical-Narrative.md?v=' + cacheBuster);
-                if (!response.ok) throw new Error('Markdown file not found');
-                
-                let markdown = await response.text();
-                
-                // Strip frontmatter if present
-                markdown = markdown.replace(/^---[\s\S]*?---\n/, '');
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-10 mt-auto">
+        <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-center md:text-left">
+                <p class="text-sm font-sans text-slate-500 font-medium">
+                    Powered by <span class="text-teal-700 font-bold tracking-tight">TRIBE-v2</span>
+                </p>
+                <p class="text-xs font-sans text-slate-400 mt-1">
+                    Trust-Reinforced Intertemporal Behavioral Engine
+                </p>
+            </div>
+            <div class="text-xs font-sans text-slate-400 bg-slate-50 px-3 py-1.5 rounded-md border border-slate-100">
+                Tailored for Precision Health Interventions and Local Clinical AI.
+            </div>
+        </div>
+    </footer>
 
-                // Setup marked to handle code blocks
-                marked.setOptions({
-                    highlight: function(code, lang) {
-                        if (lang && hljs.getLanguage(lang)) {
-                            return hljs.highlight(code, { language: lang }).value;
-                        }
-                        return hljs.highlightAuto(code).value;
-                    }
-                });
-
-                const rawHtml = marked.parse(markdown);
-                document.getElementById('content').innerHTML = rawHtml;
-
-                // 3. Class Targeting: Convert pre code.language-mermaid to div.mermaid
-                document.querySelectorAll('pre code.language-mermaid').forEach((el) => {
-                  const div = document.createElement('div');
-                  div.className = 'mermaid';
-                  div.textContent = el.textContent;
-                  el.parentNode.replaceWith(div);
-                });
-                
-                // Render Mermaid
-                if (window.mermaid) {
-                    await mermaid.run({
-                        nodes: document.querySelectorAll('.mermaid')
-                    });
-                }
-
-                // Render MathJax
-                if (window.MathJax && window.MathJax.typesetPromise) {
-                    MathJax.typesetPromise();
-                }
-
-            } catch (error) {
-                console.error('Error rendering content:', error);
-                document.getElementById('content').innerHTML = '<p class="text-red-500">Error loading content.</p>';
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', renderContent);
-    </script>
 </body>
 </html>
