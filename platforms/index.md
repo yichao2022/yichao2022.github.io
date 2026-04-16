@@ -76,20 +76,21 @@ The interactive 3D surface plot below demonstrates the power of Edge Simulation 
 <div align="center">
   <div class="mermaid">
 quadrantChart
-    title "Structural Policy Sandbox: Market Equilibrium Shifts"
-    x-axis "Strict Data Privacy Mandate (High Friction)" --> "Unrestricted Data Extraction (Low Friction)"
-    y-axis "Algorithmic Exploitation" --> "Trust-Reinforced Platform Design"
-    quadrant-1 "Sustainable Platform Equilibrium"
-    quadrant-2 "High-Trust Privacy Haven (Under-monetized)"
-    quadrant-3 "Systemic Churn (Regulatory Risk & Low Trust)"
-    quadrant-4 "Myopic Extraction (Short-term ROI, High Burn)"
-    "Current Market Baseline": [0.35, 0.40]
-    "Digital Twin Sim (TRIBE)": [0.85, 0.85]
-    "Aggressive Ad Targeting": [0.85, 0.25]
-    "GDPR / CCPA Mandate": [0.25, 0.60]
-    "Optimal Frontier (Pareto)": [0.75, 0.90]
+    title "Structural Policy Sandbox: Phase Transitions under CCPA/GDPR"
+    x-axis "Centralized Extraction (High Algorithmic Bias)" --> "Edge/Federated Privacy (CCPA/GDPR Compliant)"
+    y-axis "Value Destruction (Regulatory Shock & Churn)" --> "Sustainable Value Creation (Trust & LTV)"
+    quadrant-1 "Sustainable Equilibrium (TRIBE-v2 Edge)"
+    quadrant-2 "Legacy Ad-Tech Monopoly (Vulnerable)"
+    quadrant-3 "Systemic Churn (Regulatory Backlash)"
+    quadrant-4 "Compliance Drag (Under-monetized)"
+    "Pre-GDPR Big Tech": [0.20, 0.80]
+    "Aggressive Algorithmic Targeting": [0.15, 0.30]
+    "Raw GDPR/CCPA Shock": [0.75, 0.25]
+    "Current Market Baseline": [0.45, 0.40]
+    "Edge Simulation (TRIBE-v2)": [0.85, 0.85]
+    "Pareto Optimal Frontier": [0.95, 0.90]
   </div>
-  <p><em><strong>Figure 2. Structural Policy Sandbox:</strong> This phase map illustrates system-wide equilibrium shifts across simulated strategic agents. It demonstrates how varying vectors of Privacy Constraints (e.g., GDPR) and Incentive Design (driven by $\beta$, $\delta$, $\kappa$) trigger non-linear phase transitions—guiding platforms away from Myopic Extraction toward a Sustainable Platform Equilibrium.</em></p>
+  <p><em><strong>Figure 2. Structural Policy Sandbox:</strong> This phase map illustrates system-wide equilibrium shifts when platforms face regulatory shocks like GDPR/CCPA. It demonstrates how traditional centralized extraction falls into systemic churn or legacy vulnerability, and how raw privacy mandates induce compliance drag. By integrating <strong>Edge Computing</strong> and mitigating <strong>Algorithmic Bias</strong>, TRIBE-v2 neutralizes privacy friction ($\kappa$) and leverages institutional trust ($\delta$) to guide platforms toward a Sustainable Pareto Equilibrium.</em></p>
 </div>
 
 ---

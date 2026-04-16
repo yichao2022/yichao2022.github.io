@@ -17,20 +17,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     
-    <!-- MathJax for LaTeX -->
-    <script>
-      MathJax = {
-        tex: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']],
-          displayMath: [['$$', '$$'], ['\\[', '\\]']],
-          processEscapes: true
-        },
-        svg: {
-          fontCache: 'global'
-        }
-      };
-    </script>
+    <!-- 1. MathJax Engine (For LaTeX) -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- 2. Mermaid Engine (For Diagrams) -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+      mermaid.initialize({ 
+        startOnLoad: true, 
+        theme: 'neutral',
+        securityLevel: 'loose'
+      });
+    </script>
 
     <!-- Tailwind Typography -->
     <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
@@ -49,23 +48,6 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
         body { background-color: #f8fafc; }
-        .mermaid-container {
-            width: 100%;
-            overflow-x: auto;
-            margin: 2rem 0;
-        }
-        .mermaid {
-            width: 100% !important;
-            max-width: 1000px !important;
-            margin: 0 auto !important;
-            background-color: #f9f9f9;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-        .mermaid svg {
-            max-width: 100% !important;
-        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-700 antialiased font-serif">
@@ -84,15 +66,7 @@
         </div>
     </main>
 
-    <script type="module">
-        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-        
-        mermaid.initialize({ 
-            startOnLoad: false,
-            theme: 'default',
-            fontFamily: 'Inter'
-        });
-
+    <script>
         async function renderContent() {
             try {
                 // Add cache-busting parameter
@@ -103,53 +77,48 @@
                 let markdown = await response.text();
                 
                 // Strip frontmatter if present
-                markdown = markdown.replace(/^---[\s\S]*?---\s*/, '');
+                markdown = markdown.replace(/^---[\s\S]*?---\n/, '');
 
-                // Setup marked with mermaid support
-                marked.use({
-                    highlight(code, lang) {
-                        if (lang === 'mermaid') return code;
+                // Setup marked to handle code blocks
+                marked.setOptions({
+                    highlight: function(code, lang) {
                         if (lang && hljs.getLanguage(lang)) {
                             return hljs.highlight(code, { language: lang }).value;
                         }
                         return hljs.highlightAuto(code).value;
-                    },
-                    renderer: {
-                        code(code, lang) {
-                            if (lang === 'mermaid') {
-                                return `<div class="mermaid flex justify-center my-8">${code}</div>`;
-                            }
-                            return false; // Use default renderer
-                        }
                     }
                 });
 
                 const rawHtml = marked.parse(markdown);
-                
                 document.getElementById('content').innerHTML = rawHtml;
+
+                // 3. Class Targeting: Convert pre code.language-mermaid to div.mermaid
+                document.querySelectorAll('pre code.language-mermaid').forEach((el) => {
+                  const div = document.createElement('div');
+                  div.className = 'mermaid';
+                  div.textContent = el.textContent;
+                  el.parentNode.replaceWith(div);
+                });
                 
                 // Render Mermaid
-                await mermaid.run({
-                    nodes: document.querySelectorAll('.mermaid')
-                });
+                if (window.mermaid) {
+                    await mermaid.run({
+                        nodes: document.querySelectorAll('.mermaid')
+                    });
+                }
 
                 // Render MathJax
-                if (window.MathJax) {
+                if (window.MathJax && window.MathJax.typesetPromise) {
                     MathJax.typesetPromise();
                 }
 
             } catch (error) {
                 console.error('Error rendering content:', error);
-                document.getElementById('content').innerHTML = `
-                    <div class="text-red-500 p-4 border border-red-200 rounded-lg bg-red-50">
-                        <p class="font-bold">Error loading content:</p>
-                        <p class="text-sm">${error.message}</p>
-                    </div>
-                `;
+                document.getElementById('content').innerHTML = '<p class="text-red-500">Error loading content.</p>';
             }
         }
 
-        renderContent();
+        document.addEventListener('DOMContentLoaded', renderContent);
     </script>
 </body>
 </html>

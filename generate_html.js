@@ -19,20 +19,19 @@ const createHtml = (title, mdFile) => `<!DOCTYPE html>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     
-    <!-- MathJax for LaTeX -->
-    <script>
-      MathJax = {
-        tex: {
-          inlineMath: [['$', '$'], ['\\\\(', '\\\\)']],
-          displayMath: [['$$', '$$'], ['\\\\[', '\\\\]']],
-          processEscapes: true
-        },
-        svg: {
-          fontCache: 'global'
-        }
-      };
-    </script>
+    <!-- 1. MathJax Engine (For LaTeX) -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- 2. Mermaid Engine (For Diagrams) -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+      mermaid.initialize({ 
+        startOnLoad: true, 
+        theme: 'neutral',
+        securityLevel: 'loose'
+      });
+    </script>
 
     <!-- Tailwind Typography -->
     <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
@@ -69,15 +68,7 @@ const createHtml = (title, mdFile) => `<!DOCTYPE html>
         </div>
     </main>
 
-    <script type="module">
-        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-        
-        mermaid.initialize({ 
-            startOnLoad: false,
-            theme: 'default',
-            fontFamily: 'Inter'
-        });
-
+    <script>
         async function renderContent() {
             try {
                 // Add cache-busting parameter
@@ -90,10 +81,9 @@ const createHtml = (title, mdFile) => `<!DOCTYPE html>
                 // Strip frontmatter if present
                 markdown = markdown.replace(/^---[\\s\\S]*?---\\n/, '');
 
-                // Setup marked to handle code blocks and mermaid
+                // Setup marked to handle code blocks
                 marked.setOptions({
                     highlight: function(code, lang) {
-                        if (lang === 'mermaid') return code; // Let mermaid handle it
                         if (lang && hljs.getLanguage(lang)) {
                             return hljs.highlight(code, { language: lang }).value;
                         }
@@ -101,28 +91,26 @@ const createHtml = (title, mdFile) => `<!DOCTYPE html>
                     }
                 });
 
-                // Custom renderer for mermaid
-                const renderer = new marked.Renderer();
-                const originalCodeRenderer = renderer.code.bind(renderer);
-                renderer.code = function(code, language, isEscaped) {
-                    if (language === 'mermaid') {
-                        return '<div class="mermaid flex justify-center my-8">' + code + '</div>';
-                    }
-                    return originalCodeRenderer(code, language, isEscaped);
-                };
-                marked.use({ renderer });
-
                 const rawHtml = marked.parse(markdown);
-                
                 document.getElementById('content').innerHTML = rawHtml;
+
+                // 3. Class Targeting: Convert pre code.language-mermaid to div.mermaid
+                document.querySelectorAll('pre code.language-mermaid').forEach((el) => {
+                  const div = document.createElement('div');
+                  div.className = 'mermaid';
+                  div.textContent = el.textContent;
+                  el.parentNode.replaceWith(div);
+                });
                 
                 // Render Mermaid
-                await mermaid.run({
-                    nodes: document.querySelectorAll('.mermaid')
-                });
+                if (window.mermaid) {
+                    await mermaid.run({
+                        nodes: document.querySelectorAll('.mermaid')
+                    });
+                }
 
                 // Render MathJax
-                if (window.MathJax) {
+                if (window.MathJax && window.MathJax.typesetPromise) {
                     MathJax.typesetPromise();
                 }
 
@@ -132,15 +120,15 @@ const createHtml = (title, mdFile) => `<!DOCTYPE html>
             }
         }
 
-        renderContent();
+        document.addEventListener('DOMContentLoaded', renderContent);
     </script>
 </body>
 </html>`;
 
-fs.writeFileSync('/Users/cary/.openclaw/workspace/yichao2022.github.io/clinical/index.html', createHtml('Clinical Simulation', 'index.md'));
-fs.writeFileSync('/Users/cary/.openclaw/workspace/yichao2022.github.io/platforms/index.html', createHtml('Tech Platform Integration', 'index.md'));
-fs.writeFileSync('/Users/cary/.openclaw/workspace/yichao2022.github.io/equity/index.html', createHtml('Equity & Policy Impact', 'index.md'));
-if (fs.existsSync('/Users/cary/.openclaw/workspace/yichao2022.github.io/health/index.md')) {
-    fs.writeFileSync('/Users/cary/.openclaw/workspace/yichao2022.github.io/health/index.html', createHtml('Public Health & Behavior', 'index.md'));
+fs.writeFileSync('./clinical/index.html', createHtml('Clinical Simulation', 'index.md'));
+fs.writeFileSync('./platforms/index.html', createHtml('Tech Platform Integration', 'index.md'));
+fs.writeFileSync('./equity/index.html', createHtml('Equity & Policy Impact', 'index.md'));
+if (fs.existsSync('./health/index.md')) {
+    fs.writeFileSync('./health/index.html', createHtml('Public Health & Behavior', 'index.md'));
 }
 console.log('HTML files generated successfully with cache-busting logic!');
