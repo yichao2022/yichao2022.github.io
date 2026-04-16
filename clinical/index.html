@@ -25,9 +25,16 @@
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script>
       mermaid.initialize({ 
-        startOnLoad: true, 
+        startOnLoad: false, 
         theme: 'neutral',
-        securityLevel: 'loose'
+        securityLevel: 'loose',
+        fontFamily: 'Inter, sans-serif',
+        quadrantChart: {
+          titleFontSize: 18,
+          labelFontSize: 14,
+          pointFontSize: 12,
+          groupFontSize: 12
+        }
       });
     </script>
 
@@ -48,6 +55,11 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
         body { background-color: #f8fafc; }
+        .mermaid { display: flex; justify-content: center; margin: 2rem 0; }
+        .mermaid svg { height: auto !important; width: 100% !important; max-width: 750px !important; }
+        /* Fix for quadrant chart labels */
+        .mermaid .quadrant-label { font-size: 14px !important; font-weight: 600 !important; }
+        .mermaid .point-label { font-size: 12px !important; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-700 antialiased font-serif">
@@ -71,7 +83,7 @@
             try {
                 // Add cache-busting parameter
                 const cacheBuster = new Date().getTime();
-                const response = await fetch('./index.md?v=' + cacheBuster);
+                const response = await fetch('./TRIBE-v2-Clinical-Narrative.md?v=' + cacheBuster);
                 if (!response.ok) throw new Error('Markdown file not found');
                 
                 let markdown = await response.text();
