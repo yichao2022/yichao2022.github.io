@@ -73,12 +73,11 @@ The interactive 3D surface plot below demonstrates the power of Edge Simulation 
 
 ## Counterfactual Policy Phase Space: Navigating Regulation
 
-<div align="center">
-  <div class="mermaid">
+```mermaid
 quadrantChart
     title "Structural Policy Sandbox: Phase Transitions under CCPA/GDPR"
-    x-axis "Centralized Extraction (High Algorithmic Bias)" --> "Edge/Federated Privacy (CCPA/GDPR Compliant)"
-    y-axis "Value Destruction (Regulatory Shock & Churn)" --> "Sustainable Value Creation (Trust & LTV)"
+    x-axis "Centralized Extraction (High Alg Bias)" --> "Edge/Federated Privacy (CCPA/GDPR)"
+    y-axis "Value Destruction (Regulatory Shock)" --> "Sustainable Value Creation (Trust & LTV)"
     quadrant-1 "Sustainable Equilibrium (TRIBE-v2 Edge)"
     quadrant-2 "Legacy Ad-Tech Monopoly (Vulnerable)"
     quadrant-3 "Systemic Churn (Regulatory Backlash)"
@@ -89,13 +88,8 @@ quadrantChart
     "Current Market Baseline": [0.45, 0.40]
     "Edge Simulation (TRIBE-v2)": [0.85, 0.85]
     "Pareto Optimal Frontier": [0.95, 0.90]
-  </div>
-  <p><em><strong>Figure 2. Structural Policy Sandbox:</strong> This phase map illustrates system-wide equilibrium shifts when platforms face regulatory shocks like GDPR/CCPA. It demonstrates how traditional centralized extraction falls into systemic churn or legacy vulnerability, and how raw privacy mandates induce compliance drag. By integrating <strong>Edge Computing</strong> and mitigating <strong>Algorithmic Bias</strong>, TRIBE-v2 neutralizes privacy friction ($\kappa$) and leverages institutional trust ($\delta$) to guide platforms toward a Sustainable Pareto Equilibrium.</em></p>
-</div>
+```
+<p align="center"><em><strong>Figure 2. Structural Policy Sandbox:</strong> This phase map illustrates system-wide equilibrium shifts when platforms face regulatory shocks like GDPR/CCPA. It demonstrates how traditional centralized extraction falls into systemic churn or legacy vulnerability, and how raw privacy mandates induce compliance drag. By integrating <strong>Edge Computing</strong> and mitigating <strong>Algorithmic Bias</strong>, TRIBE-v2 neutralizes privacy friction ($\kappa$) and leverages institutional trust ($\delta$) to guide platforms toward a Sustainable Pareto Equilibrium.</em></p>
 
 ---
 *Powered by TRIBE-v2 (Trust-Reinforced Intertemporal Behavioral Engine) - Architected for Digital Privacy, Platform Economics, and Algorithmic Governance.*
-<script type="module">
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-  mermaid.initialize({ startOnLoad: true });
-</script>
