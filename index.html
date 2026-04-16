@@ -59,9 +59,9 @@
 <body class="min-h-screen flex flex-col md:flex-row text-slate-700">
 
     <!-- Sidebar / Header -->
-    <aside class="w-full md:w-1/4 bg-white border-r border-slate-200 p-8 flex flex-col items-center md:items-start md:fixed md:h-full overflow-y-auto z-10">
+    <aside class="w-full md:w-1/4 bg-white border-r border-slate-200 p-8 flex flex-col items-center md:items-start md:fixed md:top-0 md:left-0 md:h-full overflow-y-auto z-10">
         <!-- Photo Placeholder -->
-        <div class="w-48 h-48 rounded-full mb-6 overflow-hidden shadow-lg border-4 border-white ring-1 ring-slate-100 transition-transform hover:scale-105 duration-500">
+        <div class="flex-shrink-0 w-48 h-48 rounded-full mb-6 overflow-hidden shadow-lg border-4 border-white ring-1 ring-slate-100 transition-transform hover:scale-105 duration-500">
             <img src="profile.jpg" alt="Yichao Jin" class="w-full h-full object-cover">
         </div>
 
@@ -95,15 +95,6 @@
             <a href="#certifications" class="nav-link text-slate-700">Certifications</a>
             <a href="#teaching" class="nav-link text-slate-700">Teaching</a>
             <a href="#awards" class="nav-link text-slate-700">Awards</a>
-            
-            <div class="mt-4 pt-4 border-t border-slate-200">
-                <span class="block px-4 mb-2 text-sm text-slate-400 uppercase tracking-wider font-bold">Specialized Portfolios</span>
-                <div class="flex flex-col gap-2">
-                    <a href="/equity/" class="nav-link text-slate-600 text-base py-1">Health Equity</a>
-                    <a href="/clinical/" class="nav-link text-slate-600 text-base py-1">Clinical Simulation</a>
-                    <a href="/platforms/" class="nav-link text-slate-600 text-base py-1">Platform Simulation</a>
-                </div>
-            </div>
         </nav>
 
         <div class="mt-8 w-full font-sans">
@@ -124,16 +115,6 @@
             <a href="https://yichao2022.github.io/blog/" class="hover:text-teal-700" target="_blank">Blog</a>
             <a href="#education" class="hover:text-teal-700">Education</a>
             <a href="cv.pdf" class="font-bold text-teal-700">CV</a>
-        </div>
-
-        <!-- Mobile Specialized Portfolios -->
-        <div class="md:hidden flex flex-col gap-2 mb-10 text-sm border-b border-slate-200 pb-4 font-sans font-medium text-slate-600">
-            <span class="text-slate-400 uppercase tracking-wider font-bold text-xs mb-1">Specialized Portfolios</span>
-            <div class="flex flex-wrap gap-4">
-                <a href="/equity/" class="hover:text-teal-700">Health Equity</a>
-                <a href="/clinical/" class="hover:text-teal-700">Clinical Simulation</a>
-                <a href="/platforms/" class="hover:text-teal-700">Platform Simulation</a>
-            </div>
         </div>
 
         <!-- About Section -->
@@ -202,6 +183,34 @@
              <div class="paper-card opacity-90 hover:opacity-100 transition-opacity">
                 <div class="paper-title">Time Preferences in Preventive Health: A Multi-Domain Behavioral Study</div>
                 <div class="paper-meta">Research Pipeline.</div>
+            </div>
+
+            <h3 class="text-sm font-bold text-slate-400 mb-6 mt-12 uppercase tracking-widest font-sans border-b border-slate-100 pb-2">Specialized Portfolios</h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                <!-- Health Equity -->
+                <a href="/equity/" class="block bg-white p-6 rounded-lg shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 opacity-90 hover:opacity-100 hover:border-teal-300 flex flex-col h-full text-inherit no-underline group">
+                    <div class="paper-title group-hover:text-teal-700 transition-colors">Health Equity</div>
+                    <div class="paper-desc mt-auto pt-4 flex-grow border-t border-slate-100">
+                        Investigating socioeconomic disparities in health interventions using advanced policy simulation modeling and behavioral frameworks.
+                    </div>
+                </a>
+
+                <!-- Clinical Simulation -->
+                <a href="/clinical/" class="block bg-white p-6 rounded-lg shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 opacity-90 hover:opacity-100 hover:border-teal-300 flex flex-col h-full text-inherit no-underline group">
+                    <div class="paper-title group-hover:text-teal-700 transition-colors">Clinical Simulation</div>
+                    <div class="paper-desc mt-auto pt-4 flex-grow border-t border-slate-100">
+                        Applying computational behavioral science to simulate patient decision-making and optimize clinical trial protocols.
+                    </div>
+                </a>
+
+                <!-- Platform Simulation -->
+                <a href="/platforms/" class="block bg-white p-6 rounded-lg shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 opacity-90 hover:opacity-100 hover:border-teal-300 flex flex-col h-full text-inherit no-underline group">
+                    <div class="paper-title group-hover:text-teal-700 transition-colors">Platform Simulation</div>
+                    <div class="paper-desc mt-auto pt-4 flex-grow border-t border-slate-100">
+                        Modeling multi-agent dynamics and user behavior in digital platforms through discrete choice experiments and agent-based modeling.
+                    </div>
+                </a>
             </div>
 
         </section>
@@ -401,7 +410,7 @@
             </div>
         </section>
 
-        <section id="portfolios" class="mb-20 pt-12 border-t border-slate-100 opacity-40 hover:opacity-100 transition-opacity">
+        <section id="portfolios" class="mb-20 pt-12 border-t border-slate-100 opacity-0 hover:opacity-100 transition-opacity duration-500">
             <h2 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6 font-sans text-center">Specialized Portfolios</h2>
             <div class="flex flex-wrap justify-center gap-8 text-xs font-sans">
                 <a href="/health/" class="text-slate-500 hover:text-teal-700 transition">Health-Incentive Simulator</a>
