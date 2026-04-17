@@ -1,0 +1,4 @@
+- **Target**: Dr. Catherine Tucker (MIT Sloan)
+- **Email**: cetucker@mit.edu
+- **Date**: 2026-04-10
+- **Status**: Cold email drafted
