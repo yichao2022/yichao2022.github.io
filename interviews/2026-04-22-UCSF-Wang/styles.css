@@ -1,0 +1,99 @@
+/* Academic Serif Style */
+body {
+    font-family: "Charter", "Georgia", "Times New Roman", serif;
+    color: #2c3e50;
+    line-height: 1.7;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 4rem;
+    background-color: #fdfdfb; /* Subtle parchment/academic feel */
+}
+
+h1, h2, h3 {
+    font-family: "Charter", "Georgia", serif;
+    font-weight: 600;
+    color: #1a1a1a;
+    border-bottom: none; /* Cleaner look */
+    padding-bottom: 0.3rem;
+    margin-top: 2rem;
+}
+
+h1 {
+    font-size: 2.4rem;
+    text-align: center;
+    border-bottom: 3px double #333;
+    padding-bottom: 1rem;
+    margin-bottom: 3rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    border-left: 5px solid #2c3e50;
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 0.95rem;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #2c3e50;
+    padding: 1rem;
+    text-align: left;
+}
+
+td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+tr:hover {
+    background-color: #fcfcfc;
+}
+
+/* Callout Styling */
+.callout {
+    border-radius: 0;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    padding: 1.5rem;
+}
+
+.subtitle {
+    font-style: italic;
+    color: #666;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+}
+
+a {
+    color: #2c3e50;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #000;
+}
+
+code {
+    background-color: #f8f9fa;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: "Courier New", monospace;
+}
+
+blockquote {
+    border-left: 4px solid #ccc;
+    padding-left: 1rem;
+    color: #555;
+    font-style: italic;
+}
