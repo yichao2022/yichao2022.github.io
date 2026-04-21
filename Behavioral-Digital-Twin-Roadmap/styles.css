@@ -3,9 +3,9 @@ body {
     font-family: "Charter", "Georgia", "Times New Roman", serif;
     color: #2c3e50;
     line-height: 1.7;
-    max-width: 1400px; /* Enhanced for Dr. Wang's high-res monitor / Screen Share */
+    max-width: 1200px; /* Increased from 900px for better Screen Share visibility */
     margin: 0 auto;
-    padding: 2rem 8%; /* Increased padding for better hierarchy on wide screens */
+    padding: 2rem 5%; /* Responsive padding */
     background-color: #fdfdfb;
 }
 
@@ -96,4 +96,26 @@ blockquote {
     padding-left: 1rem;
     color: #555;
     font-style: italic;
+}
+
+/* GitHub Button Styling */
+.github-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #24292e;
+    color: white !important;
+    text-decoration: none !important;
+    border-radius: 6px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    transition: background-color 0.2s;
+}
+
+.github-btn:hover {
+    background-color: #444d56;
+}
+
+.github-btn i {
+    margin-right: 8px;
 }
