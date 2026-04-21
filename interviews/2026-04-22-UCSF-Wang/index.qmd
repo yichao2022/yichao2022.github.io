@@ -12,6 +12,12 @@ format:
     embed-resources: true
 ---
 
+<div style="text-align: center; margin-top: -2rem; margin-bottom: 3rem;">
+<a href="https://github.com/yichao2022/Behavioral-Digital-Twin-Roadmap" class="btn btn-outline-dark" target="_blank" style="font-family: 'Charter', serif; border-radius: 0; padding: 0.5rem 1.5rem;">
+    <i class="bi bi-github"></i> View GitHub Source (Open-Source BDT Roadmap)
+</a>
+</div>
+
 ## 1. Vision: Disaggregated Population Modeling
 
 As a **PhD Researcher** specialized in structural behavioral models and administrative burden, I propose a high-granularity approach to tobacco regulatory science. By modeling the individual-level utility surface, we can simulate complex transitions between products (Cigarettes, E-cigs, HTPs) and predict the equity impacts of policy interventions before they manifest.
