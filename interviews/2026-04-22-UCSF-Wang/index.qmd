@@ -1,49 +1,22 @@
+---
+title: "Structural Behavioral Modeling & Policy Simulation"
+subtitle: "Disaggregated Transitions & Regulatory Audit | Interview with Dr. Yingning Wang"
+author: "Yichao (Cary) Jin"
+date: "2026-04-22"
+format:
   html:
     theme: cosmo
     css: styles.css
     toc: true
     toc-depth: 2
     embed-resources: true
-    include-in-header:
-      text: |
-        <style>
-        .quarto-secondary-nav .quarto-container {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
-        #github-link-nav {
-          font-size: 0.8rem;
-          text-decoration: none;
-          color: #666;
-          border: 1px solid #ddd;
-          padding: 2px 8px;
-          margin-top: 10px;
-          display: inline-block;
-          transition: all 0.2s ease;
-        }
-        #github-link-nav:hover {
-          background-color: #f8f9fa;
-          color: #000;
-          border-color: #bbb;
-        }
-        </style>
-    include-after-body:
-      text: |
-        <script>
-        document.addEventListener("DOMContentLoaded", function() {
-          var toc = document.getElementById("TOC");
-          if (toc) {
-            var githubDiv = document.createElement("div");
-            githubDiv.style.marginTop = "1.5rem";
-            githubDiv.style.paddingTop = "1rem";
-            githubDiv.style.borderTop = "1px solid #eee";
-            githubDiv.innerHTML = '<a href="https://github.com/yichao2022/Behavioral-Digital-Twin-Roadmap" target="_blank" style="font-size: 0.85rem; color: #666; text-decoration: none;"><i class="bi bi-github"></i> Source Code</a>';
-            toc.appendChild(githubDiv);
-          }
-        });
-        </script>
 ---
+
+<div style="position: absolute; top: 1rem; right: 1rem; font-size: 0.85rem;">
+    <a href="https://github.com/yichao2022/Behavioral-Digital-Twin-Roadmap" target="_blank" style="color: #666; text-decoration: none; border: 1px solid #ddd; padding: 4px 10px; background: #fff;">
+        <i class="bi bi-github"></i> Source Code
+    </a>
+</div>
 
 ## 1. Vision: Disaggregated Population Modeling
 
