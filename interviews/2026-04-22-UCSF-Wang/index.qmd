@@ -54,15 +54,15 @@ Aggregated data masks inequality. I specialize in **disaggregated agent modeling
 
 In response to industry-funded health impact models (e.g., PMI's population models), I advocate for **Independent, Transparent, and Robust Population Health Simulations**.
 
-| Feature | Industry "Black-Box" Models | Behavioral Digital Twin (BDT) |
+| Feature | Industry "Black-Box" Models | Structural Simulation (Our Model) |
 |:---|:---:|:---:|
 | **Transparency** | Proprietary / Hidden Causal Chains | **Open-Source / Peer-Audited** |
 | **Granularity** | Aggregate cohorts | **Individual-level Agents** |
 | **Bias Mitigation** | Optimized for commercial validation | **Optimized for Health Equity** |
 | **Data Fusion** | Limited to historical trends | **Real-time Social Media + Survey Fusion** |
 
-- **Logic Audit**: Applying "System 2" reasoning (via DeepSeek/Claude) to audit the causal assumptions in industry models.
-- **Future Forecasting**: Using BDTs to provide evidence-based projections for FDA/State-level regulatory impact assessments.
+- **Logic Audit**: Applying structural logic to audit the causal assumptions in industry models.
+- **Future Forecasting**: Providing evidence-based projections for FDA/State-level regulatory impact assessments.
 
 ## 3. Technical Stack for UCSF
 
@@ -72,7 +72,7 @@ In response to industry-funded health impact models (e.g., PMI's population mode
 
 ## 4. Proposed Roadmap at IHPS
 
-1. **Phase 1**: Pilot a BDT model using California-specific tobacco purchase data to simulate the impact of recent flavor restrictions on Low SES households.
+1. **Phase 1**: Pilot a **Behavioral Simulation Model** using California-specific tobacco purchase data to simulate the impact of recent flavor restrictions on Low SES households.
 2. **Phase 2**: Integrate social media sentiment analysis into transition probability matrices for emerging products (HTPs/Cannabis).
 3. **Goal**: Establish a "Regulatory Sandbox" for policy evaluation that prioritizes health equity and independent oversight.
 
