@@ -3,9 +3,9 @@ body {
     font-family: "Charter", "Georgia", "Times New Roman", serif;
     color: #2c3e50;
     line-height: 1.7;
-    max-width: 1200px; /* Increased from 900px for better Screen Share visibility */
+    max-width: 1400px; /* Enhanced for Dr. Wang's high-res monitor / Screen Share */
     margin: 0 auto;
-    padding: 2rem 5%; /* Responsive padding */
+    padding: 2rem 8%; /* Increased padding for better hierarchy on wide screens */
     background-color: #fdfdfb;
 }
 
