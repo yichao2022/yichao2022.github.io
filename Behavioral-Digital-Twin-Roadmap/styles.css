@@ -3,7 +3,7 @@ body {
     font-family: "Charter", "Georgia", "Times New Roman", serif;
     color: #2c3e50;
     line-height: 1.7;
-    max-width: 1200px; /* Increased from 900px for better Screen Share visibility */
+    max-width: 1400px; /* Increased for better Screen Share visibility */
     margin: 0 auto;
     padding: 2rem 5%; /* Responsive padding */
     background-color: #fdfdfb;
