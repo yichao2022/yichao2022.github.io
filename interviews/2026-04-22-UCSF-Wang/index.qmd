@@ -1,0 +1,81 @@
+---
+title: "Structural Behavioral Modeling & Policy Simulation"
+subtitle: "Disaggregated Transitions & Regulatory Audit | Interview with Dr. Yingning Wang"
+author: "Yichao (Cary) Jin"
+date: "2026-04-22"
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    toc-depth: 2
+    embed-resources: true
+---
+
+## 1. Vision: Disaggregated Population Modeling
+
+As a **PhD Researcher** specialized in structural behavioral models and administrative burden, I propose a high-granularity approach to tobacco regulatory science. By modeling the individual-level utility surface, we can simulate complex transitions between products (Cigarettes, E-cigs, HTPs) and predict the equity impacts of policy interventions before they manifest.
+
+Traditional aggregate models often miss the non-linear "churn" in poly-use. My research focus is on building **Behavioral Simulation Models** (or "Digital Twins") that bridge longitudinal survey data with real-time behavioral signals to provide a robust, independent audit for regulatory decisions.
+
+## 2. Core Research Synergies
+
+::: {.callout-note appearance="simple"}
+### BDT Logic Flow: From Data to Policy Audit
+```{mermaid}
+graph TD
+    A[Raw Data: PATH, NHIS, XHS] --> B{BDT Engine}
+    B --> C[Individual Level Utility Surface]
+    B --> D[Disaggregated Agent Simulation]
+    C & D --> E[Population Impact Projections]
+    E --> F[Regulatory Decision Support]
+    
+    subgraph "Independent Audit Layer"
+    G[Industry Model Assumptions] -.-> H[Logic & Causal Audit]
+    H --> B
+    end
+    
+    style G fill:#f96,stroke:#333,stroke-width:2px
+    style B fill:#bbf,stroke:#333,stroke-width:2px
+```
+:::
+
+### A. Modeling Transitions & Poly-use Dynamics
+Transitions are rarely binary. My BDT framework treats a user's tobacco journey as a **stochastic state-space model**.
+- **Product Attributes**: I model how flavor bans or nicotine caps specifically alter the "utility surface" for users, driving them toward either cessation or alternative product uptake (e.g., switching from E-cigs back to combustibles).
+- **Dynamic Poly-use**: Simulation of concurrent use patterns (Cigarette + Vaping) based on real-world longitudinal survey data.
+
+### B. Precision Equity: Vulnerable Group Simulations
+Aggregated data masks inequality. I specialize in **disaggregated agent modeling** for:
+- **Low SES & Minority Groups**: Integrating specific behavioral constraints (financial burden, retail density) to predict how tax increases or marketing restrictions affect vulnerable groups differently than the general population.
+- **Youth & Social Media Influence**: Utilizing ML to extract behavioral priors from social media (e.g., TikTok/XHS) to model the "initiation" phase for adolescents.
+
+### C. Counter-Industry Predictive Modeling: The Independent Audit Tool
+
+In response to industry-funded health impact models (e.g., PMI's population models), I advocate for **Independent, Transparent, and Robust Population Health Simulations**.
+
+| Feature | Industry "Black-Box" Models | Behavioral Digital Twin (BDT) |
+|:---|:---:|:---:|
+| **Transparency** | Proprietary / Hidden Causal Chains | **Open-Source / Peer-Audited** |
+| **Granularity** | Aggregate cohorts | **Individual-level Agents** |
+| **Bias Mitigation** | Optimized for commercial validation | **Optimized for Health Equity** |
+| **Data Fusion** | Limited to historical trends | **Real-time Social Media + Survey Fusion** |
+
+- **Logic Audit**: Applying "System 2" reasoning (via DeepSeek/Claude) to audit the causal assumptions in industry models.
+- **Future Forecasting**: Using BDTs to provide evidence-based projections for FDA/State-level regulatory impact assessments.
+
+## 3. Technical Stack for UCSF
+
+- **Generative Agents**: Large-scale simulation of 100k+ independent tobacco-using agents.
+- **ML & Social Media**: NLP pipelines for analyzing tobacco/cannabis sentiment and transition signals from unstandardized data.
+- **Large Data Economics**: Expertise in longitudinal survey analysis (PATH, NHIS) integrated with structural modeling.
+
+## 4. Proposed Roadmap at IHPS
+
+1. **Phase 1**: Pilot a BDT model using California-specific tobacco purchase data to simulate the impact of recent flavor restrictions on Low SES households.
+2. **Phase 2**: Integrate social media sentiment analysis into transition probability matrices for emerging products (HTPs/Cannabis).
+3. **Goal**: Establish a "Regulatory Sandbox" for policy evaluation that prioritizes health equity and independent oversight.
+
+---
+
+[Back to Portfolio](https://yichao2022.github.io)
