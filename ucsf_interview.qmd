@@ -1,6 +1,6 @@
 ---
 title: "Empirical Policy Simulation: Bridging Choice Science and Tobacco Regulation"
-subtitle: "Candidate Presentation | UCSF Tobacco Center of Regulatory Science"
+subtitle: "Interview with Dr. Yingning Wang"
 author: "Yichao Jin, PhD"
 date: "2026-04-22"
 format:
