@@ -1,0 +1,73 @@
+---
+title: "Research Synergy & Technical Roadmap"
+subtitle: "Proposed Mentorship: UPenn CHIBE Trainee Program"
+author: 
+  - name: "Yichao Jin, Ph.D."
+    url: https://yichao2022.github.io
+    affiliation: "The University of Texas at Dallas"
+date: "2026-04-22"
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+    code-fold: true
+    css: styles.css
+    self-contained: true
+---
+
+## Executive Summary: The Research Bridge
+
+My doctoral research at the University of Texas at Dallas focused on **Intertemporal Choice in Vaccination Timing**, specifically how waiting times and temporal discounting shape preventive health behaviors. By integrating Discrete Choice Experiments (DCE) with structural econometric models, I quantified the psychological barriers to vaccine uptake.
+
+The synergy with **Dr. Alison Buttenheim's** work at **UPenn CHIBE** lies in the transition from *understanding* timing barriers to *designing* behavioral incentives that overcome them. My work provides the empirical foundation to optimize the **Behavioral Design** of nudges, ensuring that interventions are not only effective but also scalable across diverse populations.
+
+## Methodological Toolkit
+
+::: {.callout-note appearance="simple"}
+### Integrating Behavioral Economics with Computational Science
+I employ a tri-pillar approach to behavioral intervention design:
+:::
+
+| Method | Application in My Research | Transferability to CHIBE |
+| :--- | :--- | :--- |
+| **Discrete Choice Experiments (DCE)** | Identifying latent preferences for vaccine attributes and temporal tradeoffs. | Optimizing incentive structures (e.g., financial rewards vs. convenience) for vaccine uptake. |
+| **Structural Modeling** | Estimating causal parameters of decision-making under uncertainty. | Predicting the long-term impact of behavioral nudges on population-level health equity. |
+| **Agent-Based Modeling (ABM)** | Simulating the diffusion of preventive behaviors in social networks. | Stress-testing scaling strategies for "nudges" before large-scale field implementation. |
+
+## The "Digital Sandbox": TRIBE v2 Compute Core
+
+A significant technical edge I bring to the Buttenheim Lab is the **TRIBE v2 (Technical Research Interface for Behavioral Economics)** compute core. 
+
+### Why TRIBE v2?
+- **High-Performance Simulation**: Optimized for Apple Silicon (M-series), allowing for complex ABM and Monte Carlo simulations on local hardware.
+- **Data Privacy & Security**: At an institution like UPenn, handling sensitive patient data is paramount. TRIBE v2 ensures that all inference and model training occur **locally**, eliminating cloud dependency and ensuring strict compliance with HIPAA/IRB requirements.
+- **Rapid Prototyping**: The "Digital Sandbox" allows us to "pre-test" behavioral incentives in a simulated environment, identifying potential failures or unintended consequences before committing to expensive field trials.
+
+```{mermaid}
+graph LR
+    A[Empirical DCE Data] --> B{Structural Model}
+    B --> C[Parameter Estimation]
+    C --> D[TRIBE v2 Digital Sandbox]
+    D --> E[Simulation of Incentives]
+    E --> F{Optimal Nudge Selection}
+    F --> G[Field Implementation]
+    G --> A
+```
+
+## Proposed Synergy: Accelerating the Buttenheim Lab
+
+If granted the opportunity to work under Dr. Buttenheim's mentorship, I aim to contribute to the lab's mission in the following ways:
+
+*   **Incentive Optimization**: Applying structural choice models to refine the design of financial and social incentives for vaccine uptake in underserved communities.
+*   **Scalability Audits**: Utilizing ABM to simulate how behavioral interventions scale across different demographic and geographic contexts, identifying "tipping points" for population-level behavior change.
+*   **Grant & Publication Support**: My background in computational behavioral science allows for the rapid generation of simulation data and visual proofs-of-concept, which can strengthen grant applications (R01/RF1) and accelerate the publication cycle.
+*   **Behavioral Digital Twins**: Developing "Digital Twins" of specific target populations to allow for real-time adjustments to behavioral designs as new field data arrives.
+
+---
+
+### Contact Information
+[**Yichao Jin, Ph.D.**](https://yichao2022.github.io)  
+Email: [Yichao.Jin@UTDallas.edu](mailto:Yichao.Jin@UTDallas.edu) | [jyc20220303@gmail.com](mailto:jyc20220303@gmail.com)  
+Phone: +1 (682) 266-4185  
+[GitHub](https://github.com/yichao2022) | [Website](https://yichao2022.github.io)
