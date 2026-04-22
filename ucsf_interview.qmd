@@ -1,0 +1,95 @@
+---
+title: "Empirical Policy Simulation: Bridging Choice Science and Tobacco Regulation"
+subtitle: "Candidate Presentation | UCSF Tobacco Center of Regulatory Science"
+author: "Yichao Jin, PhD"
+date: "2026-04-22"
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 2
+    number-sections: false
+    code-fold: true
+    css: styles.css
+---
+
+<style>
+.main-container {
+    max-width: 1000px;
+}
+.hero-box {
+    background: linear-gradient(135deg, #003262 0%, #005596 100%);
+    color: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.stat-card {
+    border-left: 5px solid #005596;
+    background: #f8f9fa;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 0 10px 10px 0;
+}
+.highlight {
+    color: #005596;
+    font-weight: bold;
+}
+</style>
+
+<div class="hero-box">
+  <h1>Bridging Discrete Choice Science & Regulation</h1>
+  <p>Transforming Experimental Evidence into Predictive Policy Insights for Health Equity.</p>
+</div>
+
+## 🔬 Research Synergy: Why DCE Matters for TRS
+
+Tobacco Regulatory Science (TRS) requires understanding how smokers and non-smokers will react to **hypothetical** policies (e.g., menthol bans, nicotine reduction). 
+
+As a specialist in **Discrete Choice Experiments (DCE)**, I provide the "Ground Truth" for these scenarios:
+
+*   **Quantifying Trade-offs:** Measuring how price, flavor, and health warnings interact.
+*   **Predicting Substitution:** Anticipating shifts between combustible cigarettes and E-cigarettes.
+*   **Targeting Vulnerable Groups:** Identifying disparate impacts on specific populations to promote **Health Equity**.
+
+---
+
+## 🛠️ My Technical Framework
+
+I combine traditional econometric modeling with modern computational methods to ensure results are both **statistically rigorous** and **policy-relevant**.
+
+::: {.stat-card}
+### 1. Experimental Design (DCE)
+*   Creating realistic choice sets based on FDA regulatory priorities.
+*   Integrating product attributes that reflect the current market (Menthol, Nicotine levels, Synthetic nicotine).
+:::
+
+::: {.stat-card}
+### 2. Population-Level Inference
+*   Leveraging **PATH** and **NHIS** weights to ensure experimental results represent the US population.
+*   Accounting for heterogeneity across age, race, and socioeconomic status.
+:::
+
+::: {.stat-card}
+### 3. Predictive Simulation
+*   Developing simulation tools to model "What-If" scenarios.
+*   Providing regulators with an independent audit tool to verify industry claims.
+:::
+
+---
+
+## 📈 Impact at UCSF
+
+My goal is to integrate into the **UCSF Tobacco Center of Regulatory Science** to help answer critical questions:
+
+1.  **Regulatory Policy Evaluation:** How will different subgroups switch products under new hypothetical regulations?
+2.  **Market Shifts:** Predicting the substitution effects between combustible products and alternative nicotine delivery systems.
+3.  **Communication Efficacy:** How do different public health warning labels impact choice behavior in real-time?
+
+---
+
+<div style="text-align: center; margin-top: 3rem; padding: 2rem; background: #eee; border-radius: 10px;">
+  <h3>"Data-driven evidence is the strongest tool for public health."</h3>
+  <p>Contact: yichao.jin@utdallas.edu | [yichao2022.github.io](https://yichao2022.github.io)</p>
+</div>
