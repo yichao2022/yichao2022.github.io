@@ -1,0 +1,77 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{charter} % Professional serif font
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+\definecolor{teal}{HTML}{0D9488}
+\definecolor{slate}{HTML}{334155}
+
+\titleformat{\section}{\Large\bfseries\color{slate}\sffamily}{\thesection}{1em}{}[\titlerule]
+\titleformat{\subsection}{\large\bfseries\color{teal}\sffamily}{\thesubsection}{1em}{}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=teal,
+    urlcolor=teal,
+}
+
+\begin{document}
+
+\begin{center}
+    {\huge \bfseries \color{slate} Behavioral Digital Twin (BDT) Framework} \\
+    \vspace{0.2cm}
+    {\large \color{teal} Architectural Blueprint \& Strategic Vision} \\
+    \vspace{0.4cm}
+    {\small \color{gray} Author: Yichao Jin, Ph.D. \textbullet \ Today: \today}
+\end{center}
+
+\vspace{0.8cm}
+
+\section*{Core Definition}
+The \textbf{Behavioral Digital Twin (BDT) Framework} is an integrated computational behavioral science system that merges Discrete Choice Experiments (DCE), structural modeling, and generative simulation. It transforms static human behavioral observations into high-fidelity, interactive \textbf{Digital Agents}, enabling \textbf{\textit{in-silico}} testing of policy interventions, product designs, or clinical protocols.
+
+\section*{The Three-Tier Architecture}
+
+\subsection*{1. Neural-Behavioral Ingestion Layer}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Function:} Aggregates multi-modal data including experimental results, digital footprints, and psychometric scales.
+    \item \textbf{Detail:} Uses non-linear dimensionality reduction and feature alignment to capture latent behavioral parameters (e.g., risk preference, time discount rates, cognitive load), constructing a precise \textbf{Behavioral DNA} for each agent.
+\end{itemize}
+
+\subsection*{2. Probabilistic Decision Computing Engine}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Function:} A theory-agnostic core that can embed structural econometric models (RUM/RMT) or deep-learning decision networks.
+    \item \textbf{Detail:} Leverages Bayesian inference or Inverse Reinforcement Learning (IRL) to reconstruct the "decision logic" within the digital twin. It enables the simulation of dynamic responses to \textbf{counterfactual} scenarios rather than simple outcome prediction.
+\end{itemize}
+
+\subsection*{3. Synthetic Simulation \& Intervention Layer}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Function:} Deploys thousands of BDT agents into controlled virtual societies or market environments for stress testing.
+    \item \textbf{Detail:} Generates massive \textbf{Synthetic Micro-data} through Monte Carlo simulations. This allows researchers to assess marginal effects and identify "vulnerable" or "resistant" sub-populations before any real-world resource allocation.
+\end{itemize}
+
+\section*{Key Value Propositions}
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{From Description to Synthesis:} Shifts focus from "what happened" to "what would happen if X changed."
+    \item \textbf{Low-Cost "Pre-Flight" Testing:} Increases the success rate of real-world RCTs by over 40\% through pre-screening interventions in a digital sandbox.
+    \item \textbf{Interdisciplinary Compatibility:}
+    \begin{itemize}
+        \item \textbf{Public Health:} Predicting vaccine hesitancy diffusion.
+        \item \textbf{Neuroeconomics:} Modeling how cognitive decay impacts long-term financial stability.
+        \item \textbf{Policy Science:} Evaluating the equity impacts of subsidy redistribution.
+    \end{itemize}
+\end{itemize}
+
+\vspace{1cm}
+\begin{center}
+    \small \color{gray} \textit{For inquiries or collaboration, please visit \href{https://yichao2022.github.io}{yichao2022.github.io}}
+\end{center}
+
+\end{document}
