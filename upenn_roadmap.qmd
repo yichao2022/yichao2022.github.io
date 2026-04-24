@@ -1,0 +1,93 @@
+---
+title: "The Behavioral Architect: Scaling Health Opportunity through Digital Twins"
+subtitle: "Strategic Collaboration Roadmap | Dr. Atheendar Venkataramani"
+author: "Yichao Jin, PhD"
+date: "2026-04-24"
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 2
+    number-sections: false
+    code-fold: true
+    css: styles.css
+---
+
+<style>
+.main-container {
+    max-width: 1000px;
+}
+.hero-box {
+    background: linear-gradient(135deg, #001f3f 0%, #003366 100%);
+    color: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.stat-card {
+    border-left: 5px solid #003366;
+    background: #f8f9fa;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 0 10px 10px 0;
+}
+.highlight {
+    color: #003366;
+    font-weight: bold;
+}
+</style>
+
+<div class="hero-box">
+  <h1>Bridging Economic Opportunity & Health Equity</h1>
+  <p>Leveraging Behavioral Digital Twins (BDT) to stress-test the impacts of social mobility on population health.</p>
+</div>
+
+## 🔬 Research Synergy: The Opportunity Health Lab
+
+Your work on the **Health Effects of Economic Opportunity** establishes the causal framework for how structural shifts shape lives. My framework, the **Behavioral Digital Twin (BDT)**, provides the simulation engine to scale these insights:
+
+*   **Choice under Constraint:** Modeling how marginalized individuals navigate "Low-Opportunity" environments using Discrete Choice Experiments (DCE).
+*   **Stress-Testing Policies:** Simulating the health outcomes of upward mobility interventions before large-scale implementation.
+*   **Predictive Vulnerability:** Identifying which subgroups are most resilient or susceptible to shifts in the "Economic Safety Net."
+
+---
+
+## 🛠️ The BDT Framework for Opportunity Health
+
+I combine econometric rigor with generative modeling to create individual-level simulations of behavioral response to economic shifts.
+
+::: {.stat-card}
+### 1. Generative Population Modeling
+*   Creating "Digital Twins" of vulnerable populations using **PATH**, **NHIS**, and lab-based choice data.
+*   Modeling the "Architectural" constraints—the latent barriers that prevent healthy choices in low-resource settings.
+:::
+
+::: {.stat-card}
+### 2. Causal Behavioral Simulation
+*   Integrating your findings on economic despair and health into a predictive engine.
+*   "What-If" scenarios: Modeling the health impact of guaranteed income, education subsidies, or housing policy shifts.
+:::
+
+::: {.stat-card}
+### 3. Policy Stress-Testing
+*   Providing a technical lever to evaluate the equity-efficiency trade-off in public health interventions.
+*   Evaluating "Behavioral Spillover" effects of economic policies onto chronic disease management.
+:::
+
+---
+
+## 📈 Collaborative Impact at UPenn
+
+My goal is to align with the **Opportunity Health Lab** to tackle the next generation of social determinants research:
+
+1.  **Economic Opportunity & Chronic Disease:** Using BDT to predict how shifts in local industry impact long-term health behavior (e.g., substance use, nutrition).
+2.  **Equity-Centered Intervention Design:** Optimizing policy outreach to ensure that "Opportunity Policies" reach the most behaviorally-vulnerable clusters.
+3.  **Structural Racism & Decision Architecture:** Quantifying how systemic barriers warp the decision-making landscape of minority populations.
+
+---
+
+<div style="text-align: center; margin-top: 3rem; padding: 2rem; background: #eee; border-radius: 10px;">
+  <h3>"Transforming Economic Insights into Predictive Behavioral Solutions."</h3>
+  <p>Contact: Yichao.Jin@UTDallas.edu | [yichao2022.github.io](https://yichao2022.github.io)</p>
+</div>
