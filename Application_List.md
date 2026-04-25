@@ -55,7 +55,7 @@
 - **Dr. Jamie Daw** (Columbia Public Health - Health Policy and Management)
   - **Profile**: https://www.publichealth.columbia.edu/profile/jamie-daw-phd
   - **Email**: jrd2199@cumc.columbia.edu
-  - **Status**: Outreach sent (4/6). Received Auto-Reply: Out of office until Thursday, April 9 (Spring Break). 🏖️
+  - **Status**: Outreach sent (4/6). Received Auto-Reply: Out of office until Thursday, April 9. **OOO period passed; follow-up pending or awaiting response.** 🏖️
   - **Added**: 2026-03-16
   - **Update**: 2026-04-07
 - **UMich Center for the Assessment of Tobacco Regulations (CAsToR)**
@@ -84,15 +84,95 @@
 - **Dr. Yingning Wang** (UCSF Institute for Health & Aging / CTCRE)
   - **Profile**: https://profiles.ucsf.edu/yingning.wang
   - **Email**: yingning.wang@ucsf.edu
-  - **Status**: Identified. Drafting cold email (PI-funded outreach).
+  - **Status**: **Interview Completed** (2026-04-22). PI expressed strong interest; funding (TRDRP) expected June 2026. Provided PI with "UCSF Admin and Research Summary" to simplify Search Exemption.
   - **Topic**: Health Economics, Tobacco Control Policy, Discrete Choice Experiments, and Machine Learning.
   - **Added**: 2026-04-16
-- **Dr. Pamela Ling** (UCSF CTCRE Director)
-  - **Status**: Identified as potential PI-funded target.
-  - **Added**: 2026-04-16
-- **Dr. Dorie Apollonio** (UCSF CTCRE Fellowship Co-Director)
-  - **Status**: Identified as potential PI-funded target.
-  - **Added**: 2026-04-16
-- **Dr. Stacey Anderson** (UCSF CTCRE)
-  - **Status**: Identified as potential PI-funded target.
-  - **Added**: 2026-04-16
+  - **Update**: 2026-04-24
+
+## 🚀 高转化率目标 (High-Conversion: Non-Top Tier but Strong PIs)
+*Focus on华人 PI with strong funding (R01/RF1), active lab growth, and niche expertise.*
+
+- **Dr. Elisa Tong** (UC Davis Health / Comprehensive Cancer Center)
+  - **Role**: Director of the Tobacco Cessation Policy Research Center (TCPRC).
+  - **Funding**: Significant California TRDRP funding; leading a newly established research center (2024/2025).
+  - **Match**: High. Focus on tobacco cessation policy and health services. Your BDT framework could model "quit-attempt" trajectories.
+  - **Status**: Identified as Tier-1 High Conversion Target.
+
+- **Dr. Jun Wu** (UC Irvine / Joe C. Wen School of Population & Public Health)
+  - **Role**: Professor of Environmental & Occupational Health.
+  - **Funding**: Recent NIH grant (2025) for maternal/child mental health; NIH Climate and Health Scholar (2024-25).
+  - **Match**: Strong. Her research into environmental impacts on "mental, emotional, and behavioral disorders" is a perfect "Digital Wind Tunnel" use case for BDT.
+  - **Status**: Identified as Tier-1 High Conversion Target.
+
+- **[TBD] Targeting: Emory / Ohio State / WashU**
+  - **Strategy**: Continue identifying Chinese PIs with recent R01s in Public Health/Behavioral sciences.
+
+- **Dr. Pamela Ling** (UCSF Medicine / Director of CTCRE)
+  - **Profile**: https://profiles.ucsf.edu/pamela.ling
+  - **Email**: pamela.ling@ucsf.edu
+  - **Status**: Identified. Target for "Project-funded" Outreach.
+  - **Topic**: Tobacco marketing, Social Marketing, COM-B Model for cessation. High-match for Behavioral Digital Twins (BDT) in public health messaging.
+  - **Added**: 2026-04-22
+- **Dr. Winston Chiong** (UCSF Memory and Aging Center / Decision Lab)
+  - **Profile**: https://decisionlab.ucsf.edu/
+  - **Email**: Winston.Chiong@ucsf.edu
+  - **Status**: **OOO until 2026-04-22** (per `MEMORY.md`). Spreadsheet noted OOO until 4/13. Today is 4/17, so follow-up pending his return.
+  - **Topic**: Neuroethics, Decision-making, Digital Twin behavior mapping.
+  - **Added**: 2026-04-08
+
+- **Hossein Rahnama** (MIT / TMU)
+  - **Status**: **Emailed (4/6 Batch)**.
+  - **Topic**: AI Behavioral Digital Twins.
+  - **Added**: 2026-04-06
+
+- **Arvind Narayanan** (Princeton University)
+  - **Status**: **Emailed (4/6 Batch)**.
+  - **Added**: 2026-04-06
+
+- **Michele Gelfand** (Stanford University)
+  - **Status**: **Emailed (4/6 Batch)**.
+  - **Added**: 2026-04-06
+
+- **Sebastian Schneeweiss** (Harvard Medical School / BWH)
+  - **Status**: **Emailed (4/6 Batch)**.
+  - **Added**: 2026-04-06
+
+- **Maya Petersen** (UC Berkeley)
+  - **Status**: **Emailed (4/6 Batch)**.
+  - **Added**: 2026-04-06
+
+- **Matt Perzanowski** (Columbia University)
+  - **Status**: **Emailed (4/6 Batch)**.
+  - **Added**: 2026-04-06
+
+- **Olivier Toubia** (Columbia Business School)
+  - **Status**: **Planning** (Targeting for Digital Twin research).
+  - **Added**: 2026-04-06
+
+- **Joon Sung Park** (Stanford University)
+  - **Status**: **Planning** (Generative Agents / Digital Twins).
+  - **Added**: 2026-04-06
+
+- **David Laibson** (Harvard University)
+  - **Status**: **Planning** (Intertemporal Choice / Behavioral Economics).
+  - **Added**: 2026-04-06
+
+- **Ziad Obermeyer** (UC Berkeley)
+  - **Status**: **Planning** (Public Health AI).
+  - **Added**: 2026-04-06
+
+- **Dr. Karen J. Kowalske** (UTSW)
+  - **Status**: **Planning** (Physical Medicine / Community Integration).
+  - **Added**: 2026-04-11
+
+- **Dr. Fiemu Nwariaku** (UTSW / Univ of Utah)
+  - **Status**: **Planning** (Global Health / Surgery / mHealth).
+  - **Added**: 2026-04-11
+
+- **Dr. Marie Lynn Miranda** (Notre Dame)
+  - **Status**: **Planning** (Spatial Health / Children's Environmental Health).
+  - **Added**: 2026-04-11
+
+- **Dr. Randall A. Kramer** (Duke Global Health Institute)
+  - **Status**: **Planning** (Decision-Analytic Modeling / Global Health).
+  - **Added**: 2026-04-11
