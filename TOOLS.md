@@ -28,6 +28,11 @@ Things like:
 ### API Keys
 
 - YouTube API: `AIzaSyC7cMY7DwHPuPycJ0pdyX6pEHDWnM5kG-E` (Provided 2026-04-26)
+- Cursor API: `crsr_...` (Provided 2026-05-04)
+
+### Model Providers
+
+- **Cursor**: Configured with `cursor-small` and `claude-3.5-sonnet`.
 ```
 
 ## Why Separate?
