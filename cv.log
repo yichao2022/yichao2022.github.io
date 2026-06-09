@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2026.4.25)  8 JUN 2026 19:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2026.4.25)  8 JUN 2026 19:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**cv.tex
-(./cv.tex
+**cv/cv.tex
+(./cv/cv.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (/Users/cary/Library/TinyTeX/texmf-dist/tex/latex/base/article.cls
@@ -179,7 +179,8 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 15.
  (/Users/cary/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count300
-) (./cv.aux)
+)
+No file cv.aux.
 \openout1 = `cv.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
@@ -200,7 +201,6 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -236,11 +236,10 @@ LaTeX Font Info:    ... okay on input line 17.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring ON on input line 17.
-(./cv.out) (./cv.out)
 \@outlinefile=\write3
 \openout3 = `cv.out'.
 
- (/Users/cary/Library/TinyTeX/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+(/Users/cary/Library/TinyTeX/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count301
 \scratchdimen=\dimen162
@@ -261,7 +260,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 80--81
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
 
  []
 
@@ -270,19 +269,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 87--88
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-Package rerunfilecheck Info: File `cv.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+
+Package rerunfilecheck Warning: File `cv.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `cv.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 9546 strings out of 469471
- 146387 string characters out of 5467975
- 574631 words of memory out of 5000000
- 38124 multiletter control sequences out of 15000+600000
+ 9539 strings out of 469471
+ 146316 string characters out of 5467975
+ 574588 words of memory out of 5000000
+ 38122 multiletter control sequences out of 15000+600000
  633696 words of font info for 49 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 75i,5n,79p,486b,578s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,5n,79p,489b,578s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/cary/Library/TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></Users/cary/Library/TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></Users/cary/Library/TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></Users/cary/Library/TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></Users/cary/Library/TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb>
-Output written on cv.pdf (3 pages, 134156 bytes).
+Output written on cv.pdf (3 pages, 134179 bytes).
 PDF statistics:
  82 PDF objects out of 1000 (max. 8388607)
  65 compressed objects within 1 object stream
