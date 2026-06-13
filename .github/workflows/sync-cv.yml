@@ -1,0 +1,44 @@
+name: Sync cv.pdf to latest
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "Yichao_Jin_CV.pdf"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: "sync-cv"
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Sync cv.pdf
+        run: |
+          if [ -f Yichao_Jin_CV.pdf ]; then
+            cp Yichao_Jin_CV.pdf cv.pdf
+            echo "SYNCED=true" >> $GITHUB_ENV
+          else
+            echo "SYNCED=false" >> $GITHUB_ENV
+          fi
+
+      - name: Commit and push
+        if: env.SYNCED == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add cv.pdf
+          if git diff --cached --quiet; then
+            echo "No change — cv.pdf already matches Yichao_Jin_CV.pdf"
+          else
+            git commit -m "sync cv.pdf → latest [skip ci]"
+            git push
+          fi
