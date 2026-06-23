@@ -6,12 +6,11 @@
 \usepackage{enumitem}
 \usepackage{xcolor}
 
-% Colors and Hyperlinks
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
     urlcolor=blue,
-    pdftitle={CV - Yichao Jin},
+    pdftitle={CV - Yichao Jin - Computational Social Science \& AI},
 }
 
 \begin{document}
@@ -27,7 +26,7 @@
     \vspace{0.5em}
     \href{https://yichao2022.github.io}{\textbf{https://yichao2022.github.io}} \quad | \quad \href{https://orcid.org/0009-0003-7667-5143}{\textbf{ORCID}} \quad | \quad \href{mailto:Yichao.Jin@UTDallas.edu}{Yichao.Jin@UTDallas.edu} \\
     \vspace{0.5em}
-    \textit{Specialization: Behavioral AI \;|\; Health Economics \;|\; Behavioral Economics \;|\; Discrete Choice Experiments}
+    \textit{Computational Social Science \;|\; Behavioral AI \;|\; Structural Causal Modeling \;|\; Causal Inference}
 \end{center}
 
 \vspace{0.5em}
@@ -37,10 +36,9 @@
 \textbf{University of Texas at Dallas} \hfill May 2026 \\
 \textbf{Ph.D. in Public Policy and Political Economy}
 \begin{itemize}[noitemsep, topsep=0pt, label={-}]
-    \item Successfully Defended: April 2026
     \item Dissertation: ``Intertemporal Choice in Vaccination Timing: Evidence from a Discrete Choice Experiment in Wuhan'' --- \href{https://www.proquest.com/docview/32574920}{\textbf{ProQuest}}
-    \item Committee: \href{https://profiles.utdallas.edu/dohyeong.kim}{Dohyeong Kim} (Chair), \href{https://profiles.utdallas.edu/richard.scotch}{Richard Scotch}, \href{https://profiles.utdallas.edu/soyoung.kwon}{Soyoung Kwon}, \href{https://jindal.utdallas.edu/faculty/khai-chiong/}{Khai Chiong}.
-    \item Distinction: Dean of Graduate Education Dissertation Research Award (2025).
+    \item Committee: Dohyeong Kim (Chair), Richard Scotch, Soyoung Kwon, Khai Chiong.
+    \item Dean of Graduate Education Dissertation Research Award (2025).
 \end{itemize}
 
 \vspace{0.5em}
@@ -56,26 +54,21 @@
 \textbf{B.A. in Economics}
 
 \section*{Research Agenda}
-\vspace{0.3em}
-My research develops behavioral models and AI-driven simulation frameworks to understand why individuals make suboptimal health decisions, and how policy design can be improved through causally-valid computational inference. I integrate Discrete Choice Experiments with structural econometrics and large language models to build Behavioral Digital Twins---empirically-grounded synthetic populations for counterfactual policy simulation. My work spans health economics, behavioral economics, and AI governance.
+My research develops causally-constrained AI agents for behavioral simulation and policy analysis. I integrate discrete choice experiments, structural causal modeling, and large language models to build Behavioral Digital Twins---empirically-grounded synthetic agents that generate behavior within estimated human choice frontiers rather than from LLM training priors. This framework enables pre-screening of behavioral interventions and policy designs before field deployment, with applications to health behavior, education, and social policy.
 
 \section*{Working Papers}
 \begin{enumerate}
-    \item \textbf{``Waiting Time as a Behavioral Barrier to Vaccination Uptake: Nonlinear Heterogeneity by Institutional Trust''} \\
-    \textit{Under Review at Economic Analysis and Policy} --- \href{https://yichao2022.github.io/jmp.pdf}{\textbf{Link to Full Draft}}
-    \begin{itemize}[noitemsep, topsep=0pt]
-        \item Developed a structural Discrete Choice Experiment (DCE) framework to analyze the interaction between temporal barriers and institutional trust in vaccination behavior.
-        \item Identified nonlinear heterogeneity in waiting time sensitivity, providing a behavioral explanation for vaccine hesitancy.
-    \end{itemize}
-
     \item \textbf{``Empirical-Frontier Regularization for LLM Synthetic Agents: A Behavioral Digital Twin Framework''} \\
-    \textit{Working Paper} --- \href{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6686418}{\textbf{SSRN Link}}. Submitted to AI and Economics (AIE) Summer Conference 2026. Developed a 3-stage framework integrating DCE data and Structural Causal Modeling (SCM) to align generative agents with empirical choice frontiers, achieving a 93\% reduction in frontier-deviation MSE.
+    \href{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6686418}{\textbf{SSRN Link}}. Three-stage framework integrating DCE data, structural causal modeling, and LLM-based agents. Stage~1 estimates behavioral parameters from human choice data; Stage~2 constrains LLM outputs via empirical-frontier regularization (93\% reduction in MSE); Stage~3 deploys constrained agents for counterfactual simulation. Presented at DAISY~2026 (ACM CHIL~2026) and AIE Summer Conference~2026.
 
     \item \textbf{``Value Contamination in Policy Simulation: Measuring How LLM Policy-Value Orientations Shape Predicted Administrative Burden Effects''} \\
-    \textit{Working Paper} --- \href{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6876161}{\textbf{SSRN Link}}. Develops an audit framework for measuring value sensitivity in LLM-generated policy simulations. Using administrative burden in vaccination access as a testbed, evaluates nine LLMs across six model families through policy-value orientation batteries, narrative frame-decomposition, and within-model frame-manipulation experiments.
+    \textit{Working Paper} --- \href{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6876161}{\textbf{SSRN Link}}. Audit framework measuring value sensitivity in LLM-generated policy simulations. Tests nine LLMs across six model families through policy-value orientation batteries, narrative frame-decomposition, and within-model frame-manipulation experiments (N=2,160 observations).
+
+    \item \textbf{``Waiting Time as a Behavioral Barrier to Vaccination Uptake: Nonlinear Heterogeneity by Institutional Trust''} \\
+    \textit{Under Review at Economic Analysis and Policy} --- \href{https://yichao2022.github.io/jmp.pdf}{\textbf{Link to Full Draft}}. Structural DCE framework measuring interaction between temporal barriers and institutional trust in vaccination decisions.
 
     \item \textbf{``The Price of Waiting: Evidence on Cash--Time Trade-Offs in Vaccination Time Discount''} \\
-    \textit{Manuscript in Preparation (Expected submission: August 2026)} --- Targeting \textit{Social Science \& Medicine}.
+    \textit{Manuscript in Preparation (Expected submission: August 2026)}.
 \end{enumerate}
 
 \section*{Research Experience \& Affiliations}
@@ -92,21 +85,19 @@ My research develops behavioral models and AI-driven simulation frameworks to un
     \item Conducted high-salience behavioral experiments (N=1,027) analyzing risk-weighted health decisions and institutional trust.
 \end{itemize}
 
-\section*{Teaching Experience}
-\textbf{Teaching Assistant, School of Economic, Political and Policy Sciences, UT Dallas}
-\begin{itemize}[noitemsep, topsep=0pt]
-    \item \textbf{Quantitative Methods for Policy Analysis (Graduate)}: Led Econometrics labs; specialized in R programming, regression analysis, and causal inference.
-    \item \textbf{Health Economics \& Public Policy (Undergraduate)}: Developed case studies on health market failures and administrative challenges.
-    \item \textbf{Public Policy Analysis (Undergraduate)}: Mentored students in drafting evidence-based policy memos.
-\end{itemize}
-
 \section*{Conference Presentations}
 \begin{itemize}[noitemsep, topsep=0pt]
+    \item \textbf{DAISY 2026 Workshop at ACM Conference on Health, Inference, and Learning (CHIL) 2026}: Behavioral Digital Twins --- A Causally-Faithful Generative Framework.
     \item \textbf{AI and Economics (AIE) Summer Conference 2026}: Empirical-Frontier Regularization for LLM Synthetic Agents.
     \item \textbf{APPAM Fall Research Conference 2025} (Seattle, WA): Estimating Time Discount Rate for Vaccination.
-    \item \textbf{DAISY 2026 Workshop at ACM Conference on Health, Inference, and Learning (CHIL) 2026}: Behavioral Digital Twins — A Causally-Faithful Generative Framework.
     \item \textbf{UT Dallas Graduate Research Symposium 2025}: Modeling Vaccination Decisions with Hyperbolic Discounting.
 \end{itemize}
+
+\section*{Technical Skills \& Certifications}
+\textbf{Econometrics:} Mixed Logit (MXL), Latent Class Models (LCM), SEIR Modeling, Causal Inference. \\
+\textbf{AI \& ML:} PyTorch, Transformers (HuggingFace), LLM APIs (OpenAI, Anthropic), LangChain, Causal Machine Learning. \\
+\textbf{Software:} Stata (Advanced), R, Python, MATLAB, LaTeX, SQL, GIS. \\
+\textbf{Certifications:} Stanford Artificial Intelligence Graduate Certificate; CITI Human Subjects Protection.
 
 \section*{Honors \& Awards}
 \begin{itemize}[noitemsep, topsep=0pt]
@@ -114,12 +105,6 @@ My research develops behavioral models and AI-driven simulation frameworks to un
     \item \textbf{2025} Betty \& Gifford Johnson Graduate Travel Award, UT Dallas
     \item \textbf{2016} Omicron Delta Epsilon, International Honor Society for Economics
 \end{itemize}
-
-\section*{Technical Skills \& Certifications}
-\textbf{Econometrics}: Mixed Logit (MXL), Latent Class Models (LCM), SEIR Modeling, Causal Inference. \\
-\textbf{AI \& ML}: PyTorch, Transformers (HuggingFace), LLM APIs (OpenAI, Anthropic), LangChain, Causal Machine Learning. \\
-\textbf{Software}: Stata (Advanced), R, Python, MATLAB, LaTeX, SQL, GIS. \\
-\textbf{Certifications}: Stanford Artificial Intelligence Graduate Certificate; CITI Human Subjects Protection.
 
 \vspace{1em}
 \noindent\hrulefill
@@ -159,7 +144,7 @@ My research develops behavioral models and AI-driven simulation frameworks to un
 
 \vspace{1em}
 \begin{center}
-    \textit{Last Updated: June 8, 2026}
+    \textit{Last Updated: June 2026}
 \end{center}
 
 \end{document}
