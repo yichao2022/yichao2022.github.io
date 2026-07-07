@@ -1,0 +1,74 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.7in, top=0.5in, bottom=0.5in]{geometry}
+\usepackage{parskip}
+\setlength{\parskip}{3pt}
+\usepackage{lmodern}
+\usepackage{tgheros}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+\definecolor{slate}{HTML}{2c3e50}
+\definecolor{teal}{HTML}{16a085}
+\definecolor{rulecolor}{HTML}{bdc3c7}
+
+\titleformat{\section}
+  {\normalfont\large\bfseries\sffamily\color{slate}}
+  {}{0em}{}[\color{rulecolor}\titlerule]
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=teal,
+    urlcolor=teal,
+}
+
+\begin{document}
+\pagestyle{empty}
+
+% --- Header ---
+\begin{center}
+    {\Large \bfseries \sffamily \color{slate} Research Statement} \\
+    \vspace{0.2cm}
+    {\small Yichao Jin, Ph.D. \quad | \quad \href{mailto:yichao.jin@utdallas.edu}{yichao.jin@utdallas.edu} \quad | \quad \href{https://yichao2022.github.io}{yichao2022.github.io}} \\
+    {\small Methods: DCE, Structural Choice Modeling, Cost-Effectiveness Integration, Behavioral Simulation}
+\end{center}
+
+\vspace{0.15cm}
+
+\section*{Research Overview}
+
+My research develops computational frameworks that translate individual-level choice behavior into decision models for health policy. I specialize in Discrete Choice Experiments (DCEs), structural behavioral modeling, and simulation methods that bridge the gap between what patients prefer and what populations need at a systems level. My work sits at the intersection of behavioral economics and health decision science --- directly aligned with the Smith Center's mission of using real-world data and modeling to improve cardiovascular outcomes.
+
+\section*{The Behavioral Data Toolkit (BDT)}
+
+My dissertation built the \textbf{Behavioral Data Toolkit (BDT)}, a three-tier architecture designed to make behavioral parameters operational for policy simulation:
+
+\begin{itemize}[leftmargin=*, nosep]
+    \item \textbf{Preference Elicitation} --- DCE-based extraction of latent behavioral parameters (risk tolerance, time discounting, institutional trust sensitivity), validated against a vaccination uptake study in Wuhan (N=1,027).
+    \item \textbf{Structural Decision Engine} --- A theory-agnostic core embedding Random Utility Models with Bayesian inference, capable of generating counterfactual predictions under alternative policy scenarios.
+    \item \textbf{Policy Simulation Layer} --- Multi-agent synthetic populations for pre-screening interventions, with an LLM-based extension achieving 93.8\% reduction in frontier-deviation MSE.
+\end{itemize}
+
+The BDT framework's central contribution is methodological: it provides a principled way to incorporate \textbf{behavioral heterogeneity} --- how patients differ in their sensitivity to time delays, out-of-pocket costs, or provider trust --- into models that traditionally assume homogeneous preferences.
+
+\section*{Connection to Cardiovascular Health Economics}
+
+My work connects to the Smith Center's research in three specific ways:
+
+\begin{enumerate}[leftmargin=*, nosep]
+    \item \textbf{Enriching CEA with behavioral parameters.} Cost-effectiveness models of cardiovascular therapies often assume uniform adherence and treatment acceptance. BDT's preference estimates can parameterize subgroup-specific adherence behavior, producing CEA results that reflect real-world heterogeneity rather than clinical-trial ideal conditions.
+    \item \textbf{Modeling patient-driven treatment choice.} DCEs are increasingly used in cardiovascular outcomes research (e.g., patient preferences for anticoagulation, statin therapy, or revascularization). BDT's simulation layer can extend these analyses from static preference rankings to dynamic policy scenarios --- e.g., how cost-sharing changes affect treatment uptake across socioeconomic strata.
+    \item \textbf{Health disparities through behavioral lenses.} My Wuhan DCE revealed that low-trust individuals are disproportionately sensitive to administrative delay --- a pattern with direct analogues in cardiovascular care (delays in diagnostic testing, medication initiation, follow-up adherence). Quantifying these behavioral barriers to equitable care is a natural extension.
+\end{enumerate}
+
+\section*{Proposed Direction}
+
+I propose to extend BDT's preference-elicitation framework into cardiovascular cost-effectiveness analysis --- modeling how patient heterogeneity in treatment preferences and adherence behavior affects the population-level cost-effectiveness of therapies such as PCSK9 inhibitors, SGLT2 inhibitors, or anticoagulation strategies. This work would bridge the group's established strength in decision-analytic modeling with a behavioral dimension that is often assumed away but matters substantially for distributional cost-effectiveness.
+
+\vfill
+\noindent{\small\sffamily\color{slate} Selected Publications:} {\small Jin, Y. (2026). \emph{Empirical-Frontier Regularization for LLM Synthetic Agents.} SSRN. \;|\; Jin, Y. (2026). \emph{Waiting Time as a Behavioral Barrier to Vaccination Uptake.} Job Market Paper.}
+
+\end{document}

@@ -1,0 +1,70 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.7in, top=0.5in, bottom=0.5in]{geometry}
+\usepackage{parskip}
+\setlength{\parskip}{3pt}
+\usepackage{lmodern}
+\usepackage{tgheros}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+\definecolor{slate}{HTML}{2c3e50}
+\definecolor{teal}{HTML}{16a085}
+\definecolor{rulecolor}{HTML}{bdc3c7}
+
+\titleformat{\section}
+  {\normalfont\large\bfseries\sffamily\color{slate}}
+  {}{0em}{}[\color{rulecolor}\titlerule]
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=teal,
+    urlcolor=teal,
+}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+    {\Large \bfseries \sffamily \color{slate} Research Statement} \\
+    \vspace{0.2cm}
+    {\small Yichao Jin, Ph.D. \quad | \quad \href{mailto:yichao.jin@utdallas.edu}{yichao.jin@utdallas.edu} \quad | \quad \href{https://yichao2022.github.io}{yichao2022.github.io}} \\
+    {\small Methods: Statistical Modeling, Simulation, AI/ML, Causal Inference, Bayesian Methods}
+\end{center}
+
+\vspace{0.15cm}
+
+\section*{Quantitative Modeling and Simulation}
+
+My research centers on building and validating quantitative models of complex decision processes using computational simulation, statistical inference, and machine learning. I specialize in translating empirical data into structural models that can generate counterfactual predictions --- a skill set directly applicable to regulatory science and drug evaluation.
+
+My dissertation developed the \textbf{Behavioral Data Toolkit (BDT)}, a three-tier computational framework that integrates experimental choice data with structural simulation. The framework involves Bayesian parameter estimation, Monte Carlo simulation for counterfactual generation, and AI/ML-based validation of model outputs. While the application domain was health decision-making, the methodological core --- structural modeling, simulation, statistical validation, and AI integration --- is domain-agnostic.
+
+\section*{AI/ML and Data Science Skills}
+
+DQMM's research priorities include integrating AI/ML models with conventional pharmacokinetic modeling. My direct experience includes:
+
+\begin{itemize}[leftmargin=*, nosep]
+    \item \textbf{Machine learning for behavioral prediction:} Applied LLM-based synthetic agents to simulate human decision patterns, achieving 93.8\% reduction in prediction error through empirical-frontier regularization.
+    \item \textbf{Bayesian inference and structural modeling:} Built hierarchical Bayesian choice models incorporating random效用 parameters, with posterior predictive checks for model validation.
+    \item \textbf{Causal inference with observational data:} Experience with difference-in-differences, instrumental variables, and matching methods using large-scale survey and administrative datasets.
+    \item \textbf{Computational tools:} Proficient in R (tidyverse, brms, Stan), Python (PyTorch, scikit-learn, pandas), and reproducible research workflows (Git, Quarto, LaTeX).
+\end{itemize}
+
+\section*{Connection to Regulatory Science}
+
+The BDT framework addresses a problem that parallels challenges in generic drug evaluation: how to use limited empirical data to make reliable predictions about unobserved scenarios. In drug development, this is the question of whether \textit{in silico} modeling can reduce or replace \textit{in vivo} bioequivalence studies; in my work, it is the question of whether computational simulations can pre-screen policy interventions before field implementation. The quantitative toolkit --- structural model specification, sensitivity analysis, uncertainty quantification, and external validation --- is shared.
+
+I recognize that pharmacometric modeling (PK/PD, PBPK) requires domain knowledge I do not yet possess. What I offer is strong foundations in the \textit{methodology} of quantitative modeling and simulation: model building, statistical inference, computational implementation, and rigorous validation. I am eager to apply these skills to DQMM's regulatory science mission and to rapidly acquire the domain-specific knowledge needed.
+
+\section*{Proposed Contribution}
+
+I would contribute to DQMM's research by bringing expertise in statistical modeling, simulation methodology, and AI/ML integration --- supporting the Division's work on quantitative approaches to generic drug evaluation while developing regulatory science skills under Dr.~Babiskin's mentorship.
+
+\vfill
+\noindent{\small\sffamily\color{slate} Selected Publications:} {\small Jin, Y. (2026). \emph{Empirical-Frontier Regularization for LLM Synthetic Agents.} SSRN. \;|\; Jin, Y. (2026). \emph{Waiting Time as a Behavioral Barrier to Vaccination Uptake.} Job Market Paper.}
+
+\end{document}

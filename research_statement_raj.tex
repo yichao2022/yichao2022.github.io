@@ -1,0 +1,74 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.7in, top=0.5in, bottom=0.5in]{geometry}
+\usepackage{parskip}
+\setlength{\parskip}{3pt}
+\usepackage{lmodern}
+\usepackage{tgheros}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+\definecolor{slate}{HTML}{2c3e50}
+\definecolor{teal}{HTML}{16a085}
+\definecolor{rulecolor}{HTML}{bdc3c7}
+
+\titleformat{\section}
+  {\normalfont\large\bfseries\sffamily\color{slate}}
+  {}{0em}{}[\color{rulecolor}\titlerule]
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=teal,
+    urlcolor=teal,
+}
+
+\begin{document}
+\pagestyle{empty}
+
+% --- Header ---
+\begin{center}
+    {\Large \bfseries \sffamily \color{slate} Research Statement} \\
+    \vspace{0.2cm}
+    {\small Yichao Jin, Ph.D. \quad | \quad \href{mailto:yichao.jin@utdallas.edu}{yichao.jin@utdallas.edu} \quad | \quad \href{https://yichao2022.github.io}{yichao2022.github.io}} \\
+    {\small Methods: DCE, Structural Choice Modeling, LLM-Based Simulation, Behavioral Digital Twins}
+\end{center}
+
+\vspace{0.15cm}
+
+\section*{Research Overview}
+
+My research builds computational frameworks that translate behavioral models of patient and clinician decision-making into actionable, human-centered decision-support tools. I bridge behavioral economics, discrete choice methods, and generative AI to create systems that not only predict behavior but can be interacted with, audited, and deployed alongside real users.
+
+\section*{The Behavioral Data Toolkit (BDT)}
+
+My dissertation developed the \textbf{Behavioral Data Toolkit (BDT)}, a three-tier architecture that transforms Discrete Choice Experiment (DCE) data into high-fidelity synthetic agents:
+
+\begin{itemize}[leftmargin=*, nosep]
+    \item \textbf{Neural-Behavioral Ingestion} --- extracts latent preference parameters (risk tolerance, time discounting, trust sensitivity) from multi-modal choice data.
+    \item \textbf{Probabilistic Decision Engine} --- a theory-agnostic core embedding structural econometric models (Random Utility / Random Regret Minimization) with Bayesian inference, enabling counterfactual simulation.
+    \item \textbf{Synthetic Simulation Layer} --- deploys thousands of digital agents into virtual policy environments, generating synthetic micro-data for pre-screening interventions before field RCTs.
+\end{itemize}
+
+In a vaccination DCE (N=1,027, Wuhan, China), BDT reduced frontier-deviation MSE by 93.8\% compared to raw LLM agents and identified clinically meaningful heterogeneity in delay sensitivity by institutional trust --- a pattern conventional DCE analysis alone would not have revealed.
+
+\section*{Alignment with Dr.~Raj's Group}
+
+BDT is currently strongest at \emph{modeling} behavioral decision processes, but the question driving Dr.~Raj's group --- how to design decision-support tools that patients and clinicians actually trust and use --- is exactly where my work needs to go next. I see three concrete connections:
+
+\begin{enumerate}[leftmargin=*, nosep]
+    \item \textbf{Wearable health data as behavioral input.} BDT's ingestion layer currently handles experimental choice data; extending it to stream from passive sensor data (wearables, EHR logs) would allow preference models to update dynamically --- aligning with the group's interest in making continuous health data actionable for chronic condition management.
+    \item \textbf{Red-teaming as validation.} The group's approach of stress-testing LLMs in clinical settings (e.g., red-teaming ChatGPT) provides a natural audit framework for BDT's synthetic agents. Behavioral digital twins must be robust to adversarial inputs before they can be trusted in shared decision-making.
+    \item \textbf{Human-AI interaction design.} BDT currently outputs preference estimates and policy simulations, not interfaces. The group's expertise in designing interaction modalities that support metacognitive engagement --- helping users understand when and how to rely on AI recommendations --- would transform BDT from a modeling tool into a deployable decision-support system.
+\end{enumerate}
+
+\section*{Proposed Direction}
+
+I propose to spend my postdoc adapting BDT's preference-elicitation framework into an interactive decision-support tool, validated through both behavioral experiments and clinical deployment studies --- contributing to the group's mission of making health data and algorithms genuinely actionable for the people who need them.
+
+\vfill
+\noindent{\small\sffamily\color{slate} Selected Publications:} {\small Jin, Y. (2026). \emph{Empirical-Frontier Regularization for LLM Synthetic Agents.} SSRN. \;|\; Jin, Y. (2026). \emph{Waiting Time as a Behavioral Barrier to Vaccination Uptake.} Job Market Paper.}
+
+\end{document}

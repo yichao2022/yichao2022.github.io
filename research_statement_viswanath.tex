@@ -1,0 +1,74 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.7in, top=0.5in, bottom=0.5in]{geometry}
+\usepackage{parskip}
+\setlength{\parskip}{3pt}
+\usepackage{lmodern}
+\usepackage{tgheros}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+\definecolor{slate}{HTML}{2c3e50}
+\definecolor{teal}{HTML}{16a085}
+\definecolor{rulecolor}{HTML}{bdc3c7}
+
+\titleformat{\section}
+  {\normalfont\large\bfseries\sffamily\color{slate}}
+  {}{0em}{}[\color{rulecolor}\titlerule]
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=teal,
+    urlcolor=teal,
+}
+
+\begin{document}
+\pagestyle{empty}
+
+% --- Header ---
+\begin{center}
+    {\Large \bfseries \sffamily \color{slate} Research Statement} \\
+    \vspace{0.2cm}
+    {\small Yichao Jin, Ph.D. \quad | \quad \href{mailto:yichao.jin@utdallas.edu}{yichao.jin@utdallas.edu} \quad | \quad \href{https://yichao2022.github.io}{yichao2022.github.io}} \\
+    {\small Methods: DCE, Structural Choice Modeling, Behavioral Simulation, LLM-Integrated Decision Frameworks}
+\end{center}
+
+\vspace{0.15cm}
+
+\section*{Research Overview}
+
+My research develops computational methods for understanding how individuals make health decisions and how those decisions are shaped by social and digital environments. I specialize in discrete choice experiments, structural behavioral modeling, and simulation methods that integrate behavioral data with large language models. My work sits at the intersection of behavioral economics, health decision science, and computational social science.
+
+\section*{The Behavioral Digital Twin (BDT) Framework}
+
+My dissertation built the \textbf{Behavioral Digital Twin (BDT)} framework, a causally constrained architecture for simulating health decision-making:
+
+\begin{itemize}[leftmargin=*, nosep]
+    \item \textbf{Preference Elicitation} --- DCE-based extraction of latent behavioral parameters (risk tolerance, time discounting, institutional trust sensitivity), validated against a vaccination uptake study (N=1,027).
+    \item \textbf{Causal Constraint Layer} --- LLM-generated synthetic agents whose behavior is constrained by experimentally estimated preference parameters, preserving behavioral realism while reducing hallucination.
+    \item \textbf{Policy Simulation} --- Multi-agent framework achieving near-perfect rank-order recovery ($\rho = 0.97$) against human benchmarks for policy-relevant counterfactuals.
+\end{itemize}
+
+BDT's central contribution is methodological: it provides a principled way to integrate behavioral heterogeneity into models that traditionally assume homogeneous preferences, using AI without sacrificing causal rigor.
+
+\section*{Connection to Social and Digital Well-Being}
+
+My research offers three points of connection to the Center's mission:
+
+\begin{enumerate}[leftmargin=*, nosep]
+    \item \textbf{Digital environments and health behavior.} My work has shown that institutional trust and social context drive health decisions as much as clinical information. These are fundamentally questions about social well-being: how digital environments and social conditions enable or constrain people's ability to make choices that support their health.
+    \item \textbf{Modeling well-being at scale.} BDT is designed to model preference heterogeneity across populations, making it applicable to understanding how social connectedness, digital media use, and community-level factors shape well-being differently across groups.
+    \item \textbf{Translating research into practice.} I have experience bridging methodological development to policy-relevant applications, and I am committed to contributing to the Center's mission of translating well-being science into actionable strategies for public health practice and policy.
+\end{enumerate}
+
+\section*{Proposed Direction}
+
+At the Center, I aim to extend BDT to model how digital environments---social media, health apps, online information ecosystems---shape social well-being outcomes. I am particularly interested in understanding heterogeneity across underserved populations and collaborating on community-engaged research that translates computational findings into interventions that improve well-being.
+
+\vfill
+\noindent{\small\sffamily\color{slate} Selected Publications:} {\small Jin, Y. (2026). \emph{Empirical-Frontier Regularization for LLM Synthetic Agents.} SSRN. \;|\; Jin, Y. (2026). \emph{Waiting Time as a Behavioral Barrier to Vaccination Uptake.} Job Market Paper.}
+
+\end{document}

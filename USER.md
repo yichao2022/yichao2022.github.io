@@ -7,7 +7,7 @@ _Learn about the person you're helping. Update this as you go._
 - **Hometown:** Hangzhou, Zhejiang, China
 - **Pronouns:** He/Him
 - **Timezone:** America/Chicago (CDT)
-- **Notes:** PhD Candidate in Behavioral AI / Health Economics. Job Market Paper (JMP) is titled "Waiting Time as a Behavioral Barrier to Vaccination Uptake: Nonlinear Heterogeneity by Institutional Trust." Dissertation is titled "Intertemporal Choice in Vaccination Timing—Evidence from a Discrete Choice Experiment in Wuhan." Currently applying for postdoctoral fellowships (Harvard, Columbia, UC Berkeley, etc.).
+- **Notes:** PhD in Behavioral AI / Health Economics (graduated June 2026, UT Dallas). Job Market Paper (JMP) is titled "Waiting Time as a Behavioral Barrier to Vaccination Uptake: Nonlinear Heterogeneity by Institutional Trust." Dissertation is titled "Intertemporal Choice in Vaccination Timing—Evidence from a Discrete Choice Experiment in Wuhan." BDT paper target: Journal of Biomedical Informatics (JBI). Postdoc pipeline: Ce Shang (OSU) — warmest active lead; Julie Downs (CMU SDS/Heinz) — dept review; NIH OBSSR — under review; MD Anderson CGCCR — new lead; BEEMA 10 (BDT v95) — submitting July 5. PI direct outreach prioritized over fellowship pools.
 
 ## Context
 
