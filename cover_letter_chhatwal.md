@@ -1,0 +1,28 @@
+Yichao Jin, Ph.D.
+School of Economic, Political and Policy Sciences
+The University of Texas at Dallas
+Yichao.Jin@UTDallas.edu | https://yichao2022.github.io
+
+August 17, 2026
+
+Professor Jagpreet (Jag) Chhatwal, PhD
+Director, Center for Health Technology Assessment
+Mass General Brigham
+Harvard Medical School
+
+Re: Postdoctoral Fellowship Application
+
+Dear Professor Chhatwal,
+
+I am writing to apply for the Postdoctoral Fellow position at the Center for Health Technology Assessment, Mass General Brigham and Harvard Medical School. I recently completed my Ph.D. in Public Policy and Political Economy at the University of Texas at Dallas (May 2026), where I built a research program at the intersection of health preference measurement, decision-analytic modeling, and generative AI for health outcomes research.
+
+My methodological home is discrete choice experiments combined with structural econometrics. My dissertation, based on a discrete choice experiment of over 600 respondents in Wuhan, quantified how waiting time and institutional trust jointly shape vaccination uptake; the resulting paper, "Waiting Time as a Behavioral Barrier to Vaccination Uptake: Nonlinear Heterogeneity by Institutional Trust," is under review at Economic Analysis and Policy. I have also developed a Behavioral Digital Twin (BDT) framework that integrates DCE data with causally-constrained LLM agents to generate synthetic policy simulations. My working paper on this method, "Empirical-Frontier Regularization for LLM Synthetic Agents: A Preference-Anchored Framework" (targeted at Value in Health), demonstrates an anchor-based calibration that reduces waiting-time monotonicity violations from 62.5% to 4.2% and raises Spearman rank correlation from -0.024 to 0.952. A companion paper, "Value Contamination in Policy Simulation," audits how LLM policy-value orientations bias predicted policy effects. I see these tools--preference measurement, simulation, and the emerging role of generative AI in HEOR--as directly aligned with CHTA's agenda in decision science and health technology assessment.
+
+CHTA's work has been a reference point throughout my training. Your hepatitis C elimination models translated disease modeling into federal policy; your COVID-19 modeling consortium provided real-time guidance to states and the CDC; and your recent HEALing Communities simulation shows how modeling can guide opioid policy at the level of individual communities. I would welcome the opportunity to contribute to that tradition, developing models that move from academic insight to clinical and policy decisions.
+
+Beyond these projects, I bring advanced skills in Python, R, Stata, and MATLAB; experience with mixed logit, latent class, and SEIR modeling; and a strong interest in pursuing independent funding (e.g., an NIH K Award) to build a program on preference-sensitive decision modeling in vaccination and preventive care. I am flexible on start date and would be glad to begin before or at Fall 2026.
+
+My CV is attached, and full drafts of both working papers are available on SSRN. Thank you for your time and consideration. I would be delighted to discuss how I might contribute to CHTA's research portfolio.
+
+Sincerely,
+Yichao Jin, Ph.D.

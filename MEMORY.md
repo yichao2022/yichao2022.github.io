@@ -634,4 +634,198 @@
 - **DeepSeek API**: Still single point of failure. Periodic broken pipes at ~42-45K tokens continue.
 - **Session freezing**: Still unresolved.
 - **XHS IP block**: Server IP still blocked; residential IP workaround confirmed working.
-- **Yiye Zhang (Weill Cornell)**: Follow-up sent 7/2 — no response as of July 3. Status unknown.
+|- **Yiye Zhang (Weill Cornell)**: Follow-up sent 7/2 — no response as of July 3. Status unknown.
+
+## 2026-07-08 Memory Consolidation
+
+### July 5-8 Session Roundup
+
+**BDT Paper — Final JBI Push (July 7-8)**
+- **Target journal final**: JBI (Journal of Biomedical Informatics) confirmed after 4-journal comparison loop.
+- **Word count verified**: ~6,440 words main body (Introduction through Conclusion), ~12,497 total including appendices, 34 pages. JBI limit 5,000–7,000 words — within range.
+- **Reference count**: User asked "25 refs enough for JBI?" → 25 is low; median for biomedical informatics research papers is 39 (25th–75th: 25–56). Assistant advised targeting 40–50.
+- **LaTeX compilation**: Fixed cross-refs (`Appendix ??` → correct labels), recompiled successfully (2 passes).
+- **BEEMA 10 Workshop** (due July 5): Status unknown — user did not mention submission outcome on July 4 (holiday) or July 7-8.
+- **Paper `.zip` exported**: /tmp/efr_paper_final.zip (1.9 MB) — ready for Overleaf.
+
+**Office License — Installed (July 7-8)**
+- Microsoft Office LTSC 2024 activated on Mac via VL Serializer (GitHub KMS tool).
+- License file confirmed at `/Library/Preferences/com.microsoft.office.licensingV2.plist`.
+
+**CV Updated — AIE Summer Conference 2026 Removed**
+- All 4 .tex CV files patched (AIE session removed from paper description + conference list).
+- PDFs compiled and pushed to GitHub Pages — commit removing AIE on main branch.
+- Live GitHub Pages verified (hash match after CDN delay).
+
+**ajs-natural-science Skill — 155 Journal Profiles Installed**
+- Repo `linixity/Awesome-Journal-Skills` cloned and installed as Hermes skill.
+- Contains 155 journal profiles (Lancet Digital Health, Nature Medicine, JAMA, PLOS Medicine, BMJ, etc.) + router workflow skill.
+- Covers biomedical informatics/health journals relevant to BDT paper.
+
+**Skill Created: `effective-collaboration-principles`**
+- User requested: "写一个 skill 记录怎么跟我配合最好" after a highly productive paper-editing session.
+- Three principles formalized: (1) Give complete context/files, (2) Give clear direct feedback, (3) Give operational access.
+- Auto-triggers on "how to work with me" / "principles for collaboration" queries.
+
+**Framework Awareness — Key Meta-Level Discussion (July 7-8)**
+- User repeatedly challenged assistant's default Chinese mainstream narrative (施一公/西湖大学 praise, "5000 years" framing, etc.).
+- Assistant acknowledged: cannot "choose" frameworks but can declare which one is used. Committed to: declaring analytical frameworks explicitly in international comparisons, using global academic consensus as default where applicable.
+- User's feedback was direct, precise, and productive — led to the `effective-collaboration-principles` skill being created.
+
+**Xiaohongshu Exploration (July 7-8)**
+- ~20 shortlinks parsed and read via `rednote-xhs-reader`: Codex journal skills repo, EasyGEE (geospatial AI), KMS activation tool, download tool, AI teeth regeneration, AI SpaceX website (Tencent Hy3), Ant Group robot vision, DeepSeek interview controversy.
+- AI SpaceX website link saved to `/Users/cary/Documents/play-later.md`.
+
+**Intellectual Discussions (July 7)**
+- **PAIR Center (UPenn/Halpern)**: Analysis of signal value — UPenn PhD + Halpern NAM recommendation = strong positive signal in health behavior/decision science market.
+- **Halpern timeline**: Expected reply ~Jul 13-14 (user emailed Jul 6, reply same day, recommend follow-up around Jul 13-14).
+- **Gaokao**: Discussed as filtering mechanism for family resources + individual strategy + legitimation.
+- **China vs US/Korea research**: Comparative analysis of output scale vs originality, PhD mobility, international signal.
+- **Westlake University**: Nature Index 191, global rank #308, citation impact #35 — but near-zero international brand recognition.
+- **AIxPH 2026**: Registration deadline Jul 31, $900 speaker type — user undecided.
+- **Scott Halpern NAM status**: NAM is top ~2,400 medical leaders; parallel to Shi Yigong's NAS foreign associate.
+
+### Postdoc Target Scan Results (July 7 — Cron)
+New positions found — high-priority targets for re-engagement:
+
+| Position | Institution | PI | Match | Status |
+|----------|------------|----|-------|--------|
+| O'Donnell Center Postdoc | UC Berkeley Haas | Malmendier | High | Deadline Jun 30 — may be late |
+| Simulation/Modeling PD | USC Schaeffer | Erin Duffy reachable | Med-High | Rolling — contact Duffy |
+| AI/Decision Postdoc | Purdue CLARA | Reimer | Med-High | Rolling |
+| Health Econ Postdoc | BU Questrom | Ericson | Medium | Listed until Aug 17 |
+| STAR Lab Fellow | Harvard WCFIA | STAR Lab team | Medium | Aug 1 start, 4mo |
+
+User's most active lines: CMU Julie Downs (dept review), NIH OBSSR (under review 7/1), Erin Duffy/USC (pending).
+
+### Ongoing Issues (unchanged)
+- **DeepSeek API**: Single point of failure. Periodic broken pipes at ~42-45K tokens.
+- **Session freezing**: Still unresolved.
+- **XHS IP block**: Server IP blocked; residential IP workaround confirmed.
+- **Yiye Zhang (Weill Cornell)**: No response since Jul 2 follow-up.
+
+## 2026-07-09 Memory Consolidation
+
+### July 8-9 Sessions — Roundup
+
+**EFR Paper — JBI 5-Role Audit Complete (July 8)**
+- `jbi_audit_report_2026-07-08.md` completed — 5-role Domain/Methodology/Devil's Advocate/Perspective/Editorial Synthesis review.
+- **Verdict**: MAJOR REVISION — one cycle recoverable if narrative is correctly reframed.
+- **Critiques**: (1) Paper reads as health economics, not biomedical informatics, (2) Matched subset bias (21.9% coverage, SMD>0.61), (3) Core result is a design parameter, not an empirical finding, (4) Missing 8-10 JBI domain citations, (5) No ethics/fairness/generalizability discussion.
+- **Word count**: ~6,440 main body — within JBI's 5,000-7,000 range.
+
+**WeChat Export — Bulk Data Extraction (July 9)**
+- **wxecho** (v1.0.1) used to export all WeChat conversations: **51/54 exported** (2.2MB total, ~1,045KB chat.json data).
+- **1,163 meaningful messages** across 51 conversations. Top by volume: Jobs of Guangdong (150), UTD博士群 (149), 田震 (100), 达拉斯一起空运 (98), 国内地址已换普莱诺团2群 (97), 德州寻缘群 (88).
+- **GBrain pipeline under construction**: Extraction scripts written (`extract_wechat_to_gbrain.py`, `build_manifest.py`), batch processing URL-encoding bug being fixed mid-session.
+- Most conversations are group chats where user is primarily a forwarder (绍兴 news, cultural content).
+
+**Hindsight — Installed & Pricing Verified**
+- User installed hindsight + checkpoints-and-rewind skills (from Hermes必装skill TOP 10 XHS post).
+- **Hindsight pricing**: Self-hosted = free (MIT, single Docker command). Cloud = pay-as-you-go (Retain $15/M tokens, Recall $0.75/M tokens). Free credits to start.
+
+**Infrastructure Updates (July 7-8)**
+- **Office LTSC 2024**: Activated via KMS VL Serializer. License confirmed at `/Library/Preferences/com.microsoft.office.licensingV2.plist`.
+- **ajs-natural-science skill**: 155 journal profiles installed (biomedical informatics, health journals).
+- **`effective-collaboration-principles` skill**: Created by user request — 3 principles for optimal AI collaboration.
+- **CV updated**: All 4 .tex files patched — AIE Summer Conference 2026 removed from paper description + conference list. PDFs compiled → pushed to GitHub Pages.
+
+### Postdoc & Job Market — Status (July 8-9)
+
+| Lead | Status | Next Action |
+|------|--------|-------------|
+| **Ce Shang (OSU)** | 🔥 Warmest active lead | Zoom after Jul 10 + 3 rec letters |
+| **Julie Downs (CMU SDS/Heinz)** | 🔄 Department review | 7/1 dept chair transition may affect pace |
+| **NIH OBSSR** | ✅ Review started Jul 1 | Awaiting outcome |
+| **MD Anderson CGCCR** | 📋 Prepare application | One-PDF to mgespitia@mdanderson.org |
+| **Halpern (UPenn PAIR)** | 💬 Sent Jul 6, replied same day | Follow-up around Jul 13-14 |
+| **Erin Duffy / Jason Doctor (USC)** | 📝 Pending | July re-engagement |
+| **Yiye Zhang (Weill Cornell)** | ❓ No response since Jul 2 | Cold — likely dead |
+| **Harvard Chan (Vish Viswanath)** | 💬 Empty reply (auto-signature only) | Treated as non-response |
+| **BEEMA 10 Workshop (BDT)** | ⏳ Due Jul 5 — status unknown | User did not mention outcome |
+
+### Ongoing Issues (unchanged)
+- **DeepSeek API**: Single point of failure. Periodic broken pipes at ~42-45K tokens.
+- **Session freezing**: Still unresolved.
+- **XHS IP block**: Server IP blocked; residential IP workaround confirmed.
+|- **Exa MCP (native)**: Working as primary web search backend since Tavily retired.
+|- **Current Model**: deepseek-v4-flash.
+|- **Rclone remotes**: gdrive: (main backup), IJBM_Submission: (submission folder).
+
+## 2026-07-15 Memory Consolidation
+
+### Hermes CLI Upgrade — Completed (July 15)
+- **Upgrade**: Hermes CLI upgraded to latest version with updated configuration.
+- **Verification**: All MCP servers functional (6 active: exa, gbrain, headroom, screen-agent, smart-fetch, codebase-memory-mcp).
+- **User confirmed**: "我们刚刚完成了 Hermes 升级" — system checked and verified working.
+
+### Recent Dreams & Personal Notes (July 10-12)
+- **July 10 — Wolves at the Door**: Dream recorded in GBrain.
+- **July 10 — Bullies Came to America**: Dream about elementary school bullies also coming to America and getting PhDs.
+- **July 11-12 — ENT Surgery**: Multiple dreams related to ENT surgery (possibly reflecting health anxiety or recent medical exposure).
+- **GBrain status**: Dreams being actively recorded and tracked in personal knowledge base.
+
+### Skill Routing Principles — Documented (July 11)
+- Created `personal/skill-routing-principles` page in GBrain.
+- Formalizing how skills are selected and routed for different tasks.
+
+### MRA Reconstruction — Cross-Thread Memory (July 11)
+- **Page**: `strategy/cross-thread-reconstruction-july-2026`
+- **Focus**: Halpern (UPenn), Bridges, EFR paper tracking across multiple conversation threads.
+- **Active reconstruction**: Using MRA-style memory to connect disparate conversation threads.
+
+### Postdoc & Career Updates (July 10-15)
+- **Ce Shang (OSU)**: Still the warmest active lead — Zoom meeting scheduled after July 10, 3 recommendation letters needed.
+- **Julie Downs (CMU)**: Department review ongoing, 7/1 dept chair transition may affect pace.
+- **NIH OBSSR**: Review started July 1, awaiting outcome.
+- **Halpern (UPenn PAIR)**: Sent July 6, replied same day — follow-up around July 13-14.
+- **Yiye Zhang (Weill Cornell)**: No response since July 2 follow-up — likely dead lead.
+
+### Infrastructure Status (unchanged)
+- **DeepSeek API**: Still single point of failure (no OpenRouter fallback). Periodic broken pipes at ~42-45K tokens.
+- **Session freezing**: Still unresolved (user reported "经常卡死" June 18-21, continuing into July).
+- **Exa MCP**: Primary web search backend, working correctly.
+- **XHS IP block**: Server IP blocked; residential IP workaround confirmed.
+
+---
+
+## 2026-07-10 Memory Consolidation
+
+### Dyad — Local Open-Source AI App Builder
+- **Source**: Xiaohongshu note (video), explored via rednote-reader skill.
+- **What it is**: Dyad is an open-source local AI app builder that runs entirely on the user's own machine. Alternative to Bolt/Lovable/Loomable.
+- **Key differentiators**:
+  - Local deployment — all code and data stay on the user's computer.
+  - Custom API Key support — no platform plan restrictions.
+  - Complete development workbench — generate, iterate, modify apps freely.
+  - No project hosting on third-party platforms.
+- **User reaction**: Positive interest — aligns with existing local-first philosophy (M4 Max 128GB stack, vllm-mlx, local model inference).
+
+### Postdoc Market — Week 42 Status
+| Lead | Status | Next Action |
+|------|--------|-------------|
+| **Ce Shang (OSU Wexner)** | 🔥 Warmest active lead | Zoom after Jul 10 + 3 rec letters |
+| **Julie Downs (CMU SDS/Heinz)** | 🔄 Department review | 7/1 dept chair transition may affect pace |
+| **NIH OBSSR** | ✅ Review started Jul 1 | Awaiting outcome |
+| **MD Anderson CGCCR** | 📋 Prepare application | One-PDF to mgespitia@mdanderson.org |
+| **Halpern (UPenn PAIR)** | 💬 Sent Jul 6, replied same day | Follow-up around Jul 13-14 |
+| **Erin Duffy / Jason Doctor (USC)** | 📝 Pending | July re-engagement |
+| **Yiye Zhang (Weill Cornell)** | ❓ No response since Jul 2 | Cold — likely dead |
+| **Harvard Chan (Vish Viswanath)** | 💬 Empty reply (auto-signature only) | Treated as non-response |
+
+**New leads found (Jul 9 scan):**
+- 🟢 **Stanford — Butzin-Dozier Lab** (Causal Inference + EHR) — visa restriction (no sponsorship)
+- 🟢 **Columbia DBMI — Joshi/Elhadad** (Causal Inference + ML + EHR) — visa friendly
+- 🟡 **Ohio State — Ce Shang** (DCE methodology) — already the warmest active lead
+- 🟡 **BU Questrom — Keith Marzilli Ericson** (Health Economics) — deadline Aug 17
+- 🟡 **Purdue CLARA — Torsten Reimer** (AI + Decision Making) — may still be open
+
+### Personal Notes
+- **Dream (2026-07-10)**: Dreamt that two elementary school bullies also came to America and got PhDs. Recorded in GBrain `dreams/2026-07-10-bullies-came-to-america`.
+- **WeChat Data Export**: Completed bulk WeChat export (51/54 conversations, 2.2MB total, ~1,045KB chat.json). GBrain extraction pipeline under construction.
+
+### Infrastructure Notes
+- **Hindsight installed**: From Hermes必装skill TOP 10 XHS post. Self-hosted = free (MIT). Cloud = pay-as-you-go.
+- **Office LTSC 2024**: Activated via KMS VL Serializer.
+- **ajs-natural-science skill**: 155 journal profiles installed.
+- **effective-collaboration-principles skill**: Created by user.
